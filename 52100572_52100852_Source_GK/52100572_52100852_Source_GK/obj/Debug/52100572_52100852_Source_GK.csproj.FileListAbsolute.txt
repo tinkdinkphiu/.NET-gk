@@ -1,0 +1,11 @@
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\bin\Debug\52100572_52100852_Source_GK.exe.config
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\bin\Debug\52100572_52100852_Source_GK.exe
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\bin\Debug\52100572_52100852_Source_GK.pdb
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.csproj.AssemblyReference.cache
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.csproj.SuggestedBindingRedirects.cache
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\_52100572_52100852_Source_GK.Properties.Resources.resources
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.csproj.GenerateResource.cache
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.csproj.CoreCompileInputs.cache
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.exe
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.pdb
+D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\_52100572_52100852_Source_GK.CarRental.resources
