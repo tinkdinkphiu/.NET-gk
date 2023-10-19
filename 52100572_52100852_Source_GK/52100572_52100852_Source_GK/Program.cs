@@ -16,7 +16,7 @@ namespace _52100572_52100852_Source_GK
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CarRental());
+            Application.Run(new Login());
         }
     }
 }
