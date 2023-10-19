@@ -9,3 +9,16 @@ D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572
 D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.exe
 D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.pdb
 D:\University\2023-2024Term1\dotNet\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\_52100572_52100852_Source_GK.CarRental.resources
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\bin\Debug\52100572_52100852_Source_GK.exe.config
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\bin\Debug\52100572_52100852_Source_GK.exe
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\bin\Debug\52100572_52100852_Source_GK.pdb
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\bin\Debug\System.Data.SqlClient.dll
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\bin\Debug\System.Data.SqlClient.xml
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.csproj.AssemblyReference.cache
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\_52100572_52100852_Source_GK.CarRental.resources
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\_52100572_52100852_Source_GK.Properties.Resources.resources
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.csproj.GenerateResource.cache
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.csproj.CoreCompileInputs.cache
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.csproj.CopyComplete
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.exe
+C:\Users\TrongTinh\source\repos\.NET-gk\52100572_52100852_Source_GK\52100572_52100852_Source_GK\obj\Debug\52100572_52100852_Source_GK.pdb

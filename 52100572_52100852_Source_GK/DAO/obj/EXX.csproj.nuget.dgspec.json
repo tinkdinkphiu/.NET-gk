@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\BUS\\BUS.csproj": {}
+    "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\EXX.csproj": {}
   },
   "projects": {
     "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\BUS\\BUS.csproj": {
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\DAO.csproj": {
-                "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\DAO.csproj"
+              "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\EXX.csproj": {
+                "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\EXX.csproj"
               },
               "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DTO\\DTO.csproj": {
                 "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DTO\\DTO.csproj"
@@ -66,12 +66,12 @@
         }
       }
     },
-    "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\DAO.csproj": {
+    "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\EXX.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\DAO.csproj",
-        "projectName": "DAO",
-        "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\DAO.csproj",
+        "projectUniqueName": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\EXX.csproj",
+        "projectName": "EXX",
+        "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\EXX.csproj",
         "packagesPath": "C:\\Users\\TrongTinh\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DAO\\obj\\",
         "projectStyle": "PackageReference",
@@ -90,6 +90,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\BUS\\BUS.csproj": {
+                "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\BUS\\BUS.csproj"
+              },
               "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DTO\\DTO.csproj": {
                 "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DTO\\DTO.csproj"
               }

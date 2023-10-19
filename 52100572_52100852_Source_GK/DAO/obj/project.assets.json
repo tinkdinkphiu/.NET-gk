@@ -147,19 +147,6 @@
           }
         }
       },
-      "BUS/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "DTO": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/BUS.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BUS.dll": {}
-        }
-      },
       "DTO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -486,11 +473,6 @@
         "version.txt"
       ]
     },
-    "BUS/1.0.0": {
-      "type": "project",
-      "path": "../BUS/BUS.csproj",
-      "msbuildProject": "../BUS/BUS.csproj"
-    },
     "DTO/1.0.0": {
       "type": "project",
       "path": "../DTO/DTO.csproj",
@@ -499,7 +481,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "BUS >= 1.0.0",
       "DTO >= 1.0.0",
       "System.Data.SqlClient >= 4.8.5"
     ]
@@ -531,9 +512,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\BUS\\BUS.csproj": {
-              "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\BUS\\BUS.csproj"
-            },
             "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DTO\\DTO.csproj": {
               "projectPath": "C:\\Users\\TrongTinh\\source\\repos\\.NET-gk\\52100572_52100852_Source_GK\\DTO\\DTO.csproj"
             }
