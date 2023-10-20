@@ -11,6 +11,7 @@ namespace DTO
         public int DonDatXeID { get; set; }
         public int KhachHangID { get; set; }
         public int XeOtoID { get; set; }
+        public string NhienLieu { get; set; }
         public DateTime ThoiGianThue { get; set; }
         public bool TinhTrangThanhToan { get; set; }
     }

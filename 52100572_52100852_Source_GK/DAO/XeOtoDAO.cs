@@ -36,7 +36,6 @@ namespace DAO
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
-                    NhienLieu = row["NhienLieu"].ToString(),
                     Gia = Double.Parse(row["GiaThue"].ToString()),
                     TrangThai = row["TrangThai"].ToString()
                 };
@@ -61,18 +60,17 @@ namespace DAO
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
                     Gia = Double.Parse(row["GiaThue"].ToString()),
-                    NhienLieu = row["NhienLieu"].ToString(),
                     TrangThai = row["TrangThai"].ToString()
                 };
 
                 // Lấy danh sách XeOto_TinhNangDTO
-                List<XeOto_TinhNangDTO> listTinhNang = GetXeOto_TinhNangListByXeOtoID(xeOto.XeOtoID);
+                List<string> listTinhNang = GetXeOto_TinhNangListByXeOtoID(xeOto.XeOtoID);
 
                 // Xây dựng danh sách TinhNangDTO từ XeOto_TinhNangDTO
                 xeOto.TinhNangList = new List<TinhNangDTO>();
-                foreach (var xeOto_TinhNang in listTinhNang)
+                foreach (var tinhNangID in listTinhNang)
                 {
-                    TinhNangDTO tinhNang = TinhNangDAO.Instance.GetTinhNangByID(xeOto_TinhNang.TinhNangID);
+                    TinhNangDTO tinhNang = TinhNangDAO.Instance.GetTinhNangByID(int.Parse(tinhNangID));
                     xeOto.TinhNangList.Add(tinhNang);
                 }
 
@@ -84,25 +82,22 @@ namespace DAO
             }
         }
 
-        public bool AddXeOto(XeOtoDTO xeOto, List<TinhNangDTO> listTinhNang)
+        public bool AddXeOto(XeOtoDTO xeOto)
         {
-            string query = "INSERT INTO XeOto (HangXe, Model, LoaiXe, NhienLieu, TrangThai, GiaThue ) " +
-                           "VALUES ( @HangXe, @Model, @LoaiXe, @NhienLieu, @TrangThai )";
-            object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.NhienLieu, xeOto.TrangThai, xeOto.Gia};
+            string query = "INSERT INTO XeOto (HangXe, Model, LoaiXe, TrangThai, GiaThue ) " +
+                           "VALUES ( @HangXe , @Model , @LoaiXe , @TrangThai , @GiaThue )";
+            object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.TrangThai, xeOto.Gia};
             int xeOToId = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query, parameters));
-            foreach (var tinhNang in listTinhNang)
-            {
-                AddTinhNangToXeOto(xeOToId, tinhNang.TinhNangID);
-            }
+            
             return xeOToId > 0;
         }
 
         public bool UpdateXeOto(XeOtoDTO xeOto)
         {
             string query = "UPDATE XeOto " +
-                           "SET HangXe = @HangXe, Model = @Model, LoaiXe = @LoaiXe, NhienLieu = @NhienLieu, TrangThai = @TrangThai , GiaThue = @Gia " +
-                           "WHERE XeOtoID = @XeOtoID";
-            object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.NhienLieu, xeOto.TrangThai,xeOto.Gia, xeOto.XeOtoID };
+                           "SET HangXe = @HangXe , Model = @Model , LoaiXe = @LoaiXe , TrangThai = @TrangThai , GiaThue = @Gia " +
+                           "WHERE XeOtoID = @XeOtoID ";
+            object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.TrangThai,xeOto.Gia, xeOto.XeOtoID };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
 
@@ -115,7 +110,7 @@ namespace DAO
 
         public List<XeOtoDTO> SearchXeOtoByConditions(string keyword)
         {
-            string query = "SELECT * FROM XeOto WHERE HangXe = @keyword OR Model = @keyword OR LoaiXe = @keyword";
+            string query = "SELECT * FROM XeOto WHERE HangXe LIKE '%' + @HangXe + '%' OR Model LIKE '%' + @Model + '%' OR LoaiXe LIKE '%' + @LoaiXe + '%'";
             object[] parameters = { keyword, keyword, keyword };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
 
@@ -129,7 +124,6 @@ namespace DAO
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
                     Gia = Double.Parse(row["GiaThue"].ToString()),
-                    NhienLieu = row["NhienLieu"].ToString(),
                     TrangThai = row["TrangThai"].ToString()
                 };
                 result.Add(xeOto);
@@ -180,9 +174,9 @@ namespace DAO
 
 
 
-        public List<XeOto_TinhNangDTO> GetXeOto_TinhNangListByXeOtoID(int xeOtoID)
+        public List<string> GetXeOto_TinhNangListByXeOtoID(int xeOtoID)
         {
-            List<XeOto_TinhNangDTO> xeOto_TinhNangList = new List<XeOto_TinhNangDTO>();
+            List<string> xeOto_TinhNangList = new List<string>();
 
             string query = "SELECT * FROM XeOto_TinhNang WHERE XeOtoID = @XeOtoID";
             object[] parameters = { xeOtoID };
@@ -190,12 +184,7 @@ namespace DAO
 
             foreach (DataRow row in data.Rows)
             {
-                XeOto_TinhNangDTO xeOto_TinhNang = new XeOto_TinhNangDTO
-                {
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
-                    TinhNangID = Convert.ToInt32(row["TinhNangID"])
-                };
-                xeOto_TinhNangList.Add(xeOto_TinhNang);
+                xeOto_TinhNangList.Add(row["TinhNangID"].ToString());
             }
 
             return xeOto_TinhNangList;

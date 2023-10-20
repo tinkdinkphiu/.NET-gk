@@ -27,9 +27,19 @@ namespace BUS
         public List<XeOtoDTO> GetXeOtoList()
         {
             return xeOtoDAO.GetXeOtoList();
+        }        
+        
+        public List<string> GetXeOto_TinhNangListByXeOtoID(int xeOToID)
+        {
+            return xeOtoDAO.GetXeOto_TinhNangListByXeOtoID(xeOToID);
         }
 
-        public bool AddXeOto(XeOtoDTO xeOto, List<TinhNangDTO> listtinhNang)
+        public List<TinhNangDTO> GetTinhNangList()
+        {
+            return TinhNangDAO.Instance.GetAllTinhNang();
+        }
+
+        public bool AddXeOto(XeOtoDTO xeOto)
         {
             // Thêm xử lý validation nếu cần
             if (xeOto.HangXe == null || xeOto.Model == null || xeOto.LoaiXe == null)
@@ -38,7 +48,7 @@ namespace BUS
                 return false;
             }
 
-            return xeOtoDAO.AddXeOto(xeOto, listtinhNang);
+            return xeOtoDAO.AddXeOto(xeOto);
         }
 
         public bool UpdateXeOto(XeOtoDTO xeOto)

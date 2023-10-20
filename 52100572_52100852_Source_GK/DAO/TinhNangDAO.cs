@@ -25,7 +25,7 @@ namespace DAO
         {
             List<TinhNangDTO> tinhNangList = new List<TinhNangDTO>();
 
-            string query = "SELECT * FROM TinhNang";
+            string query = "SELECT * FROM TinhNangXe";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow row in data.Rows)
@@ -43,7 +43,7 @@ namespace DAO
 
         public TinhNangDTO GetTinhNangByID(int tinhNangID)
         {
-            string query = "SELECT * FROM TinhNang WHERE TinhNangID = @TinhNangID";
+            string query = "SELECT * FROM TinhNangXe WHERE TinhNangID = @TinhNangID";
             object[] parameters = { tinhNangID };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
 
