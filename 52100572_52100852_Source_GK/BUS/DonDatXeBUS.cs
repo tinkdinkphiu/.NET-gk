@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,16 +24,20 @@ namespace BUS
             }
         }
 
-        public bool AddDonDatXe(XeOtoDTO xeOto, List<TinhNangDTO> listtinhNang, string nhienLieu)
+        public bool AddDonDatXe(DonDatXeDTO donDatXe, List<string> listtinhNang)
         {
-            // Thêm xử lý validation nếu cần
-            if (xeOto.HangXe == null || xeOto.Model == null || xeOto.LoaiXe == null)
-            {
-                // Xử lý lỗi hoặc thông báo
-                return false;
-            }
-
-            return true;
+            return DonDatXeDAO.Instance.CreateDonDatXe(donDatXe,listtinhNang);
         }
+
+        public List<DonDatXeDTO> GetDonDatXeList()
+        {
+            return DonDatXeDAO.Instance.GetDonDatXeList();
+        }
+
+        public List<DonDatXeDTO> Search(string key)
+        {
+            return DonDatXeDAO.Instance.SearchByConditions(key);
+        }
+        
     }
 }

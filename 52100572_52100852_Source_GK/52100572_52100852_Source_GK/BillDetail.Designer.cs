@@ -44,13 +44,12 @@
             this.fpnl_TinhNang = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_Total = new MaterialSkin.Controls.MaterialLabel();
             this.btn_Save = new MaterialSkin.Controls.MaterialButton();
-            this.btn_Cancel = new MaterialSkin.Controls.MaterialButton();
-            this.btn_Edit = new MaterialSkin.Controls.MaterialButton();
             this.lbl_NhienLieu = new MaterialSkin.Controls.MaterialLabel();
             this.rdb_Xang = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdb_Dau = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdb_Dien = new MaterialSkin.Controls.MaterialRadioButton();
             this.pnl_NhienLieu = new System.Windows.Forms.Panel();
+            this.btn_Cancel = new MaterialSkin.Controls.MaterialButton();
             this.pnl_NhienLieu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +71,7 @@
             this.txt_ID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_ID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_ID.Depth = 0;
-            this.txt_ID.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ID.HideSelection = true;
             this.txt_ID.LeadingIcon = null;
             this.txt_ID.Location = new System.Drawing.Point(109, 83);
@@ -116,7 +115,7 @@
             this.cbb_HangXe.DropDownHeight = 174;
             this.cbb_HangXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_HangXe.DropDownWidth = 121;
-            this.cbb_HangXe.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbb_HangXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbb_HangXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbb_HangXe.FormattingEnabled = true;
             this.cbb_HangXe.IntegralHeight = false;
@@ -163,7 +162,7 @@
             this.txt_Model.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_Model.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Model.Depth = 0;
-            this.txt_Model.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_Model.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Model.HideSelection = true;
             this.txt_Model.LeadingIcon = null;
             this.txt_Model.Location = new System.Drawing.Point(109, 147);
@@ -194,7 +193,7 @@
             this.cbb_LoaiXe.DropDownHeight = 174;
             this.cbb_LoaiXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_LoaiXe.DropDownWidth = 121;
-            this.cbb_LoaiXe.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbb_LoaiXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbb_LoaiXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbb_LoaiXe.FormattingEnabled = true;
             this.cbb_LoaiXe.IntegralHeight = false;
@@ -248,7 +247,7 @@
             this.cbb_TrangThai.DropDownHeight = 174;
             this.cbb_TrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_TrangThai.DropDownWidth = 121;
-            this.cbb_TrangThai.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbb_TrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbb_TrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbb_TrangThai.FormattingEnabled = true;
             this.cbb_TrangThai.IntegralHeight = false;
@@ -283,7 +282,7 @@
             this.txt_GiaThue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_GiaThue.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_GiaThue.Depth = 0;
-            this.txt_GiaThue.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_GiaThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_GiaThue.HideSelection = true;
             this.txt_GiaThue.LeadingIcon = null;
             this.txt_GiaThue.Location = new System.Drawing.Point(386, 221);
@@ -310,7 +309,7 @@
             this.lbl_TinhNang.AutoSize = true;
             this.lbl_TinhNang.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_TinhNang.Depth = 0;
-            this.lbl_TinhNang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TinhNang.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_TinhNang.Location = new System.Drawing.Point(11, 305);
             this.lbl_TinhNang.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_TinhNang.Name = "lbl_TinhNang";
@@ -356,46 +355,6 @@
             this.btn_Save.UseAccentColor = false;
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Visible = false;
-            // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btn_Cancel.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btn_Cancel.Depth = 0;
-            this.btn_Cancel.HighEmphasis = true;
-            this.btn_Cancel.Icon = null;
-            this.btn_Cancel.Location = new System.Drawing.Point(452, 707);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_Cancel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Cancel.Size = new System.Drawing.Size(64, 36);
-            this.btn_Cancel.TabIndex = 16;
-            this.btn_Cancel.Text = "Hủy";
-            this.btn_Cancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btn_Cancel.UseAccentColor = false;
-            this.btn_Cancel.UseVisualStyleBackColor = true;
-            this.btn_Cancel.Visible = false;
-            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
-            // 
-            // btn_Edit
-            // 
-            this.btn_Edit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btn_Edit.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btn_Edit.Depth = 0;
-            this.btn_Edit.HighEmphasis = true;
-            this.btn_Edit.Icon = null;
-            this.btn_Edit.Location = new System.Drawing.Point(549, 707);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_Edit.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Edit.Size = new System.Drawing.Size(99, 36);
-            this.btn_Edit.TabIndex = 17;
-            this.btn_Edit.Text = "Chỉnh sửa";
-            this.btn_Edit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btn_Edit.UseAccentColor = false;
-            this.btn_Edit.UseVisualStyleBackColor = true;
             // 
             // lbl_NhienLieu
             // 
@@ -468,14 +427,34 @@
             this.pnl_NhienLieu.Size = new System.Drawing.Size(508, 43);
             this.pnl_NhienLieu.TabIndex = 22;
             // 
-            // CarDetail
+            // btn_Cancel
+            // 
+            this.btn_Cancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Cancel.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Cancel.Depth = 0;
+            this.btn_Cancel.HighEmphasis = true;
+            this.btn_Cancel.Icon = null;
+            this.btn_Cancel.Location = new System.Drawing.Point(452, 707);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Cancel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Cancel.Size = new System.Drawing.Size(64, 36);
+            this.btn_Cancel.TabIndex = 16;
+            this.btn_Cancel.Text = "Hủy";
+            this.btn_Cancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Cancel.UseAccentColor = false;
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Visible = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
+            // BillDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 762);
             this.Controls.Add(this.pnl_NhienLieu);
             this.Controls.Add(this.lbl_NhienLieu);
-            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.lbl_Total);
@@ -493,7 +472,7 @@
             this.Controls.Add(this.lbl_HangXe);
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.lbl_ID);
-            this.Name = "CarDetail";
+            this.Name = "BillDetail";
             this.Text = "Chi Tiết Đơn Đặt Xe";
             this.Load += new System.EventHandler(this.CarDetail_Load);
             this.pnl_NhienLieu.ResumeLayout(false);
@@ -521,12 +500,11 @@
         private System.Windows.Forms.FlowLayoutPanel fpnl_TinhNang;
         private MaterialSkin.Controls.MaterialLabel lbl_Total;
         private MaterialSkin.Controls.MaterialButton btn_Save;
-        private MaterialSkin.Controls.MaterialButton btn_Cancel;
-        private MaterialSkin.Controls.MaterialButton btn_Edit;
         private MaterialSkin.Controls.MaterialLabel lbl_NhienLieu;
         private MaterialSkin.Controls.MaterialRadioButton rdb_Xang;
         private MaterialSkin.Controls.MaterialRadioButton rdb_Dau;
         private MaterialSkin.Controls.MaterialRadioButton rdb_Dien;
         private System.Windows.Forms.Panel pnl_NhienLieu;
+        private MaterialSkin.Controls.MaterialButton btn_Cancel;
     }
 }
