@@ -37,7 +37,7 @@ namespace DAO
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
                     NhienLieu = row["NhienLieu"].ToString(),
-                    Gia = Double.Parse(row["Gia"].ToString()),
+                    Gia = Double.Parse(row["GiaThue"].ToString()),
                     TrangThai = row["TrangThai"].ToString()
                 };
                 xeOtoList.Add(xeOto);
@@ -60,7 +60,7 @@ namespace DAO
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
-                    Gia = Double.Parse(row["Gia"].ToString()),
+                    Gia = Double.Parse(row["GiaThue"].ToString()),
                     NhienLieu = row["NhienLieu"].ToString(),
                     TrangThai = row["TrangThai"].ToString()
                 };
@@ -86,7 +86,7 @@ namespace DAO
 
         public bool AddXeOto(XeOtoDTO xeOto, List<TinhNangDTO> listTinhNang)
         {
-            string query = "INSERT INTO XeOto (HangXe, Model, LoaiXe, NhienLieu, TrangThai, Gia) " +
+            string query = "INSERT INTO XeOto (HangXe, Model, LoaiXe, NhienLieu, TrangThai, GiaThue ) " +
                            "VALUES ( @HangXe, @Model, @LoaiXe, @NhienLieu, @TrangThai )";
             object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.NhienLieu, xeOto.TrangThai, xeOto.Gia};
             int xeOToId = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query, parameters));
@@ -100,7 +100,7 @@ namespace DAO
         public bool UpdateXeOto(XeOtoDTO xeOto)
         {
             string query = "UPDATE XeOto " +
-                           "SET HangXe = @HangXe, Model = @Model, LoaiXe = @LoaiXe, NhienLieu = @NhienLieu, TrangThai = @TrangThai , Gia = @Gia " +
+                           "SET HangXe = @HangXe, Model = @Model, LoaiXe = @LoaiXe, NhienLieu = @NhienLieu, TrangThai = @TrangThai , GiaThue = @Gia " +
                            "WHERE XeOtoID = @XeOtoID";
             object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.NhienLieu, xeOto.TrangThai,xeOto.Gia, xeOto.XeOtoID };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
@@ -128,7 +128,7 @@ namespace DAO
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
-                    Gia = Double.Parse(row["Gia"].ToString()),
+                    Gia = Double.Parse(row["GiaThue"].ToString()),
                     NhienLieu = row["NhienLieu"].ToString(),
                     TrangThai = row["TrangThai"].ToString()
                 };
