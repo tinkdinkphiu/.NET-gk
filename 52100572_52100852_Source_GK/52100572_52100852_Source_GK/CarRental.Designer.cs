@@ -50,6 +50,10 @@
             this.lbl_suv = new MaterialSkin.Controls.MaterialLabel();
             this.lvl_mpv = new MaterialSkin.Controls.MaterialLabel();
             this.lvl_truck = new MaterialSkin.Controls.MaterialLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_inner_mini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_truck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_mpv)).BeginInit();
@@ -64,6 +68,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_inner_suv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_inner_mpv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_inner_truck)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_cartype
@@ -72,7 +79,7 @@
             this.lbl_cartype.Depth = 0;
             this.lbl_cartype.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_cartype.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.lbl_cartype.Location = new System.Drawing.Point(12, 16);
+            this.lbl_cartype.Location = new System.Drawing.Point(152, 16);
             this.lbl_cartype.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_cartype.Name = "lbl_cartype";
             this.lbl_cartype.Size = new System.Drawing.Size(720, 29);
@@ -305,12 +312,66 @@
             this.lvl_truck.Text = "Bán tải";
             this.lvl_truck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(330, 265);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(647, 361);
+            this.tableLayoutPanel1.TabIndex = 22;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.materialLabel1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(154, 130);
+            this.panel1.TabIndex = 23;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(1, 75);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(139, 60);
+            this.materialLabel1.TabIndex = 25;
+            this.materialLabel1.Text = "4 chỗ (Mini)";
+            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::_52100572_52100852_Source_GK.Properties.Resources.mini;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
             // CarRental
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(744, 600);
+            this.ClientSize = new System.Drawing.Size(1024, 743);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lvl_truck);
             this.Controls.Add(this.lvl_mpv);
             this.Controls.Add(this.lbl_suv);
@@ -351,6 +412,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_inner_suv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_inner_mpv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_inner_truck)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,5 +443,9 @@
         private MaterialSkin.Controls.MaterialLabel lbl_suv;
         private MaterialSkin.Controls.MaterialLabel lvl_mpv;
         private MaterialSkin.Controls.MaterialLabel lvl_truck;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -52,9 +52,5 @@ namespace _52100572_52100852_Source_GK
                     break;
             }
         }
-        private void tab_home_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
