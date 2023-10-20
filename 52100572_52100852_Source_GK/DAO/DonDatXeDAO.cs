@@ -34,6 +34,7 @@ namespace DAO
                     DonDatXeID = Convert.ToInt32(row["DonDatXeID"]),
                     KhachHangID = Convert.ToInt32(row["KhachHangID"]),
                     XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    NhienLieu = row["NhienLieu"].ToString(),
                     ThoiGianThue = Convert.ToDateTime(row["ThoiGianThue"]),
                     TinhTrangThanhToan = Convert.ToBoolean(row["TinhTrangThanhToan"])
                 };

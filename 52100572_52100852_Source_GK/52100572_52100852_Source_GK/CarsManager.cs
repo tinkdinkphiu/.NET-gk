@@ -28,10 +28,31 @@ namespace _52100572_52100852_Source_GK
             lv_CarsManager.Columns.Add("Giá Thuê (VND/Giờ)", 200);
         }
 
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string key = txt_Search.Text;
+            List<XeOtoDTO> data;
+            if (key.Length > 0)
+            {
+                 data = XeOtoBUS.Instance.SearchXeOto(key);
+            }
+            else
+            {
+                data = XeOtoBUS.Instance.GetXeOtoList();
+            }
+            bindingData(data);
+        }
+
         private void CarsManager_Load(object sender, EventArgs e)
         {
+            
             List<XeOtoDTO> data = XeOtoBUS.Instance.GetXeOtoList();
-
+            bindingData(data);
+            
+        }
+        private void bindingData(List<XeOtoDTO> data)
+        {
+            lv_CarsManager.Items.Clear();
             foreach (var item in data)
             {
                 ListViewItem listViewItem = new ListViewItem();
@@ -41,9 +62,35 @@ namespace _52100572_52100852_Source_GK
                 listViewItem.SubItems.Add(item.LoaiXe);
                 listViewItem.SubItems.Add(item.TrangThai);
                 listViewItem.SubItems.Add(item.Gia.ToString());
-
                 lv_CarsManager.Items.Add(listViewItem);
             }
+        }
+
+        private void lv_CarsManager_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in lv_CarsManager.SelectedItems)
+            {
+                XeOtoDTO xeOto = new XeOtoDTO
+                {
+                    XeOtoID = int.Parse(item.SubItems[0].Text),
+                    HangXe = item.SubItems[1].Text,
+                    Model = item.SubItems[2].Text,
+                    LoaiXe = item.SubItems[3].Text,
+                    TrangThai = item.SubItems[4].Text,
+                    Gia = int.Parse(item.SubItems[5].Text)
+                };
+
+                CarDetail carDetail = new CarDetail(xeOto);
+                carDetail.ShowDialog();
+                CarsManager_Load(sender, e);
+            }
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            CarDetail carDetail = new CarDetail(null);
+            carDetail.ShowDialog();
+            CarsManager_Load(sender, e);
         }
     }
 }

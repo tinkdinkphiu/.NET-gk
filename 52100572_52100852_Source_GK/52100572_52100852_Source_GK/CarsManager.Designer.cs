@@ -105,6 +105,7 @@
             this.btn_Add.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_Add.UseAccentColor = false;
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // lv_CarsManager
             // 
@@ -128,6 +129,7 @@
             this.lv_CarsManager.TabIndex = 4;
             this.lv_CarsManager.UseCompatibleStateImageBehavior = false;
             this.lv_CarsManager.View = System.Windows.Forms.View.Details;
+            this.lv_CarsManager.SelectedIndexChanged += new System.EventHandler(this.lv_CarsManager_SelectedIndexChanged);
             // 
             // lbl_CarsManager
             // 
