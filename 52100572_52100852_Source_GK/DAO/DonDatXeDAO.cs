@@ -10,6 +10,17 @@ namespace DAO
 {
     public class DonDatXeDAO
     {
+        private static DonDatXeDAO instance;
+
+        public static DonDatXeDAO Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new DonDatXeDAO();
+                return instance;
+            }
+        }
         public List<DonDatXeDTO> GetDonDatXeList()
         {
             string query = "SELECT * FROM DonDatXe";
