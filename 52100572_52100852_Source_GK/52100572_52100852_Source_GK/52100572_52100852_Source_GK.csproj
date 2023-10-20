@@ -223,7 +223,7 @@
     </Compile>
     <Compile Include="Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="BillDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +241,18 @@
     </Compile>
     <Compile Include="CarRental.Designer.cs">
       <DependentUpon>CarRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarRental2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarRental2.Designer.cs">
+      <DependentUpon>CarRental2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarRental3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarRental3.Designer.cs">
+      <DependentUpon>CarRental3.cs</DependentUpon>
     </Compile>
     <Compile Include="CarsManager.cs">
       <SubType>Form</SubType>
@@ -274,7 +286,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +303,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CarRental.resx">
       <DependentUpon>CarRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarRental2.resx">
+      <DependentUpon>CarRental2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarRental3.resx">
+      <DependentUpon>CarRental3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CarsManager.resx">
       <DependentUpon>CarsManager.cs</DependentUpon>
