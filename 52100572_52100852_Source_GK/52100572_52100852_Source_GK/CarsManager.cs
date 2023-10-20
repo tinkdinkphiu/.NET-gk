@@ -28,11 +28,6 @@ namespace _52100572_52100852_Source_GK
             lv_CarsManager.Columns.Add("Giá Thuê (VND/Giờ)", 200);
         }
 
-        private void btn_Search_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CarsManager_Load(object sender, EventArgs e)
         {
             List<XeOtoDTO> data = XeOtoBUS.Instance.GetXeOtoList();

@@ -230,6 +230,12 @@
     <Compile Include="CarsManager.Designer.cs">
       <DependentUpon>CarsManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomersManager.cs">
       <SubType>Form</SubType>
     </Compile>

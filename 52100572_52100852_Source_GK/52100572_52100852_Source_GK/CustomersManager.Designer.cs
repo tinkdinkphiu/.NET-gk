@@ -70,7 +70,7 @@
             this.lbl_CustomersManager.Name = "lbl_CustomersManager";
             this.lbl_CustomersManager.Size = new System.Drawing.Size(790, 60);
             this.lbl_CustomersManager.TabIndex = 7;
-            this.lbl_CustomersManager.Text = "Quản lý khách hàng";
+            this.lbl_CustomersManager.Text = "Khách hàng";
             this.lbl_CustomersManager.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_Add
@@ -93,7 +93,6 @@
             this.btn_Add.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_Add.UseAccentColor = false;
             this.btn_Add.UseVisualStyleBackColor = true;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Search
             // 

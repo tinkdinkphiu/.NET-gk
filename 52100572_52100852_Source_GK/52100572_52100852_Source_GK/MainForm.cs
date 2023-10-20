@@ -55,6 +55,10 @@ namespace _52100572_52100852_Source_GK
                     CustomersManager customersManagerForm = new CustomersManager();
                     EmbedFormInTabPage(customersManagerForm, tab_Customer);
                     break;
+                case 3:
+                    Bill billForm = new Bill();
+                    EmbedFormInTabPage(billForm, tab_Bill);
+                    break;
             }
         }
     }

@@ -26,11 +26,6 @@ namespace _52100572_52100852_Source_GK
 
         }
 
-        private void btn_Add_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CustomersManager_Load(object sender, EventArgs e)
         {
             List<KhachHangDTO> data = KhachHangBUS.Instance.GetKhachHangList();
