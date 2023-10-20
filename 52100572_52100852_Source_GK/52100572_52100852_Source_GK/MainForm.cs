@@ -43,22 +43,33 @@ namespace _52100572_52100852_Source_GK
         {
             switch (menuControl.SelectedIndex)
             {
-                case 0: // Click vào trang chủ
-                    //CarRental carRentalForm = new CarRental();
-                    //EmbedFormInTabPage(carRentalForm, tab_home);
+                case 0: // Trang chủ
+                    // Trang chủ
                     break;
-                case 1: // Click vào quản lý xe
+                case 1: // Quản lý xe
                     CarsManager carsManagerForm = new CarsManager();
                     EmbedFormInTabPage(carsManagerForm, tab_CarsManager);
                     break;
-                case 2:
+                case 2: // Quản lý khách hàng
                     CustomersManager customersManagerForm = new CustomersManager();
                     EmbedFormInTabPage(customersManagerForm, tab_Customer);
                     break;
-                case 3:
+                case 3: // Đơn đặt xe
                     Bill billForm = new Bill();
                     EmbedFormInTabPage(billForm, tab_Bill);
                     break;
+                case 4: // Lịch trình
+                    Schedule scheduleForm = new Schedule();
+                    EmbedFormInTabPage(scheduleForm, tab_Schedule);
+                    break;
+                case 5: // Báo cáo thống kê
+                    // Báo cáo thống kê
+                    break;
+                case 6: // Quản lý nhân viên
+                    EmployeesManager employeesManagerForm = new EmployeesManager();
+                    EmbedFormInTabPage(employeesManagerForm, tab_Admin);
+                    break;
+                default: break;
             }
         }
     }

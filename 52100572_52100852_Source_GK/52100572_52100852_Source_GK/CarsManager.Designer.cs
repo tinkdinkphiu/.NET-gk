@@ -84,7 +84,6 @@
             this.btn_Search.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_Search.UseAccentColor = false;
             this.btn_Search.UseVisualStyleBackColor = true;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Searh_Click);
             // 
             // btn_Add
             // 
