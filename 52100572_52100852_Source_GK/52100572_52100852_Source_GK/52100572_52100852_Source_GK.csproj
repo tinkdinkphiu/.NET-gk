@@ -223,6 +223,7 @@
     </Compile>
     <Compile Include="Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
+	</Compile>
     <Compile Include="BillDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +283,7 @@
     </Compile>
     <EmbeddedResource Include="Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillDetail.resx">
       <DependentUpon>BillDetail.cs</DependentUpon>
     </EmbeddedResource>
