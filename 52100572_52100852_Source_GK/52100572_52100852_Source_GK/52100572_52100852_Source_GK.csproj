@@ -218,6 +218,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillDetail.Designer.cs">
+      <DependentUpon>BillDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarDetail.Designer.cs">
+      <DependentUpon>CarDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarRental.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +256,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BillDetail.resx">
+      <DependentUpon>BillDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarDetail.resx">
+      <DependentUpon>CarDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarRental.resx">
       <DependentUpon>CarRental.cs</DependentUpon>
     </EmbeddedResource>
