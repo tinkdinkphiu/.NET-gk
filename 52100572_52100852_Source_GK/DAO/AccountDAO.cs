@@ -10,6 +10,17 @@ namespace DAO
 {
     public class AccountDAO
     {
+        private static AccountDAO instance;
+
+        public static AccountDAO Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new AccountDAO();
+                return instance;
+            }
+        }
         public AccountDTO GetAccountByUsername(string username)
         {
             string query = "SELECT * FROM Account WHERE Username = @Username";

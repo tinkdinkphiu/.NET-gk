@@ -24,7 +24,7 @@ namespace DAO
         }
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=DESKTOP-BKTUHMP;Initial Catalog=IIEXCinema;Integrated Security=True";
+        private string connectionSTR = "Data Source=DESKTOP-HOMSRBG\\SQLEXPRESS;Initial Catalog=CarRentalDB;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

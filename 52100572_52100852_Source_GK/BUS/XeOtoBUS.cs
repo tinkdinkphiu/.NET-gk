@@ -10,11 +10,18 @@ namespace BUS
 {
     public class XeOtoBUS
     {
-        private XeOtoDAO xeOtoDAO;
+        private XeOtoDAO xeOtoDAO = XeOtoDAO.Instance;
 
-        public XeOtoBUS()
+        private static XeOtoBUS instance;
+
+        public static XeOtoBUS Instance
         {
-            xeOtoDAO = XeOtoDAO.Instance;
+            get
+            {
+                if (instance == null)
+                    instance = new XeOtoBUS();
+                return instance;
+            }
         }
 
         public List<XeOtoDTO> GetXeOtoList()
