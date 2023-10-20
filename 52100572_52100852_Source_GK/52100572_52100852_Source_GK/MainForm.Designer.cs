@@ -86,7 +86,6 @@ namespace _52100572_52100852_Source_GK
             this.tab_home.Size = new System.Drawing.Size(966, 536);
             this.tab_home.TabIndex = 0;
             this.tab_home.Text = "Trang chủ";
-            this.tab_home.Click += new System.EventHandler(this.tab_home_Click);
             // 
             // tab_carsManager
             // 
