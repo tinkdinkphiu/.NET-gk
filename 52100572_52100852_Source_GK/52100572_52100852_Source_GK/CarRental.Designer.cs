@@ -68,15 +68,14 @@
             // 
             // lbl_cartype
             // 
-            this.lbl_cartype.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_cartype.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_cartype.Depth = 0;
             this.lbl_cartype.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_cartype.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.lbl_cartype.Location = new System.Drawing.Point(0, 60);
+            this.lbl_cartype.Location = new System.Drawing.Point(12, 16);
             this.lbl_cartype.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_cartype.Name = "lbl_cartype";
-            this.lbl_cartype.Size = new System.Drawing.Size(744, 29);
+            this.lbl_cartype.Size = new System.Drawing.Size(720, 29);
             this.lbl_cartype.TabIndex = 0;
             this.lbl_cartype.Text = "Loại xe";
             this.lbl_cartype.TextAlign = System.Drawing.ContentAlignment.TopCenter;
