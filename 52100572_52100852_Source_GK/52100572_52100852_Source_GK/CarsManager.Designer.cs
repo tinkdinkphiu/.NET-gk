@@ -28,37 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.lbl_carsManager = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
-            // materialLabel1
+            // lbl_carsManager
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(142, 253);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(27, 19);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "hihi";
+            this.lbl_carsManager.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_carsManager.Depth = 0;
+            this.lbl_carsManager.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_carsManager.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
+            this.lbl_carsManager.Location = new System.Drawing.Point(12, 16);
+            this.lbl_carsManager.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_carsManager.Name = "lbl_carsManager";
+            this.lbl_carsManager.Size = new System.Drawing.Size(818, 29);
+            this.lbl_carsManager.TabIndex = 0;
+            this.lbl_carsManager.Text = "Quản lý xe";
+            this.lbl_carsManager.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CarsManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.materialLabel1);
+            this.ClientSize = new System.Drawing.Size(842, 495);
+            this.Controls.Add(this.lbl_carsManager);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CarsManager";
             this.Text = "CarsManager";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel lbl_carsManager;
     }
 }

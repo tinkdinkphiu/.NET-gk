@@ -72,10 +72,10 @@
             this.lbl_cartype.Depth = 0;
             this.lbl_cartype.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_cartype.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.lbl_cartype.Location = new System.Drawing.Point(6, 88);
+            this.lbl_cartype.Location = new System.Drawing.Point(12, 16);
             this.lbl_cartype.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_cartype.Name = "lbl_cartype";
-            this.lbl_cartype.Size = new System.Drawing.Size(732, 29);
+            this.lbl_cartype.Size = new System.Drawing.Size(720, 29);
             this.lbl_cartype.TabIndex = 0;
             this.lbl_cartype.Text = "Loại xe";
             this.lbl_cartype.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -309,6 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(744, 600);
             this.Controls.Add(this.lvl_truck);
             this.Controls.Add(this.lvl_mpv);

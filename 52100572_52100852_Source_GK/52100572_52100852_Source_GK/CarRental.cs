@@ -28,10 +28,5 @@ namespace _52100572_52100852_Source_GK
         {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
