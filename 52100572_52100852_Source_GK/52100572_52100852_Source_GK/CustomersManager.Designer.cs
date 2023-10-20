@@ -48,11 +48,12 @@
             this.lv_CustomersManager.HideSelection = false;
             this.lv_CustomersManager.Location = new System.Drawing.Point(24, 134);
             this.lv_CustomersManager.Margin = new System.Windows.Forms.Padding(2);
+            this.lv_CustomersManager.MinimumSize = new System.Drawing.Size(200, 100);
             this.lv_CustomersManager.MouseLocation = new System.Drawing.Point(-1, -1);
             this.lv_CustomersManager.MouseState = MaterialSkin.MouseState.OUT;
             this.lv_CustomersManager.Name = "lv_CustomersManager";
             this.lv_CustomersManager.OwnerDraw = true;
-            this.lv_CustomersManager.Size = new System.Drawing.Size(742, 341);
+            this.lv_CustomersManager.Size = new System.Drawing.Size(742, 342);
             this.lv_CustomersManager.TabIndex = 6;
             this.lv_CustomersManager.UseCompatibleStateImageBehavior = false;
             this.lv_CustomersManager.View = System.Windows.Forms.View.Details;
@@ -92,6 +93,7 @@
             this.btn_Add.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_Add.UseAccentColor = false;
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Search
             // 
@@ -147,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 499);
+            this.ClientSize = new System.Drawing.Size(790, 500);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_Search);
@@ -156,6 +158,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomersManager";
             this.Text = "CustomersManager";
+            this.Load += new System.EventHandler(this.CustomersManager_Load);
             this.ResumeLayout(false);
 
         }

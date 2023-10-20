@@ -28,26 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_CarsManager = new MaterialSkin.Controls.MaterialLabel();
             this.txt_Search = new MaterialSkin.Controls.MaterialTextBox2();
             this.btn_Search = new MaterialSkin.Controls.MaterialButton();
             this.btn_Add = new MaterialSkin.Controls.MaterialButton();
             this.lv_CarsManager = new MaterialSkin.Controls.MaterialListView();
+            this.lbl_CarsManager = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
-            // 
-            // lbl_CarsManager
-            // 
-            this.lbl_CarsManager.Depth = 0;
-            this.lbl_CarsManager.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_CarsManager.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_CarsManager.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.lbl_CarsManager.Location = new System.Drawing.Point(0, 0);
-            this.lbl_CarsManager.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbl_CarsManager.Name = "lbl_CarsManager";
-            this.lbl_CarsManager.Size = new System.Drawing.Size(842, 60);
-            this.lbl_CarsManager.TabIndex = 0;
-            this.lbl_CarsManager.Text = "Quản lý xe";
-            this.lbl_CarsManager.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_Search
             // 
@@ -59,7 +45,7 @@
             this.txt_Search.HideSelection = true;
             this.txt_Search.Hint = "Nhập từ khóa tìm kiếm";
             this.txt_Search.LeadingIcon = null;
-            this.txt_Search.Location = new System.Drawing.Point(11, 64);
+            this.txt_Search.Location = new System.Drawing.Point(24, 62);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Search.MaxLength = 32767;
             this.txt_Search.MouseState = MaterialSkin.MouseState.OUT;
@@ -72,7 +58,7 @@
             this.txt_Search.SelectionLength = 0;
             this.txt_Search.SelectionStart = 0;
             this.txt_Search.ShortcutsEnabled = true;
-            this.txt_Search.Size = new System.Drawing.Size(142, 48);
+            this.txt_Search.Size = new System.Drawing.Size(200, 48);
             this.txt_Search.TabIndex = 1;
             this.txt_Search.TabStop = false;
             this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -81,17 +67,18 @@
             // 
             // btn_Search
             // 
+            this.btn_Search.AutoSize = false;
             this.btn_Search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_Search.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btn_Search.Depth = 0;
             this.btn_Search.HighEmphasis = true;
             this.btn_Search.Icon = null;
-            this.btn_Search.Location = new System.Drawing.Point(174, 67);
+            this.btn_Search.Location = new System.Drawing.Point(240, 65);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Search.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Search.Size = new System.Drawing.Size(86, 36);
+            this.btn_Search.Size = new System.Drawing.Size(100, 40);
             this.btn_Search.TabIndex = 2;
             this.btn_Search.Text = "Tìm kiếm";
             this.btn_Search.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -101,17 +88,19 @@
             // 
             // btn_Add
             // 
+            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Add.AutoSize = false;
             this.btn_Add.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_Add.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btn_Add.Depth = 0;
             this.btn_Add.HighEmphasis = true;
             this.btn_Add.Icon = null;
-            this.btn_Add.Location = new System.Drawing.Point(256, 67);
+            this.btn_Add.Location = new System.Drawing.Point(616, 65);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Add.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Add.Size = new System.Drawing.Size(93, 36);
+            this.btn_Add.Size = new System.Drawing.Size(150, 40);
             this.btn_Add.TabIndex = 3;
             this.btn_Add.Text = "Thêm mới";
             this.btn_Add.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -120,29 +109,47 @@
             // 
             // lv_CarsManager
             // 
+            this.lv_CarsManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lv_CarsManager.AutoSizeTable = false;
             this.lv_CarsManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lv_CarsManager.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lv_CarsManager.Depth = 0;
             this.lv_CarsManager.FullRowSelect = true;
             this.lv_CarsManager.HideSelection = false;
-            this.lv_CarsManager.Location = new System.Drawing.Point(12, 117);
+            this.lv_CarsManager.Location = new System.Drawing.Point(24, 134);
             this.lv_CarsManager.Margin = new System.Windows.Forms.Padding(2);
-            this.lv_CarsManager.MinimumSize = new System.Drawing.Size(150, 81);
+            this.lv_CarsManager.MinimumSize = new System.Drawing.Size(200, 100);
             this.lv_CarsManager.MouseLocation = new System.Drawing.Point(-1, -1);
             this.lv_CarsManager.MouseState = MaterialSkin.MouseState.OUT;
             this.lv_CarsManager.Name = "lv_CarsManager";
             this.lv_CarsManager.OwnerDraw = true;
-            this.lv_CarsManager.Size = new System.Drawing.Size(818, 366);
+            this.lv_CarsManager.Size = new System.Drawing.Size(742, 342);
             this.lv_CarsManager.TabIndex = 4;
             this.lv_CarsManager.UseCompatibleStateImageBehavior = false;
             this.lv_CarsManager.View = System.Windows.Forms.View.Details;
+            // 
+            // lbl_CarsManager
+            // 
+            this.lbl_CarsManager.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CarsManager.Depth = 0;
+            this.lbl_CarsManager.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_CarsManager.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
+            this.lbl_CarsManager.Location = new System.Drawing.Point(0, 0);
+            this.lbl_CarsManager.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_CarsManager.Name = "lbl_CarsManager";
+            this.lbl_CarsManager.Size = new System.Drawing.Size(790, 60);
+            this.lbl_CarsManager.TabIndex = 0;
+            this.lbl_CarsManager.Text = "Quản lý xe";
+            this.lbl_CarsManager.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CarsManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 495);
+            this.ClientSize = new System.Drawing.Size(790, 500);
             this.Controls.Add(this.lv_CarsManager);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Search);
@@ -153,16 +160,14 @@
             this.Text = "CarsManager";
             this.Load += new System.EventHandler(this.CarsManager_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialLabel lbl_CarsManager;
         private MaterialSkin.Controls.MaterialTextBox2 txt_Search;
         private MaterialSkin.Controls.MaterialButton btn_Search;
         private MaterialSkin.Controls.MaterialButton btn_Add;
         private MaterialSkin.Controls.MaterialListView lv_CarsManager;
+        private MaterialSkin.Controls.MaterialLabel lbl_CarsManager;
     }
 }

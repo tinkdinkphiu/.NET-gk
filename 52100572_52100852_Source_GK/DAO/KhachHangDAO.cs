@@ -43,6 +43,31 @@ namespace DAO
             return khachHangList;
         }
 
+        public KhachHangDTO GetKhachHangByID(int khachHangID)
+        {
+            string query = "SELECT * FROM KhachHang WHERE KhachHangID = @KhachHangID";
+            object[] parameters = { khachHangID };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
+
+            if(data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                KhachHangDTO khachHang = new KhachHangDTO
+                {
+                    KhachHangID = Convert.ToInt32(row["KhachHangID"]),
+                    Ten = row["Ten"].ToString(),
+                    SoDienThoai = row["SoDienThoai"].ToString(),
+                    DiaChi = row["DiaChi"].ToString(),
+                    Email = row["Email"].ToString()
+                };
+                return khachHang;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public bool AddKhachHang(KhachHangDTO khachHang)
         {
             string query = "INSERT INTO KhachHang (Ten, SoDienThoai, DiaChi, Email) " +
