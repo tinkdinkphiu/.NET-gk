@@ -18,59 +18,12 @@ namespace _52100572_52100852_Source_GK
         public MainForm()
         {
             InitializeComponent();
-        }
 
-        private Form currentFormChild;
-        private void OpenChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
-            currentFormChild = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panel_body.Controls.Add(childForm);
-            panel_body.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
-        private void sideBarTimer_Tick(object sender, EventArgs e)
-        {
-            if(sidebarExpand)
-            {
-                sideBar.Width -= 10;
-                if(sideBar.Width == sideBar.MinimumSize.Width)
-                {
-                    sidebarExpand = false;
-                    sideBarTimer.Stop();
-                }
-            } else
-            {
-                sideBar.Width += 10;
-                if(sideBar.Width == sideBar.MaximumSize.Width)
-                {
-                    sidebarExpand = true;
-                    sideBarTimer.Stop();
-                }
-            }
-        }
-
-        private void btn_menu_Click(object sender, EventArgs e)
-        {
-            sideBarTimer.Start();
-        }
-
-        private void btn_home_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new CarRental());
-        }
-
-        private void btn_carList_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new CarsManager());
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.EnforceBackcolorOnAllComponents = true;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Blue700, TextShade.WHITE);
         }
     }
 }

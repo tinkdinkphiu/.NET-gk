@@ -154,6 +154,7 @@ namespace _52100572_52100852_Source_GK
             this.Controls.Add(this.input_username);
             this.Controls.Add(this.lbl_username);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
