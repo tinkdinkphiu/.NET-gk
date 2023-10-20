@@ -38,6 +38,18 @@
             this.lbl_sedan = new MaterialSkin.Controls.MaterialLabel();
             this.pb_sedan = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.pn_truck = new System.Windows.Forms.Panel();
+            this.pn_inner_truck = new System.Windows.Forms.Panel();
+            this.lbl_truck = new MaterialSkin.Controls.MaterialLabel();
+            this.pb_truck = new System.Windows.Forms.PictureBox();
+            this.pn_mpv = new System.Windows.Forms.Panel();
+            this.pn_inner_mpv = new System.Windows.Forms.Panel();
+            this.lbl_mpv = new MaterialSkin.Controls.MaterialLabel();
+            this.pb_mpv = new System.Windows.Forms.PictureBox();
+            this.pn_suv = new System.Windows.Forms.Panel();
+            this.pn_inner_suv = new System.Windows.Forms.Panel();
+            this.lbl_suv = new MaterialSkin.Controls.MaterialLabel();
+            this.pb_suv = new System.Windows.Forms.PictureBox();
             this.pn_hatchback = new System.Windows.Forms.Panel();
             this.pn_inner_hatchback = new System.Windows.Forms.Panel();
             this.lbl_hatchback = new MaterialSkin.Controls.MaterialLabel();
@@ -46,18 +58,6 @@
             this.pn_inner_cuv = new System.Windows.Forms.Panel();
             this.lbl_cuv = new MaterialSkin.Controls.MaterialLabel();
             this.pb_cuv = new System.Windows.Forms.PictureBox();
-            this.pn_suv = new System.Windows.Forms.Panel();
-            this.pn_inner_suv = new System.Windows.Forms.Panel();
-            this.lbl_suv = new MaterialSkin.Controls.MaterialLabel();
-            this.pb_suv = new System.Windows.Forms.PictureBox();
-            this.pn_mpv = new System.Windows.Forms.Panel();
-            this.pn_inner_mpv = new System.Windows.Forms.Panel();
-            this.lbl_mpv = new MaterialSkin.Controls.MaterialLabel();
-            this.pb_mpv = new System.Windows.Forms.PictureBox();
-            this.pn_truck = new System.Windows.Forms.Panel();
-            this.pn_inner_truck = new System.Windows.Forms.Panel();
-            this.lbl_truck = new MaterialSkin.Controls.MaterialLabel();
-            this.pb_truck = new System.Windows.Forms.PictureBox();
             this.pn_mini.SuspendLayout();
             this.pn_inner_mini.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_mini)).BeginInit();
@@ -65,21 +65,21 @@
             this.pn_inner_sedan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_sedan)).BeginInit();
             this.tableLayoutPanel.SuspendLayout();
+            this.pn_truck.SuspendLayout();
+            this.pn_inner_truck.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_truck)).BeginInit();
+            this.pn_mpv.SuspendLayout();
+            this.pn_inner_mpv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_mpv)).BeginInit();
+            this.pn_suv.SuspendLayout();
+            this.pn_inner_suv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_suv)).BeginInit();
             this.pn_hatchback.SuspendLayout();
             this.pn_inner_hatchback.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_hatchback)).BeginInit();
             this.pn_cuv.SuspendLayout();
             this.pn_inner_cuv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cuv)).BeginInit();
-            this.pn_suv.SuspendLayout();
-            this.pn_inner_suv.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_suv)).BeginInit();
-            this.pn_mpv.SuspendLayout();
-            this.pn_inner_mpv.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_mpv)).BeginInit();
-            this.pn_truck.SuspendLayout();
-            this.pn_inner_truck.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_truck)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_cartype
@@ -95,7 +95,6 @@
             this.lbl_cartype.TabIndex = 0;
             this.lbl_cartype.Text = "Loại xe";
             this.lbl_cartype.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_cartype.Click += new System.EventHandler(this.lbl_cartype_Click);
             // 
             // pn_mini
             // 
@@ -208,6 +207,138 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(955, 626);
             this.tableLayoutPanel.TabIndex = 25;
             // 
+            // pn_truck
+            // 
+            this.pn_truck.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pn_truck.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
+            this.pn_truck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pn_truck.Controls.Add(this.pn_inner_truck);
+            this.pn_truck.Location = new System.Drawing.Point(515, 389);
+            this.pn_truck.Name = "pn_truck";
+            this.pn_truck.Size = new System.Drawing.Size(160, 160);
+            this.pn_truck.TabIndex = 28;
+            // 
+            // pn_inner_truck
+            // 
+            this.pn_inner_truck.Controls.Add(this.lbl_truck);
+            this.pn_inner_truck.Controls.Add(this.pb_truck);
+            this.pn_inner_truck.Location = new System.Drawing.Point(5, 5);
+            this.pn_inner_truck.Name = "pn_inner_truck";
+            this.pn_inner_truck.Size = new System.Drawing.Size(150, 150);
+            this.pn_inner_truck.TabIndex = 23;
+            // 
+            // lbl_truck
+            // 
+            this.lbl_truck.Depth = 0;
+            this.lbl_truck.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_truck.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_truck.Location = new System.Drawing.Point(0, 75);
+            this.lbl_truck.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_truck.Name = "lbl_truck";
+            this.lbl_truck.Size = new System.Drawing.Size(150, 75);
+            this.lbl_truck.TabIndex = 24;
+            this.lbl_truck.Text = "Bán tải";
+            this.lbl_truck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pb_truck
+            // 
+            this.pb_truck.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pb_truck.Image = global::_52100572_52100852_Source_GK.Properties.Resources.pickup;
+            this.pb_truck.Location = new System.Drawing.Point(0, 0);
+            this.pb_truck.Name = "pb_truck";
+            this.pb_truck.Size = new System.Drawing.Size(150, 75);
+            this.pb_truck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_truck.TabIndex = 23;
+            this.pb_truck.TabStop = false;
+            // 
+            // pn_mpv
+            // 
+            this.pn_mpv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pn_mpv.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
+            this.pn_mpv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pn_mpv.Controls.Add(this.pn_inner_mpv);
+            this.pn_mpv.Location = new System.Drawing.Point(277, 389);
+            this.pn_mpv.Name = "pn_mpv";
+            this.pn_mpv.Size = new System.Drawing.Size(160, 160);
+            this.pn_mpv.TabIndex = 27;
+            // 
+            // pn_inner_mpv
+            // 
+            this.pn_inner_mpv.Controls.Add(this.lbl_mpv);
+            this.pn_inner_mpv.Controls.Add(this.pb_mpv);
+            this.pn_inner_mpv.Location = new System.Drawing.Point(5, 5);
+            this.pn_inner_mpv.Name = "pn_inner_mpv";
+            this.pn_inner_mpv.Size = new System.Drawing.Size(150, 150);
+            this.pn_inner_mpv.TabIndex = 23;
+            // 
+            // lbl_mpv
+            // 
+            this.lbl_mpv.Depth = 0;
+            this.lbl_mpv.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_mpv.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_mpv.Location = new System.Drawing.Point(0, 75);
+            this.lbl_mpv.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_mpv.Name = "lbl_mpv";
+            this.lbl_mpv.Size = new System.Drawing.Size(150, 75);
+            this.lbl_mpv.TabIndex = 24;
+            this.lbl_mpv.Text = "7 chỗ (MPV gầm thấp)";
+            this.lbl_mpv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pb_mpv
+            // 
+            this.pb_mpv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pb_mpv.Image = global::_52100572_52100852_Source_GK.Properties.Resources.mpv;
+            this.pb_mpv.Location = new System.Drawing.Point(0, 0);
+            this.pb_mpv.Name = "pb_mpv";
+            this.pb_mpv.Size = new System.Drawing.Size(150, 75);
+            this.pb_mpv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_mpv.TabIndex = 23;
+            this.pb_mpv.TabStop = false;
+            // 
+            // pn_suv
+            // 
+            this.pn_suv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pn_suv.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
+            this.pn_suv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pn_suv.Controls.Add(this.pn_inner_suv);
+            this.pn_suv.Location = new System.Drawing.Point(39, 389);
+            this.pn_suv.Name = "pn_suv";
+            this.pn_suv.Size = new System.Drawing.Size(160, 160);
+            this.pn_suv.TabIndex = 26;
+            // 
+            // pn_inner_suv
+            // 
+            this.pn_inner_suv.Controls.Add(this.lbl_suv);
+            this.pn_inner_suv.Controls.Add(this.pb_suv);
+            this.pn_inner_suv.Location = new System.Drawing.Point(5, 5);
+            this.pn_inner_suv.Name = "pn_inner_suv";
+            this.pn_inner_suv.Size = new System.Drawing.Size(150, 150);
+            this.pn_inner_suv.TabIndex = 23;
+            // 
+            // lbl_suv
+            // 
+            this.lbl_suv.Depth = 0;
+            this.lbl_suv.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_suv.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_suv.Location = new System.Drawing.Point(0, 75);
+            this.lbl_suv.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_suv.Name = "lbl_suv";
+            this.lbl_suv.Size = new System.Drawing.Size(150, 75);
+            this.lbl_suv.TabIndex = 24;
+            this.lbl_suv.Text = "7 chỗ (SUV gầm cao)";
+            this.lbl_suv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pb_suv
+            // 
+            this.pb_suv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pb_suv.Image = global::_52100572_52100852_Source_GK.Properties.Resources.suv;
+            this.pb_suv.Location = new System.Drawing.Point(0, 0);
+            this.pb_suv.Name = "pb_suv";
+            this.pb_suv.Size = new System.Drawing.Size(150, 75);
+            this.pb_suv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_suv.TabIndex = 23;
+            this.pb_suv.TabStop = false;
+            // 
             // pn_hatchback
             // 
             this.pn_hatchback.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -296,138 +427,6 @@
             this.pb_cuv.TabIndex = 23;
             this.pb_cuv.TabStop = false;
             // 
-            // pn_suv
-            // 
-            this.pn_suv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pn_suv.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
-            this.pn_suv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pn_suv.Controls.Add(this.pn_inner_suv);
-            this.pn_suv.Location = new System.Drawing.Point(39, 389);
-            this.pn_suv.Name = "pn_suv";
-            this.pn_suv.Size = new System.Drawing.Size(160, 160);
-            this.pn_suv.TabIndex = 26;
-            // 
-            // pn_inner_suv
-            // 
-            this.pn_inner_suv.Controls.Add(this.lbl_suv);
-            this.pn_inner_suv.Controls.Add(this.pb_suv);
-            this.pn_inner_suv.Location = new System.Drawing.Point(5, 5);
-            this.pn_inner_suv.Name = "pn_inner_suv";
-            this.pn_inner_suv.Size = new System.Drawing.Size(150, 150);
-            this.pn_inner_suv.TabIndex = 23;
-            // 
-            // lbl_suv
-            // 
-            this.lbl_suv.Depth = 0;
-            this.lbl_suv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_suv.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_suv.Location = new System.Drawing.Point(0, 75);
-            this.lbl_suv.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbl_suv.Name = "lbl_suv";
-            this.lbl_suv.Size = new System.Drawing.Size(150, 75);
-            this.lbl_suv.TabIndex = 24;
-            this.lbl_suv.Text = "7 chỗ (SUV gầm cao)";
-            this.lbl_suv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb_suv
-            // 
-            this.pb_suv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pb_suv.Image = global::_52100572_52100852_Source_GK.Properties.Resources.suv;
-            this.pb_suv.Location = new System.Drawing.Point(0, 0);
-            this.pb_suv.Name = "pb_suv";
-            this.pb_suv.Size = new System.Drawing.Size(150, 75);
-            this.pb_suv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_suv.TabIndex = 23;
-            this.pb_suv.TabStop = false;
-            // 
-            // pn_mpv
-            // 
-            this.pn_mpv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pn_mpv.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
-            this.pn_mpv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pn_mpv.Controls.Add(this.pn_inner_mpv);
-            this.pn_mpv.Location = new System.Drawing.Point(277, 389);
-            this.pn_mpv.Name = "pn_mpv";
-            this.pn_mpv.Size = new System.Drawing.Size(160, 160);
-            this.pn_mpv.TabIndex = 27;
-            // 
-            // pn_inner_mpv
-            // 
-            this.pn_inner_mpv.Controls.Add(this.lbl_mpv);
-            this.pn_inner_mpv.Controls.Add(this.pb_mpv);
-            this.pn_inner_mpv.Location = new System.Drawing.Point(5, 5);
-            this.pn_inner_mpv.Name = "pn_inner_mpv";
-            this.pn_inner_mpv.Size = new System.Drawing.Size(150, 150);
-            this.pn_inner_mpv.TabIndex = 23;
-            // 
-            // lbl_mpv
-            // 
-            this.lbl_mpv.Depth = 0;
-            this.lbl_mpv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_mpv.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_mpv.Location = new System.Drawing.Point(0, 75);
-            this.lbl_mpv.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbl_mpv.Name = "lbl_mpv";
-            this.lbl_mpv.Size = new System.Drawing.Size(150, 75);
-            this.lbl_mpv.TabIndex = 24;
-            this.lbl_mpv.Text = "7 chỗ (MPV gầm thấp)";
-            this.lbl_mpv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb_mpv
-            // 
-            this.pb_mpv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pb_mpv.Image = global::_52100572_52100852_Source_GK.Properties.Resources.mpv;
-            this.pb_mpv.Location = new System.Drawing.Point(0, 0);
-            this.pb_mpv.Name = "pb_mpv";
-            this.pb_mpv.Size = new System.Drawing.Size(150, 75);
-            this.pb_mpv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_mpv.TabIndex = 23;
-            this.pb_mpv.TabStop = false;
-            // 
-            // pn_truck
-            // 
-            this.pn_truck.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pn_truck.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
-            this.pn_truck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pn_truck.Controls.Add(this.pn_inner_truck);
-            this.pn_truck.Location = new System.Drawing.Point(515, 389);
-            this.pn_truck.Name = "pn_truck";
-            this.pn_truck.Size = new System.Drawing.Size(160, 160);
-            this.pn_truck.TabIndex = 28;
-            // 
-            // pn_inner_truck
-            // 
-            this.pn_inner_truck.Controls.Add(this.lbl_truck);
-            this.pn_inner_truck.Controls.Add(this.pb_truck);
-            this.pn_inner_truck.Location = new System.Drawing.Point(5, 5);
-            this.pn_inner_truck.Name = "pn_inner_truck";
-            this.pn_inner_truck.Size = new System.Drawing.Size(150, 150);
-            this.pn_inner_truck.TabIndex = 23;
-            // 
-            // lbl_truck
-            // 
-            this.lbl_truck.Depth = 0;
-            this.lbl_truck.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_truck.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_truck.Location = new System.Drawing.Point(0, 75);
-            this.lbl_truck.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbl_truck.Name = "lbl_truck";
-            this.lbl_truck.Size = new System.Drawing.Size(150, 75);
-            this.lbl_truck.TabIndex = 24;
-            this.lbl_truck.Text = "Bán tải";
-            this.lbl_truck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb_truck
-            // 
-            this.pb_truck.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pb_truck.Image = global::_52100572_52100852_Source_GK.Properties.Resources.pickup;
-            this.pb_truck.Location = new System.Drawing.Point(0, 0);
-            this.pb_truck.Name = "pb_truck";
-            this.pb_truck.Size = new System.Drawing.Size(150, 75);
-            this.pb_truck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_truck.TabIndex = 23;
-            this.pb_truck.TabStop = false;
-            // 
             // CarRental
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,21 +446,21 @@
             this.pn_inner_sedan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_sedan)).EndInit();
             this.tableLayoutPanel.ResumeLayout(false);
+            this.pn_truck.ResumeLayout(false);
+            this.pn_inner_truck.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_truck)).EndInit();
+            this.pn_mpv.ResumeLayout(false);
+            this.pn_inner_mpv.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_mpv)).EndInit();
+            this.pn_suv.ResumeLayout(false);
+            this.pn_inner_suv.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_suv)).EndInit();
             this.pn_hatchback.ResumeLayout(false);
             this.pn_inner_hatchback.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_hatchback)).EndInit();
             this.pn_cuv.ResumeLayout(false);
             this.pn_inner_cuv.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_cuv)).EndInit();
-            this.pn_suv.ResumeLayout(false);
-            this.pn_inner_suv.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_suv)).EndInit();
-            this.pn_mpv.ResumeLayout(false);
-            this.pn_inner_mpv.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_mpv)).EndInit();
-            this.pn_truck.ResumeLayout(false);
-            this.pn_inner_truck.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_truck)).EndInit();
             this.ResumeLayout(false);
 
         }

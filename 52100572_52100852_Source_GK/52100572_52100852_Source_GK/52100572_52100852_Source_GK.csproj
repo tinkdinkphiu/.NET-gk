@@ -230,6 +230,12 @@
     <Compile Include="CarsManager.Designer.cs">
       <DependentUpon>CarsManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomersManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersManager.Designer.cs">
+      <DependentUpon>CustomersManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,12 +248,6 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Preserve.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Preserve.Designer.cs">
-      <DependentUpon>Preserve.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CarRental.resx">
@@ -256,14 +256,14 @@
     <EmbeddedResource Include="CarsManager.resx">
       <DependentUpon>CarsManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomersManager.resx">
+      <DependentUpon>CustomersManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Preserve.resx">
-      <DependentUpon>Preserve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

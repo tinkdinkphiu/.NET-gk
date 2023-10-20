@@ -25,8 +25,9 @@ namespace _52100572_52100852_Source_GK
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Blue700, TextShade.WHITE);
         
+            // Khởi tạo lúc vừa chạy form
             CarRental carRentalForm = new CarRental();
-            EmbedFormInTabPage(carRentalForm, tab_home);
+            EmbedFormInTabPage(carRentalForm, tab_Home);
         }
 
         private void EmbedFormInTabPage(Form childForm, TabPage tabPage)
@@ -34,7 +35,7 @@ namespace _52100572_52100852_Source_GK
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            //tabPage.Controls.Clear();  // Clear previous controls/forms from the tab page
+            //tabPage.Controls.Clear();  // Xóa controls/forms cũ khỏi tab
             tabPage.Controls.Add(childForm);
             childForm.Show();
         }
@@ -42,13 +43,17 @@ namespace _52100572_52100852_Source_GK
         {
             switch (menuControl.SelectedIndex)
             {
-                case 0:
+                case 0: // Click vào trang chủ
                     //CarRental carRentalForm = new CarRental();
                     //EmbedFormInTabPage(carRentalForm, tab_home);
                     break;
-                case 1:
+                case 1: // Click vào quản lý xe
                     CarsManager carsManagerForm = new CarsManager();
-                    EmbedFormInTabPage(carsManagerForm, tab_carsManager);
+                    EmbedFormInTabPage(carsManagerForm, tab_CarsManager);
+                    break;
+                case 2:
+                    CustomersManager customersManagerForm = new CustomersManager();
+                    EmbedFormInTabPage(customersManagerForm, tab_Customer);
                     break;
             }
         }
