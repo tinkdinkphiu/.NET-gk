@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
@@ -27,25 +28,10 @@ namespace _52100572_52100852_Source_GK
             materialSkinManager.ColorScheme = new ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Blue700, TextShade.WHITE);
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_login_Click(object sender, EventArgs e)
         {
             mainForm.Show();
             this.Hide();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void input_password_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

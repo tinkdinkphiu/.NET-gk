@@ -7,14 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin;
-using MaterialSkin.Controls;
 
 namespace _52100572_52100852_Source_GK
 {
-    public partial class CarRental : Form
+    public partial class EmployeesManager : Form
     {
-        public CarRental()
+        public EmployeesManager()
         {
             InitializeComponent();
         }

@@ -34,13 +34,13 @@ namespace _52100572_52100852_Source_GK
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel_body = new System.Windows.Forms.Panel();
             this.menuControl = new MaterialSkin.Controls.MaterialTabControl();
-            this.tab_home = new System.Windows.Forms.TabPage();
-            this.tab_carsManager = new System.Windows.Forms.TabPage();
-            this.tab_customer = new System.Windows.Forms.TabPage();
-            this.tab_bill = new System.Windows.Forms.TabPage();
-            this.tab_schedule = new System.Windows.Forms.TabPage();
-            this.tab_statistic = new System.Windows.Forms.TabPage();
-            this.tab_admin = new System.Windows.Forms.TabPage();
+            this.tab_Home = new System.Windows.Forms.TabPage();
+            this.tab_CarsManager = new System.Windows.Forms.TabPage();
+            this.tab_Customer = new System.Windows.Forms.TabPage();
+            this.tab_Bill = new System.Windows.Forms.TabPage();
+            this.tab_Schedule = new System.Windows.Forms.TabPage();
+            this.tab_Statistic = new System.Windows.Forms.TabPage();
+            this.tab_Admin = new System.Windows.Forms.TabPage();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.panel_body.SuspendLayout();
             this.menuControl.SuspendLayout();
@@ -57,13 +57,13 @@ namespace _52100572_52100852_Source_GK
             // 
             // menuControl
             // 
-            this.menuControl.Controls.Add(this.tab_home);
-            this.menuControl.Controls.Add(this.tab_carsManager);
-            this.menuControl.Controls.Add(this.tab_customer);
-            this.menuControl.Controls.Add(this.tab_bill);
-            this.menuControl.Controls.Add(this.tab_schedule);
-            this.menuControl.Controls.Add(this.tab_statistic);
-            this.menuControl.Controls.Add(this.tab_admin);
+            this.menuControl.Controls.Add(this.tab_Home);
+            this.menuControl.Controls.Add(this.tab_CarsManager);
+            this.menuControl.Controls.Add(this.tab_Customer);
+            this.menuControl.Controls.Add(this.tab_Bill);
+            this.menuControl.Controls.Add(this.tab_Schedule);
+            this.menuControl.Controls.Add(this.tab_Statistic);
+            this.menuControl.Controls.Add(this.tab_Admin);
             this.menuControl.Depth = 0;
             this.menuControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuControl.ImageList = this.imageList;
@@ -76,77 +76,77 @@ namespace _52100572_52100852_Source_GK
             this.menuControl.TabIndex = 0;
             this.menuControl.SelectedIndexChanged += new System.EventHandler(this.menuControl_SelectedIndexChanged);
             // 
-            // tab_home
+            // tab_Home
             // 
-            this.tab_home.BackColor = System.Drawing.Color.White;
-            this.tab_home.ImageKey = "home.png";
-            this.tab_home.Location = new System.Drawing.Point(4, 39);
-            this.tab_home.Name = "tab_home";
-            this.tab_home.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_home.Size = new System.Drawing.Size(966, 536);
-            this.tab_home.TabIndex = 0;
-            this.tab_home.Text = "Trang chủ";
+            this.tab_Home.BackColor = System.Drawing.Color.White;
+            this.tab_Home.ImageKey = "home.png";
+            this.tab_Home.Location = new System.Drawing.Point(4, 39);
+            this.tab_Home.Name = "tab_Home";
+            this.tab_Home.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Home.Size = new System.Drawing.Size(966, 536);
+            this.tab_Home.TabIndex = 0;
+            this.tab_Home.Text = "Trang chủ";
             // 
-            // tab_carsManager
+            // tab_CarsManager
             // 
-            this.tab_carsManager.BackColor = System.Drawing.Color.White;
-            this.tab_carsManager.ImageKey = "car.png";
-            this.tab_carsManager.Location = new System.Drawing.Point(4, 39);
-            this.tab_carsManager.Name = "tab_carsManager";
-            this.tab_carsManager.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_carsManager.Size = new System.Drawing.Size(966, 536);
-            this.tab_carsManager.TabIndex = 1;
-            this.tab_carsManager.Text = "Quản lý xe";
+            this.tab_CarsManager.BackColor = System.Drawing.Color.White;
+            this.tab_CarsManager.ImageKey = "car.png";
+            this.tab_CarsManager.Location = new System.Drawing.Point(4, 39);
+            this.tab_CarsManager.Name = "tab_CarsManager";
+            this.tab_CarsManager.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_CarsManager.Size = new System.Drawing.Size(966, 536);
+            this.tab_CarsManager.TabIndex = 1;
+            this.tab_CarsManager.Text = "Quản lý xe";
             // 
-            // tab_customer
+            // tab_Customer
             // 
-            this.tab_customer.BackColor = System.Drawing.Color.White;
-            this.tab_customer.ImageKey = "customer.png";
-            this.tab_customer.Location = new System.Drawing.Point(4, 39);
-            this.tab_customer.Name = "tab_customer";
-            this.tab_customer.Size = new System.Drawing.Size(966, 536);
-            this.tab_customer.TabIndex = 2;
-            this.tab_customer.Text = "Khách hàng";
+            this.tab_Customer.BackColor = System.Drawing.Color.White;
+            this.tab_Customer.ImageKey = "customer.png";
+            this.tab_Customer.Location = new System.Drawing.Point(4, 39);
+            this.tab_Customer.Name = "tab_Customer";
+            this.tab_Customer.Size = new System.Drawing.Size(966, 536);
+            this.tab_Customer.TabIndex = 2;
+            this.tab_Customer.Text = "Khách hàng";
             // 
-            // tab_bill
+            // tab_Bill
             // 
-            this.tab_bill.BackColor = System.Drawing.Color.White;
-            this.tab_bill.ImageKey = "bill.png";
-            this.tab_bill.Location = new System.Drawing.Point(4, 39);
-            this.tab_bill.Name = "tab_bill";
-            this.tab_bill.Size = new System.Drawing.Size(966, 536);
-            this.tab_bill.TabIndex = 3;
-            this.tab_bill.Text = "Đơn đặt xe";
+            this.tab_Bill.BackColor = System.Drawing.Color.White;
+            this.tab_Bill.ImageKey = "bill.png";
+            this.tab_Bill.Location = new System.Drawing.Point(4, 39);
+            this.tab_Bill.Name = "tab_Bill";
+            this.tab_Bill.Size = new System.Drawing.Size(966, 536);
+            this.tab_Bill.TabIndex = 3;
+            this.tab_Bill.Text = "Đơn đặt xe";
             // 
-            // tab_schedule
+            // tab_Schedule
             // 
-            this.tab_schedule.BackColor = System.Drawing.Color.White;
-            this.tab_schedule.ImageKey = "schedule.png";
-            this.tab_schedule.Location = new System.Drawing.Point(4, 39);
-            this.tab_schedule.Name = "tab_schedule";
-            this.tab_schedule.Size = new System.Drawing.Size(966, 536);
-            this.tab_schedule.TabIndex = 4;
-            this.tab_schedule.Text = "Lịch trình";
+            this.tab_Schedule.BackColor = System.Drawing.Color.White;
+            this.tab_Schedule.ImageKey = "schedule.png";
+            this.tab_Schedule.Location = new System.Drawing.Point(4, 39);
+            this.tab_Schedule.Name = "tab_Schedule";
+            this.tab_Schedule.Size = new System.Drawing.Size(966, 536);
+            this.tab_Schedule.TabIndex = 4;
+            this.tab_Schedule.Text = "Lịch trình";
             // 
-            // tab_statistic
+            // tab_Statistic
             // 
-            this.tab_statistic.BackColor = System.Drawing.Color.White;
-            this.tab_statistic.ImageKey = "statistic.png";
-            this.tab_statistic.Location = new System.Drawing.Point(4, 39);
-            this.tab_statistic.Name = "tab_statistic";
-            this.tab_statistic.Size = new System.Drawing.Size(966, 536);
-            this.tab_statistic.TabIndex = 5;
-            this.tab_statistic.Text = "Báo cáo thống kê";
+            this.tab_Statistic.BackColor = System.Drawing.Color.White;
+            this.tab_Statistic.ImageKey = "statistic.png";
+            this.tab_Statistic.Location = new System.Drawing.Point(4, 39);
+            this.tab_Statistic.Name = "tab_Statistic";
+            this.tab_Statistic.Size = new System.Drawing.Size(966, 536);
+            this.tab_Statistic.TabIndex = 5;
+            this.tab_Statistic.Text = "Báo cáo thống kê";
             // 
-            // tab_admin
+            // tab_Admin
             // 
-            this.tab_admin.BackColor = System.Drawing.Color.White;
-            this.tab_admin.ImageKey = "employee.png";
-            this.tab_admin.Location = new System.Drawing.Point(4, 39);
-            this.tab_admin.Name = "tab_admin";
-            this.tab_admin.Size = new System.Drawing.Size(966, 536);
-            this.tab_admin.TabIndex = 6;
-            this.tab_admin.Text = "Nhân viên";
+            this.tab_Admin.BackColor = System.Drawing.Color.White;
+            this.tab_Admin.ImageKey = "employee.png";
+            this.tab_Admin.Location = new System.Drawing.Point(4, 39);
+            this.tab_Admin.Name = "tab_Admin";
+            this.tab_Admin.Size = new System.Drawing.Size(966, 536);
+            this.tab_Admin.TabIndex = 6;
+            this.tab_Admin.Text = "Nhân viên";
             // 
             // imageList
             // 
@@ -156,9 +156,10 @@ namespace _52100572_52100852_Source_GK
             this.imageList.Images.SetKeyName(1, "car.png");
             this.imageList.Images.SetKeyName(2, "customer.png");
             this.imageList.Images.SetKeyName(3, "employee.png");
-            this.imageList.Images.SetKeyName(4, "home.png");
-            this.imageList.Images.SetKeyName(5, "schedule.png");
-            this.imageList.Images.SetKeyName(6, "statistic.png");
+            this.imageList.Images.SetKeyName(4, "schedule.png");
+            this.imageList.Images.SetKeyName(5, "statistic.png");
+            this.imageList.Images.SetKeyName(6, "home.png");
+            this.imageList.Images.SetKeyName(7, "log out.png");
             // 
             // MainForm
             // 
@@ -170,7 +171,6 @@ namespace _52100572_52100852_Source_GK
             this.DrawerTabControl = this.menuControl;
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(0, 64, 0, 0);
-            this.Text = "Trang chủ";
             this.panel_body.ResumeLayout(false);
             this.menuControl.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -180,13 +180,13 @@ namespace _52100572_52100852_Source_GK
         #endregion
         private System.Windows.Forms.Panel panel_body;
         private MaterialSkin.Controls.MaterialTabControl menuControl;
-        private System.Windows.Forms.TabPage tab_home;
-        private System.Windows.Forms.TabPage tab_carsManager;
+        private System.Windows.Forms.TabPage tab_Home;
+        private System.Windows.Forms.TabPage tab_CarsManager;
         private System.Windows.Forms.ImageList imageList;
-        private System.Windows.Forms.TabPage tab_customer;
-        private System.Windows.Forms.TabPage tab_bill;
-        private System.Windows.Forms.TabPage tab_schedule;
-        private System.Windows.Forms.TabPage tab_statistic;
-        private System.Windows.Forms.TabPage tab_admin;
+        private System.Windows.Forms.TabPage tab_Customer;
+        private System.Windows.Forms.TabPage tab_Bill;
+        private System.Windows.Forms.TabPage tab_Schedule;
+        private System.Windows.Forms.TabPage tab_Statistic;
+        private System.Windows.Forms.TabPage tab_Admin;
     }
 }

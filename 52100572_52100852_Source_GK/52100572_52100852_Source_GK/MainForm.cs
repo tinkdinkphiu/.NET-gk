@@ -25,8 +25,9 @@ namespace _52100572_52100852_Source_GK
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Blue700, TextShade.WHITE);
         
+            // Khởi tạo lúc vừa chạy form
             CarRental carRentalForm = new CarRental();
-            EmbedFormInTabPage(carRentalForm, tab_home);
+            EmbedFormInTabPage(carRentalForm, tab_Home);
         }
 
         private void EmbedFormInTabPage(Form childForm, TabPage tabPage)
@@ -34,7 +35,7 @@ namespace _52100572_52100852_Source_GK
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            //tabPage.Controls.Clear();  // Clear previous controls/forms from the tab page
+            //tabPage.Controls.Clear();  // Xóa controls/forms cũ khỏi tab
             tabPage.Controls.Add(childForm);
             childForm.Show();
         }
@@ -42,14 +43,33 @@ namespace _52100572_52100852_Source_GK
         {
             switch (menuControl.SelectedIndex)
             {
-                case 0:
-                    //CarRental carRentalForm = new CarRental();
-                    //EmbedFormInTabPage(carRentalForm, tab_home);
+                case 0: // Trang chủ
+                    // Trang chủ
                     break;
-                case 1:
+                case 1: // Quản lý xe
                     CarsManager carsManagerForm = new CarsManager();
-                    EmbedFormInTabPage(carsManagerForm, tab_carsManager);
+                    EmbedFormInTabPage(carsManagerForm, tab_CarsManager);
                     break;
+                case 2: // Quản lý khách hàng
+                    CustomersManager customersManagerForm = new CustomersManager();
+                    EmbedFormInTabPage(customersManagerForm, tab_Customer);
+                    break;
+                case 3: // Đơn đặt xe
+                    Bill billForm = new Bill();
+                    EmbedFormInTabPage(billForm, tab_Bill);
+                    break;
+                case 4: // Lịch trình
+                    Schedule scheduleForm = new Schedule();
+                    EmbedFormInTabPage(scheduleForm, tab_Schedule);
+                    break;
+                case 5: // Báo cáo thống kê
+                    // Báo cáo thống kê
+                    break;
+                case 6: // Quản lý nhân viên
+                    EmployeesManager employeesManagerForm = new EmployeesManager();
+                    EmbedFormInTabPage(employeesManagerForm, tab_Admin);
+                    break;
+                default: break;
             }
         }
     }

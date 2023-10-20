@@ -23,7 +23,7 @@ namespace _52100572_52100852_Source_GK
             lv_CarsManager.Columns.Add("ID", 60);
             lv_CarsManager.Columns.Add("Hãng Xe", 120);
             lv_CarsManager.Columns.Add("Model", 60);
-            lv_CarsManager.Columns.Add("Loại Xe", 120);
+            lv_CarsManager.Columns.Add("Loại Xe", 200);
             lv_CarsManager.Columns.Add("Trạng Thái", 150);
             lv_CarsManager.Columns.Add("Giá Thuê (VND/Giờ)", 200);
         }
