@@ -17,6 +17,10 @@ namespace _52100572_52100852_Source_GK
     {
         private XeOtoDTO xeOtoDTO;
         private List<string> tinhNangIDList;
+
+        private Double total;
+        private Double giaNhienLieu;
+        private string nhienLieu;
         public BillDetail(XeOtoDTO xeOtoDTO)
         {
             InitializeComponent();
@@ -27,9 +31,21 @@ namespace _52100572_52100852_Source_GK
                 txt_ID.Text = xeOtoDTO.XeOtoID.ToString();
                 txt_GiaThue.Text = xeOtoDTO.Gia.ToString();
                 txt_Model.Text = xeOtoDTO.Model.ToString();
-                tinhNangIDList = XeOtoBUS.Instance.GetXeOto_TinhNangListByXeOtoID(xeOtoDTO.XeOtoID);
+                this.total = xeOtoDTO.Gia;
             }
-            
+
+            txt_ID.Enabled = false;
+            txt_Model.Enabled = false;
+            txt_GiaThue.Enabled = false;
+            cbb_HangXe.Enabled = false;
+            cbb_TrangThai.Enabled = false;
+            cbb_LoaiXe.Enabled = false;
+            bindingTotal();
+        }
+
+        private void bindingTotal()
+        {
+            lbl_Total.Text = "Tổng: " + (total+giaNhienLieu).ToString("N0") + " VND/giờ";
         }
 
         private void CarDetail_Load(object sender, EventArgs e)
@@ -39,7 +55,7 @@ namespace _52100572_52100852_Source_GK
             {
                 MaterialCheckbox checkBox = new MaterialCheckbox();
                 checkBox.Text = tinhNang.TenTinhNang;
-                checkBox.Tag =  tinhNang.TinhNangID.ToString();
+                checkBox.Tag =  tinhNang.TinhNangID;
                 checkBox.CheckedChanged += CheckBox_CheckedChanged;
                 checkBox.Width = 180;
                 if (tinhNangIDList.Contains(tinhNang.TinhNangID.ToString()))
@@ -53,21 +69,73 @@ namespace _52100572_52100852_Source_GK
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
+            int gia = (int)checkBox.Tag;
             if (checkBox.Checked)
             {
-                string tinhNangID = (string)checkBox.Tag;
-                tinhNangIDList.Add(tinhNangID);
+                total += gia * 10000;
+                tinhNangIDList.Add(gia.ToString());
             }
             else
             {
-                tinhNangIDList.Remove(checkBox.Tag.ToString());
+                total -= gia * 10000;
+                tinhNangIDList.Remove(gia.ToString());
             }
-            lbl_Total.Text = string.Join(", ", tinhNangIDList);
+            bindingTotal();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void rdb_Dien_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdb_Dien.Checked)
+            {
+                giaNhienLieu = 50000;
+                nhienLieu = "Điện";
+            }
+            else if (rdb_Dau.Checked)
+            {
+                giaNhienLieu = 100000;
+                nhienLieu = "Dầu Diesel";
+            }            
+            else if (rdb_Xang.Checked)
+            {
+                giaNhienLieu = 98000;
+                nhienLieu = "Xăng";
+            }
+            bindingTotal();
+        }
+
+        private void btn_Confirm_Click(object sender, EventArgs e)
+        {
+            KhachHangDTO khachHang = new KhachHangDTO
+            {
+                Ten = txt_Name.Text,
+                DiaChi = txt_Address.Text,
+                Email = txt_Email.Text,
+                SoDienThoai = txt_Phone.Text
+            };
+
+            DonDatXeDTO donDatXe = new DonDatXeDTO
+            {
+                XeOtoID = xeOtoDTO.XeOtoID,
+                GiaThue = total + giaNhienLieu,
+                NhienLieu = nhienLieu,
+                TinhTrangThanhToan = false,
+                ThoiGianThue = DateTime.Now
+            };
+            bool task = DonDatXeBUS.Instance.AddDonDatXe(khachHang,tinhNangIDList, donDatXe);
+            if (task)
+            {
+                MessageBox.Show("Thuê xe thành công!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi xảy ra!");
+            }
         }
     }
 }

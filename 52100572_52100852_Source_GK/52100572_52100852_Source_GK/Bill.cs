@@ -32,11 +32,11 @@ namespace _52100572_52100852_Source_GK
             List<DonDatXeDTO> data;
             if (key.Length > 0)
             {
-                data = DonDatXeBUS.Instance.s;
+                data = DonDatXeBUS.Instance.Search(key);
             }
             else
             {
-                data = XeOtoBUS.Instance.GetXeOtoList();
+                data = DonDatXeBUS.Instance.GetDonDatXeList();
             }
             bindingData(data);
         }

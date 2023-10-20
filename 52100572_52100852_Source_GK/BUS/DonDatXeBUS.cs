@@ -24,8 +24,19 @@ namespace BUS
             }
         }
 
-        public bool AddDonDatXe(DonDatXeDTO donDatXe, List<string> listtinhNang)
+        public bool AddDonDatXe(KhachHangDTO khachHang, List<string> listtinhNang, DonDatXeDTO donDatXe)
         {
+            KhachHangDTO newKH = KhachHangBUS.Instance.GetKhachHangByEmail(khachHang.Email);
+            if ( newKH == null )
+            {
+               bool task = KhachHangBUS.Instance.AddKhachHang(khachHang);
+               if ( !task )
+                {
+                    return false;
+                }
+            }
+            newKH = KhachHangBUS.Instance.GetKhachHangByEmail(khachHang.Email);
+            donDatXe.KhachHangID = newKH.KhachHangID;
             return DonDatXeDAO.Instance.CreateDonDatXe(donDatXe,listtinhNang);
         }
 

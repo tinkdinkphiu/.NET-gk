@@ -119,65 +119,7 @@ namespace DAO
             }
             return result;
         }
-        public bool AddTinhNangToXeOto(int xeOtoID, int tinhNangID)
-        {
-            // Kiểm tra xem xe ô tô và tính năng đã được liên kết chưa, nếu đã liên kết thì không thêm nữa
-            string checkQuery = "SELECT COUNT(*) FROM XeOto_TinhNang WHERE XeOtoID = @XeOtoID AND TinhNangID = @TinhNangID";
-            object[] checkParameters = { xeOtoID, tinhNangID };
-            int count = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(checkQuery, checkParameters));
-
-            if (count > 0)
-            {
-                return false; // Xe ô tô đã có tính năng này
-            }
-
-            // Nếu chưa có liên kết, thêm liên kết mới
-            string query = "INSERT INTO XeOto_TinhNang (XeOtoID, TinhNangID) " +
-                           "VALUES (@XeOtoID, @TinhNangID)";
-            object[] parameters = { xeOtoID, tinhNangID };
-
-            return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
-        }
-
-        public List<LoaiXeDTO> GetLoaiXeList()
-        {
-            List<LoaiXeDTO> loaiXeList = new List<LoaiXeDTO>();
-
-            string query = "SELECT * FROM LoaiXe";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-
-            foreach (DataRow row in data.Rows)
-            {
-                LoaiXeDTO loaiXe = new LoaiXeDTO
-                {
-                    LoaiXeID = Convert.ToInt32(row["LoaiXeID"]),
-                    TenLoaiXe = row["TenLoaiXe"].ToString(),
-                    // Các trường thông tin khác về loại xe
-                };
-
-                loaiXeList.Add(loaiXe);
-            }
-
-            return loaiXeList;
-        }
-
-
-
-        public List<string> GetXeOto_TinhNangListByXeOtoID(int xeOtoID)
-        {
-            List<string> xeOto_TinhNangList = new List<string>();
-
-            string query = "SELECT * FROM XeOto_TinhNang WHERE XeOtoID = @XeOtoID";
-            object[] parameters = { xeOtoID };
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
-
-            foreach (DataRow row in data.Rows)
-            {
-                xeOto_TinhNangList.Add(row["TinhNangID"].ToString());
-            }
-
-            return xeOto_TinhNangList;
-        }
+      
     }
 
 }

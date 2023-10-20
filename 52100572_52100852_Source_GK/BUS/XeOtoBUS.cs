@@ -29,10 +29,6 @@ namespace BUS
             return xeOtoDAO.GetXeOtoList();
         }        
         
-        public List<string> GetXeOto_TinhNangListByXeOtoID(int xeOToID)
-        {
-            return xeOtoDAO.GetXeOto_TinhNangListByXeOtoID(xeOToID);
-        }
 
         public List<TinhNangDTO> GetTinhNangList()
         {

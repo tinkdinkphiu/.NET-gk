@@ -28,13 +28,6 @@ namespace BUS
 
         public bool AddKhachHang(KhachHangDTO khachHang)
         {
-            // Thêm xử lý validation nếu cần
-            if (string.IsNullOrEmpty(khachHang.Ten) || string.IsNullOrEmpty(khachHang.SoDienThoai) || string.IsNullOrEmpty(khachHang.DiaChi) || string.IsNullOrEmpty(khachHang.Email))
-            {
-                // Xử lý lỗi hoặc thông báo
-                return false;
-            }
-
             return khachHangDAO.AddKhachHang(khachHang);
         }
 
@@ -58,6 +51,11 @@ namespace BUS
         public KhachHangDTO GetKhachHangByID(int xeOtoID)
         {
             return khachHangDAO.GetKhachHangByID(xeOtoID);
+        }       
+        
+        public KhachHangDTO GetKhachHangByEmail(string email)
+        {
+            return khachHangDAO.GetKhachHangByEmail(email);
         }
     }
 }

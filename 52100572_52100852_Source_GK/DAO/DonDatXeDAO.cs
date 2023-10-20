@@ -47,15 +47,15 @@ namespace DAO
         public bool CreateDonDatXe(DonDatXeDTO donDatXe, List<string>tinhNangIDList)
         {
             string query = "INSERT INTO DonDatXe (KhachHangID, XeOtoID, ThoiGianThue, TinhTrangThanhToan, NhienLieu, GiaThue) " +
-                           "VALUES (@KhachHangID , @XeOtoID , @ThoiGianThue , @TinhTrangThanhToan , @NhienLieu , @GiaThue )";
-            object[] parameters = { donDatXe.KhachHangID, donDatXe.XeOtoID, donDatXe.ThoiGianThue, donDatXe.TinhTrangThanhToan, donDatXe.NhienLieu,donDatXe.GiaThue};
+                           "VALUES ( @KhachHangID , @XeOtoID , @ThoiGianThue , @TinhTrangThanhToan , @NhienLieu , @GiaThue )";
+            object[] parameters = { donDatXe.KhachHangID, donDatXe.XeOtoID, donDatXe.ThoiGianThue, donDatXe.TinhTrangThanhToan, donDatXe.NhienLieu , donDatXe.GiaThue};
             int donDatXeID = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query, parameters));
             foreach (string item in tinhNangIDList)
             {
                 AddTinhNangToDonDatXe(donDatXeID,int.Parse(item));
             }
 
-            return donDatXeID > 0;
+            return donDatXeID >= 0;
         }
 
         public bool UpdateDonDatXe(DonDatXeDTO donDatXe)
