@@ -1,4 +1,6 @@
-﻿namespace _52100572_52100852_Source_GK
+﻿using System.Drawing;
+
+namespace _52100572_52100852_Source_GK
 {
     partial class CarDetail
     {
@@ -76,7 +78,7 @@
             this.txt_ID.HideSelection = true;
             this.txt_ID.LeadingIcon = null;
             this.txt_ID.Location = new System.Drawing.Point(24, 112);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID.MaxLength = 32767;
             this.txt_ID.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID.Name = "txt_ID";
@@ -145,7 +147,7 @@
             "Ssangyong",
             "Land Rover"});
             this.cbb_HangXe.Location = new System.Drawing.Point(24, 208);
-            this.cbb_HangXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_HangXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_HangXe.MaxDropDownItems = 4;
             this.cbb_HangXe.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_HangXe.Name = "cbb_HangXe";
@@ -183,7 +185,7 @@
             this.txt_Model.HideSelection = true;
             this.txt_Model.LeadingIcon = null;
             this.txt_Model.Location = new System.Drawing.Point(24, 304);
-            this.txt_Model.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Model.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Model.MaxLength = 32767;
             this.txt_Model.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Model.Name = "txt_Model";
@@ -228,7 +230,7 @@
             "7 cho (MPV Gam thap)",
             "Ban tai"});
             this.cbb_LoaiXe.Location = new System.Drawing.Point(24, 400);
-            this.cbb_LoaiXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_LoaiXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_LoaiXe.MaxDropDownItems = 4;
             this.cbb_LoaiXe.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_LoaiXe.Name = "cbb_LoaiXe";
@@ -290,7 +292,7 @@
             "Sẵn sàng",
             "Đang cho thuê"});
             this.cbb_TrangThai.Location = new System.Drawing.Point(24, 496);
-            this.cbb_TrangThai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_TrangThai.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_TrangThai.MaxDropDownItems = 4;
             this.cbb_TrangThai.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_TrangThai.Name = "cbb_TrangThai";
@@ -328,7 +330,7 @@
             this.txt_GiaThue.HideSelection = true;
             this.txt_GiaThue.LeadingIcon = null;
             this.txt_GiaThue.Location = new System.Drawing.Point(24, 590);
-            this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(2);
             this.txt_GiaThue.MaxLength = 32767;
             this.txt_GiaThue.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_GiaThue.Name = "txt_GiaThue";
@@ -375,6 +377,7 @@
             this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Cancel.AutoSize = false;
             this.btn_Cancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Cancel.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Cancel.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btn_Cancel.Depth = 0;
             this.btn_Cancel.HighEmphasis = true;
@@ -389,7 +392,7 @@
             this.btn_Cancel.Text = "Hủy";
             this.btn_Cancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_Cancel.UseAccentColor = false;
-            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Visible = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
@@ -420,6 +423,7 @@
             this.btn_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Delete.AutoSize = false;
             this.btn_Delete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Delete.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Delete.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btn_Delete.Depth = 0;
             this.btn_Delete.HighEmphasis = true;
@@ -434,7 +438,7 @@
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_Delete.UseAccentColor = false;
-            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.UseVisualStyleBackColor = false;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // CarDetail
@@ -458,7 +462,7 @@
             this.Controls.Add(this.lbl_HangXe);
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.lbl_ID);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CarDetail";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Chi Tiết Xe";

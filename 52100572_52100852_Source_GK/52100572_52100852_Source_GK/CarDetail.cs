@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DTO;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace _52100572_52100852_Source_GK
         public CarDetail(XeOtoDTO xeOtoDTO)
         {
             InitializeComponent();
+
             this.xeOtoDTO = xeOtoDTO;
             if (xeOtoDTO != null )
             {
