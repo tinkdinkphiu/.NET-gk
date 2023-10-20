@@ -92,5 +92,14 @@ namespace _52100572_52100852_Source_GK
             carDetail.ShowDialog();
             CarsManager_Load(sender, e);
         }
+        private void txt_Search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_Search.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
+
     }
 }
