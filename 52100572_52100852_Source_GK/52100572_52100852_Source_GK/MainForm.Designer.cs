@@ -156,9 +156,10 @@ namespace _52100572_52100852_Source_GK
             this.imageList.Images.SetKeyName(1, "car.png");
             this.imageList.Images.SetKeyName(2, "customer.png");
             this.imageList.Images.SetKeyName(3, "employee.png");
-            this.imageList.Images.SetKeyName(4, "home.png");
-            this.imageList.Images.SetKeyName(5, "schedule.png");
-            this.imageList.Images.SetKeyName(6, "statistic.png");
+            this.imageList.Images.SetKeyName(4, "schedule.png");
+            this.imageList.Images.SetKeyName(5, "statistic.png");
+            this.imageList.Images.SetKeyName(6, "home.png");
+            this.imageList.Images.SetKeyName(7, "log out.png");
             // 
             // MainForm
             // 
@@ -170,7 +171,6 @@ namespace _52100572_52100852_Source_GK
             this.DrawerTabControl = this.menuControl;
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(0, 64, 0, 0);
-            this.Text = "Trang chủ";
             this.panel_body.ResumeLayout(false);
             this.menuControl.ResumeLayout(false);
             this.ResumeLayout(false);

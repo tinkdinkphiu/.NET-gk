@@ -120,7 +120,6 @@ namespace _52100572_52100852_Source_GK
             this.txt_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_Password.TrailingIcon = null;
             this.txt_Password.UseSystemPasswordChar = true;
-            this.txt_Password.Click += new System.EventHandler(this.input_password_Click);
             // 
             // btn_Login
             // 
@@ -156,7 +155,6 @@ namespace _52100572_52100852_Source_GK
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
