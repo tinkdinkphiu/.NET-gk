@@ -46,7 +46,7 @@ namespace DAO
         public bool AddAccount(AccountDTO account)
         {
             string query = "INSERT INTO Account (Username, Password, Role) " +
-                           "VALUES (@Username, @Password, @Role)";
+                           "VALUES ( @Username , @Password , @Role )";
             object[] parameters = { account.Username, account.Password, account.Role };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
@@ -54,8 +54,8 @@ namespace DAO
         public bool UpdateAccount(AccountDTO account)
         {
             string query = "UPDATE Account " +
-                           "SET Password = @Password, Role = @Role " +
-                           "WHERE Username = @Username";
+                           "SET Password = @Password , Role = @Role " +
+                           "WHERE Username = @Username ";
             object[] parameters = { account.Password, account.Role, account.Username };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }

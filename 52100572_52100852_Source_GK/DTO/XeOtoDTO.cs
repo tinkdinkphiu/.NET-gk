@@ -14,12 +14,5 @@ namespace DTO
         public string LoaiXe { get; set; }
         public string TrangThai { get; set; }
         public Double Gia { get; set; } // gia/gio
-        public List<TinhNangDTO> TinhNangList { get; set; }
-
-
-        public XeOtoDTO()
-        {
-            TinhNangList = new List<TinhNangDTO>();
-        }
     }
 }

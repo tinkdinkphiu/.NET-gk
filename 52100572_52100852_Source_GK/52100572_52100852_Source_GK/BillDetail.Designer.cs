@@ -43,8 +43,10 @@
             this.lbl_TinhNang = new MaterialSkin.Controls.MaterialLabel();
             this.fpnl_TinhNang = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_Total = new MaterialSkin.Controls.MaterialLabel();
+
             this.btn_Confirm = new MaterialSkin.Controls.MaterialButton();
             this.btn_Cancel = new MaterialSkin.Controls.MaterialButton();
+
             this.lbl_NhienLieu = new MaterialSkin.Controls.MaterialLabel();
             this.rdb_Xang = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdb_Dau = new MaterialSkin.Controls.MaterialRadioButton();
@@ -78,7 +80,7 @@
             this.txt_ID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_ID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_ID.Depth = 0;
-            this.txt_ID.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ID.HideSelection = true;
             this.txt_ID.LeadingIcon = null;
             this.txt_ID.Location = new System.Drawing.Point(107, 88);
@@ -124,7 +126,7 @@
             this.cbb_HangXe.DropDownHeight = 174;
             this.cbb_HangXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_HangXe.DropDownWidth = 121;
-            this.cbb_HangXe.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbb_HangXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbb_HangXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbb_HangXe.FormattingEnabled = true;
             this.cbb_HangXe.IntegralHeight = false;
@@ -173,7 +175,7 @@
             this.txt_Model.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_Model.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Model.Depth = 0;
-            this.txt_Model.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_Model.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Model.HideSelection = true;
             this.txt_Model.LeadingIcon = null;
             this.txt_Model.Location = new System.Drawing.Point(107, 160);
@@ -205,7 +207,7 @@
             this.cbb_LoaiXe.DropDownHeight = 174;
             this.cbb_LoaiXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_LoaiXe.DropDownWidth = 121;
-            this.cbb_LoaiXe.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbb_LoaiXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbb_LoaiXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbb_LoaiXe.FormattingEnabled = true;
             this.cbb_LoaiXe.IntegralHeight = false;
@@ -262,7 +264,7 @@
             this.cbb_TrangThai.DropDownHeight = 174;
             this.cbb_TrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_TrangThai.DropDownWidth = 121;
-            this.cbb_TrangThai.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbb_TrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbb_TrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbb_TrangThai.FormattingEnabled = true;
             this.cbb_TrangThai.IntegralHeight = false;
@@ -298,7 +300,7 @@
             this.txt_GiaThue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_GiaThue.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_GiaThue.Depth = 0;
-            this.txt_GiaThue.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_GiaThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_GiaThue.HideSelection = true;
             this.txt_GiaThue.LeadingIcon = null;
             this.txt_GiaThue.Location = new System.Drawing.Point(415, 232);
@@ -328,6 +330,7 @@
             this.lbl_TinhNang.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_TinhNang.Location = new System.Drawing.Point(24, 307);
             this.lbl_TinhNang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
             this.lbl_TinhNang.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_TinhNang.Name = "lbl_TinhNang";
             this.lbl_TinhNang.Size = new System.Drawing.Size(100, 48);
@@ -699,8 +702,10 @@
         private MaterialSkin.Controls.MaterialLabel lbl_TinhNang;
         private System.Windows.Forms.FlowLayoutPanel fpnl_TinhNang;
         private MaterialSkin.Controls.MaterialLabel lbl_Total;
+
         private MaterialSkin.Controls.MaterialButton btn_Confirm;
         private MaterialSkin.Controls.MaterialButton btn_Cancel;
+
         private MaterialSkin.Controls.MaterialLabel lbl_NhienLieu;
         private MaterialSkin.Controls.MaterialRadioButton rdb_Xang;
         private MaterialSkin.Controls.MaterialRadioButton rdb_Dau;
@@ -713,5 +718,6 @@
         private MaterialSkin.Controls.MaterialTextBox2 txt_Address;
         private MaterialSkin.Controls.MaterialLabel lbl_Email;
         private MaterialSkin.Controls.MaterialTextBox2 txt_Email;
+
     }
 }

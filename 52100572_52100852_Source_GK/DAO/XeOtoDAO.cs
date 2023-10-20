@@ -63,17 +63,6 @@ namespace DAO
                     TrangThai = row["TrangThai"].ToString()
                 };
 
-                // Lấy danh sách XeOto_TinhNangDTO
-                List<string> listTinhNang = GetXeOto_TinhNangListByXeOtoID(xeOto.XeOtoID);
-
-                // Xây dựng danh sách TinhNangDTO từ XeOto_TinhNangDTO
-                xeOto.TinhNangList = new List<TinhNangDTO>();
-                foreach (var tinhNangID in listTinhNang)
-                {
-                    TinhNangDTO tinhNang = TinhNangDAO.Instance.GetTinhNangByID(int.Parse(tinhNangID));
-                    xeOto.TinhNangList.Add(tinhNang);
-                }
-
                 return xeOto;
             }
             else
