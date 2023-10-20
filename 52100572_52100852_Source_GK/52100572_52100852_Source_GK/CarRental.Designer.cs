@@ -93,7 +93,7 @@
             this.lbl_cartype.Name = "lbl_cartype";
             this.lbl_cartype.Size = new System.Drawing.Size(955, 60);
             this.lbl_cartype.TabIndex = 0;
-            this.lbl_cartype.Text = "Loại xe";
+            this.lbl_cartype.Text = "Chọn loại xe";
             this.lbl_cartype.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pn_mini
@@ -106,6 +106,7 @@
             this.pn_mini.Name = "pn_mini";
             this.pn_mini.Size = new System.Drawing.Size(160, 160);
             this.pn_mini.TabIndex = 22;
+            this.pn_mini.Click += new System.EventHandler(this.mini_Click);
             // 
             // pn_inner_mini
             // 
@@ -115,6 +116,7 @@
             this.pn_inner_mini.Name = "pn_inner_mini";
             this.pn_inner_mini.Size = new System.Drawing.Size(150, 150);
             this.pn_inner_mini.TabIndex = 23;
+            this.pn_inner_mini.Click += new System.EventHandler(this.mini_Click);
             // 
             // lbl_mini
             // 
@@ -128,6 +130,7 @@
             this.lbl_mini.TabIndex = 24;
             this.lbl_mini.Text = "4 chỗ (Mini)";
             this.lbl_mini.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_mini.Click += new System.EventHandler(this.mini_Click);
             // 
             // pb_mini
             // 
@@ -139,6 +142,7 @@
             this.pb_mini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_mini.TabIndex = 23;
             this.pb_mini.TabStop = false;
+            this.pb_mini.Click += new System.EventHandler(this.mini_Click);
             // 
             // pn_sedan
             // 
@@ -150,6 +154,7 @@
             this.pn_sedan.Name = "pn_sedan";
             this.pn_sedan.Size = new System.Drawing.Size(160, 160);
             this.pn_sedan.TabIndex = 24;
+            this.pn_sedan.Click += new System.EventHandler(this.sedan_Click);
             // 
             // pn_inner_sedan
             // 
@@ -159,6 +164,7 @@
             this.pn_inner_sedan.Name = "pn_inner_sedan";
             this.pn_inner_sedan.Size = new System.Drawing.Size(150, 150);
             this.pn_inner_sedan.TabIndex = 23;
+            this.pn_inner_sedan.Click += new System.EventHandler(this.sedan_Click);
             // 
             // lbl_sedan
             // 
@@ -172,6 +178,7 @@
             this.lbl_sedan.TabIndex = 24;
             this.lbl_sedan.Text = "4 chỗ (Sedan)";
             this.lbl_sedan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_sedan.Click += new System.EventHandler(this.sedan_Click);
             // 
             // pb_sedan
             // 
@@ -183,6 +190,7 @@
             this.pb_sedan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_sedan.TabIndex = 23;
             this.pb_sedan.TabStop = false;
+            this.pb_sedan.Click += new System.EventHandler(this.sedan_Click);
             // 
             // tableLayoutPanel
             // 
@@ -217,6 +225,7 @@
             this.pn_truck.Name = "pn_truck";
             this.pn_truck.Size = new System.Drawing.Size(160, 160);
             this.pn_truck.TabIndex = 28;
+            this.pn_truck.Click += new System.EventHandler(this.truck_Click);
             // 
             // pn_inner_truck
             // 
@@ -226,6 +235,7 @@
             this.pn_inner_truck.Name = "pn_inner_truck";
             this.pn_inner_truck.Size = new System.Drawing.Size(150, 150);
             this.pn_inner_truck.TabIndex = 23;
+            this.pn_inner_truck.Click += new System.EventHandler(this.truck_Click);
             // 
             // lbl_truck
             // 
@@ -239,6 +249,7 @@
             this.lbl_truck.TabIndex = 24;
             this.lbl_truck.Text = "Bán tải";
             this.lbl_truck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_truck.Click += new System.EventHandler(this.truck_Click);
             // 
             // pb_truck
             // 
@@ -250,6 +261,7 @@
             this.pb_truck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_truck.TabIndex = 23;
             this.pb_truck.TabStop = false;
+            this.pb_truck.Click += new System.EventHandler(this.truck_Click);
             // 
             // pn_mpv
             // 
@@ -261,6 +273,7 @@
             this.pn_mpv.Name = "pn_mpv";
             this.pn_mpv.Size = new System.Drawing.Size(160, 160);
             this.pn_mpv.TabIndex = 27;
+            this.pn_mpv.Click += new System.EventHandler(this.mpv_Click);
             // 
             // pn_inner_mpv
             // 
@@ -270,6 +283,7 @@
             this.pn_inner_mpv.Name = "pn_inner_mpv";
             this.pn_inner_mpv.Size = new System.Drawing.Size(150, 150);
             this.pn_inner_mpv.TabIndex = 23;
+            this.pn_inner_mpv.Click += new System.EventHandler(this.mpv_Click);
             // 
             // lbl_mpv
             // 
@@ -283,6 +297,7 @@
             this.lbl_mpv.TabIndex = 24;
             this.lbl_mpv.Text = "7 chỗ (MPV gầm thấp)";
             this.lbl_mpv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_mpv.Click += new System.EventHandler(this.mpv_Click);
             // 
             // pb_mpv
             // 
@@ -294,6 +309,7 @@
             this.pb_mpv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_mpv.TabIndex = 23;
             this.pb_mpv.TabStop = false;
+            this.pb_mpv.Click += new System.EventHandler(this.mpv_Click);
             // 
             // pn_suv
             // 
@@ -305,6 +321,7 @@
             this.pn_suv.Name = "pn_suv";
             this.pn_suv.Size = new System.Drawing.Size(160, 160);
             this.pn_suv.TabIndex = 26;
+            this.pn_suv.Click += new System.EventHandler(this.suv_Click);
             // 
             // pn_inner_suv
             // 
@@ -314,6 +331,7 @@
             this.pn_inner_suv.Name = "pn_inner_suv";
             this.pn_inner_suv.Size = new System.Drawing.Size(150, 150);
             this.pn_inner_suv.TabIndex = 23;
+            this.pn_inner_suv.Click += new System.EventHandler(this.suv_Click);
             // 
             // lbl_suv
             // 
@@ -327,6 +345,7 @@
             this.lbl_suv.TabIndex = 24;
             this.lbl_suv.Text = "7 chỗ (SUV gầm cao)";
             this.lbl_suv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_suv.Click += new System.EventHandler(this.suv_Click);
             // 
             // pb_suv
             // 
@@ -338,6 +357,7 @@
             this.pb_suv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_suv.TabIndex = 23;
             this.pb_suv.TabStop = false;
+            this.pb_suv.Click += new System.EventHandler(this.suv_Click);
             // 
             // pn_hatchback
             // 
@@ -349,6 +369,7 @@
             this.pn_hatchback.Name = "pn_hatchback";
             this.pn_hatchback.Size = new System.Drawing.Size(160, 160);
             this.pn_hatchback.TabIndex = 41;
+            this.pn_hatchback.Click += new System.EventHandler(this.hatchback_Click);
             // 
             // pn_inner_hatchback
             // 
@@ -358,6 +379,7 @@
             this.pn_inner_hatchback.Name = "pn_inner_hatchback";
             this.pn_inner_hatchback.Size = new System.Drawing.Size(150, 150);
             this.pn_inner_hatchback.TabIndex = 23;
+            this.pn_inner_hatchback.Click += new System.EventHandler(this.hatchback_Click);
             // 
             // lbl_hatchback
             // 
@@ -371,6 +393,7 @@
             this.lbl_hatchback.TabIndex = 24;
             this.lbl_hatchback.Text = "4 chỗ (Hatchback)";
             this.lbl_hatchback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_hatchback.Click += new System.EventHandler(this.hatchback_Click);
             // 
             // pb_hatchback
             // 
@@ -382,6 +405,7 @@
             this.pb_hatchback.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_hatchback.TabIndex = 23;
             this.pb_hatchback.TabStop = false;
+            this.pb_hatchback.Click += new System.EventHandler(this.hatchback_Click);
             // 
             // pn_cuv
             // 
@@ -393,6 +417,7 @@
             this.pn_cuv.Name = "pn_cuv";
             this.pn_cuv.Size = new System.Drawing.Size(160, 160);
             this.pn_cuv.TabIndex = 25;
+            this.pn_cuv.Click += new System.EventHandler(this.cuv_Click);
             // 
             // pn_inner_cuv
             // 
@@ -402,6 +427,7 @@
             this.pn_inner_cuv.Name = "pn_inner_cuv";
             this.pn_inner_cuv.Size = new System.Drawing.Size(150, 150);
             this.pn_inner_cuv.TabIndex = 23;
+            this.pn_inner_cuv.Click += new System.EventHandler(this.cuv_Click);
             // 
             // lbl_cuv
             // 
@@ -415,6 +441,7 @@
             this.lbl_cuv.TabIndex = 24;
             this.lbl_cuv.Text = "5 chỗ (CUV gầm cao)";
             this.lbl_cuv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_cuv.Click += new System.EventHandler(this.cuv_Click);
             // 
             // pb_cuv
             // 
@@ -426,6 +453,7 @@
             this.pb_cuv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_cuv.TabIndex = 23;
             this.pb_cuv.TabStop = false;
+            this.pb_cuv.Click += new System.EventHandler(this.cuv_Click);
             // 
             // CarRental
             // 

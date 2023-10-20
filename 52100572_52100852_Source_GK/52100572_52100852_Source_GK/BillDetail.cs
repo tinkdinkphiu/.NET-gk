@@ -32,27 +32,6 @@ namespace _52100572_52100852_Source_GK
             
         }
 
-        public void toggle(bool isEditing)
-        {
-            if(isEditing)
-            {
-
-            }
-            else
-            {
-                txt_ID.Enabled = false;
-                txt_Model.Enabled = false;
-                txt_GiaThue.Enabled = false;
-                btn_Cancel.Visible = false;
-                btn_Save.Visible = false;
-            }
-        }
-
-        private void lbl_GiaThue_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CarDetail_Load(object sender, EventArgs e)
         {
             List<TinhNangDTO> tinhNangDTOs = XeOtoBUS.Instance.GetTinhNangList();

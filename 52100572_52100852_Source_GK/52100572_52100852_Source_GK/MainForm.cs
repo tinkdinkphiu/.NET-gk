@@ -14,7 +14,6 @@ namespace _52100572_52100852_Source_GK
 {
     public partial class MainForm : MaterialForm
     {
-        bool sidebarExpand;
         public MainForm()
         {
             InitializeComponent();
@@ -30,12 +29,12 @@ namespace _52100572_52100852_Source_GK
             EmbedFormInTabPage(carRentalForm, tab_Home);
         }
 
-        private void EmbedFormInTabPage(Form childForm, TabPage tabPage)
+        public void EmbedFormInTabPage(Form childForm, TabPage tabPage)
         {
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            //tabPage.Controls.Clear();  // Xóa controls/forms cũ khỏi tab
+            tabPage.Controls.Clear();  // Xóa controls/forms cũ khỏi tab
             tabPage.Controls.Add(childForm);
             childForm.Show();
         }
@@ -44,7 +43,8 @@ namespace _52100572_52100852_Source_GK
             switch (menuControl.SelectedIndex)
             {
                 case 0: // Trang chủ
-                    // Trang chủ
+                    CarRental carRentalForm = new CarRental();
+                    EmbedFormInTabPage(carRentalForm, tab_Home);
                     break;
                 case 1: // Quản lý xe
                     CarsManager carsManagerForm = new CarsManager();
@@ -63,7 +63,7 @@ namespace _52100572_52100852_Source_GK
                     EmbedFormInTabPage(scheduleForm, tab_Schedule);
                     break;
                 case 5: // Báo cáo thống kê
-                    // Báo cáo thống kê
+                    // Báo cáo thống kê chưa code
                     break;
                 case 6: // Quản lý nhân viên
                     EmployeesManager employeesManagerForm = new EmployeesManager();
@@ -71,6 +71,16 @@ namespace _52100572_52100852_Source_GK
                     break;
                 default: break;
             }
+        }
+        public void startCarRental2(string carType)
+        {
+            CarRental2 carRental2Form = new CarRental2(carType);
+            EmbedFormInTabPage(carRental2Form, tab_Home);
+        }
+        public void backToCarRental()
+        {
+            CarRental carRentalForm = new CarRental();
+            EmbedFormInTabPage(carRentalForm, tab_Home);
         }
     }
 }
