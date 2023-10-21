@@ -23,6 +23,13 @@ CREATE TABLE Accounts
 );
 GO
 
+INSERT INTO Accounts (Username, Password, Role)
+VALUES ('admin', 'admin123', 'admin');
+go
+INSERT INTO Accounts (Username, Password, Role)
+VALUES ('employee', 'employee123', 'employee');
+go
+
 CREATE TABLE XeOto
 (
     XeOtoID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,

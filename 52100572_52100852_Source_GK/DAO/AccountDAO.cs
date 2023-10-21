@@ -23,7 +23,7 @@ namespace DAO
         }
         public AccountDTO GetAccountByUsername(string username)
         {
-            string query = "SELECT * FROM Account WHERE Username = @Username";
+            string query = "SELECT * FROM Accounts WHERE Username = @Username";
             object[] parameters = { username };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
 
@@ -45,7 +45,7 @@ namespace DAO
 
         public bool AddAccount(AccountDTO account)
         {
-            string query = "INSERT INTO Account (Username, Password, Role) " +
+            string query = "INSERT INTO Accounts (Username, Password, Role) " +
                            "VALUES ( @Username , @Password , @Role )";
             object[] parameters = { account.Username, account.Password, account.Role };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
@@ -53,7 +53,7 @@ namespace DAO
 
         public bool UpdateAccount(AccountDTO account)
         {
-            string query = "UPDATE Account " +
+            string query = "UPDATE Accounts " +
                            "SET Password = @Password , Role = @Role " +
                            "WHERE Username = @Username ";
             object[] parameters = { account.Password, account.Role, account.Username };
@@ -62,7 +62,7 @@ namespace DAO
 
         public bool DeleteAccount(string username)
         {
-            string query = "DELETE FROM Account WHERE Username = @Username";
+            string query = "DELETE FROM Accounts WHERE Username = @Username";
             object[] parameters = { username };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }

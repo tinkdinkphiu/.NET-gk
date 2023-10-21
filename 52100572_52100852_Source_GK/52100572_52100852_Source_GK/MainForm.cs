@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
@@ -27,6 +28,17 @@ namespace _52100572_52100852_Source_GK
             // Khởi tạo lúc vừa chạy form
             CarRental carRentalForm = new CarRental();
             EmbedFormInTabPage(carRentalForm, tab_Home);
+
+            //Phân quyền
+            if (SessionManager.Role != null)
+            {
+                if (!SessionManager.Role.Equals("admin"))
+                {
+                    menuControl.TabPages.Remove(tab_Statistic);
+                    menuControl.TabPages.Remove(tab_Admin);
+                }
+            }
+
         }
 
         public void EmbedFormInTabPage(Form childForm, TabPage tabPage)
