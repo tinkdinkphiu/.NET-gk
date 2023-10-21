@@ -49,6 +49,11 @@ namespace BUS
         {
             return DonDatXeDAO.Instance.SearchByConditions(key);
         }
+
+        public List<string> getListTinhNangByID(int donDatXeID)
+        {
+            return DonDatXeDAO.Instance.GetTinhNangListByDonDatXe(donDatXeID);
+        }
         
     }
 }

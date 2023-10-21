@@ -73,7 +73,7 @@ namespace _52100572_52100852_Source_GK
                     Gia = int.Parse(item.SubItems[5].Text)
                 };
 
-                BillDetail billDetails = new BillDetail(xeOto);
+                BillDetail billDetails = new BillDetail(xeOto,null);
                 billDetails.ShowDialog();
             }
         }

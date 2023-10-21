@@ -123,6 +123,7 @@
             this.lv_Bill.TabIndex = 11;
             this.lv_Bill.UseCompatibleStateImageBehavior = false;
             this.lv_Bill.View = System.Windows.Forms.View.Details;
+            this.lv_Bill.SelectedIndexChanged += new System.EventHandler(this.lv_Bill_SelectedIndexChanged);
             // 
             // Bill
             // 
@@ -134,7 +135,7 @@
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.lbl_Bill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Bill";
             this.Text = "Bill";
             this.Load += new System.EventHandler(this.Bill_Load);

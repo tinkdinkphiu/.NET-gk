@@ -47,7 +47,8 @@ namespace DAO
         public bool CreateDonDatXe(DonDatXeDTO donDatXe, List<string>tinhNangIDList)
         {
             string query = "INSERT INTO DonDatXe (KhachHangID, XeOtoID, ThoiGianThue, TinhTrangThanhToan, NhienLieu, GiaThue) " +
-                           "VALUES ( @KhachHangID , @XeOtoID , @ThoiGianThue , @TinhTrangThanhToan , @NhienLieu , @GiaThue )";
+                           "VALUES ( @KhachHangID , @XeOtoID , @ThoiGianThue , @TinhTrangThanhToan , @NhienLieu , @GiaThue ); "+
+                           "SELECT SCOPE_IDENTITY();";
             object[] parameters = { donDatXe.KhachHangID, donDatXe.XeOtoID, donDatXe.ThoiGianThue, donDatXe.TinhTrangThanhToan, donDatXe.NhienLieu , donDatXe.GiaThue};
             int donDatXeID = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query, parameters));
             foreach (string item in tinhNangIDList)
@@ -89,7 +90,7 @@ namespace DAO
 
             // Nếu chưa có liên kết, thêm liên kết mới
             string query = "INSERT INTO DonDatXe_TinhNang (DonDatXeID, TinhNangID) " +
-                           "VALUES ( @DonDatXeID , @TinhNangID)";
+                           "VALUES ( @DonDatXeID , @TinhNangID )";
             object[] parameters = { donDatXeID, tinhNangID };
 
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
