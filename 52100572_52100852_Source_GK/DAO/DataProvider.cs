@@ -90,6 +90,7 @@ namespace DAO
                 catch (SqlException e)
                 {
                     data = 0;
+                    throw;
                 }
 
                 connection.Close();

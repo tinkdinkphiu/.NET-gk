@@ -8,11 +8,11 @@ namespace DTO
 {
     public class SessionManager
     {
-        public static int UserId { get; private set; }
+        public static string UserId { get; private set; }
         public static string Username { get; private set; }
         public static string Role { get; private set; }
 
-        public static void Login(int userId, string username, string role)
+        public static void Login(string userId, string username, string role)
         {
             UserId = userId;
             Username = username;
@@ -21,14 +21,14 @@ namespace DTO
 
         public static void Logout()
         {
-            UserId = 0;
+            UserId = null;
             Username = null;
             Role = null;
         }
 
         public static bool IsUserLoggedIn()
         {
-            return UserId != 0;
+            return UserId != null;
         }
     }
 

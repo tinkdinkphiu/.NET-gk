@@ -32,7 +32,7 @@ namespace DAO
             {
                 XeOtoDTO xeOto = new XeOtoDTO
                 {
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    XeOtoID = row["XeOtoID"].ToString(),
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
@@ -44,7 +44,7 @@ namespace DAO
             return xeOtoList;
         }
 
-        public XeOtoDTO GetXeOtoByID(int xeOtoID)
+        public XeOtoDTO GetXeOtoByID(string xeOtoID)
         {
             string query = "SELECT * FROM XeOto WHERE XeOtoID = @XeOtoID";
             object[] parameters = { xeOtoID };
@@ -55,7 +55,7 @@ namespace DAO
                 DataRow row = data.Rows[0];
                 XeOtoDTO xeOto = new XeOtoDTO
                 {
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    XeOtoID = row["XeOtoID"].ToString(),
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
@@ -88,9 +88,18 @@ namespace DAO
                            "WHERE XeOtoID = @XeOtoID ";
             object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.TrangThai,xeOto.Gia, xeOto.XeOtoID };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
+        } 
+        
+        public bool UpdateTrangThai(string xeOtoID, string trangThai)
+        {
+            string query = "UPDATE XeOto " +
+                           "SET TrangThai = @TrangThai " +
+                           "WHERE XeOtoID = @XeOtoID ";
+            object[] parameters = { trangThai, xeOtoID };
+            return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
 
-        public bool DeleteXeOto(int xeOtoID)
+        public bool DeleteXeOto(string xeOtoID)
         {
             string query = "DELETE FROM XeOto WHERE XeOtoID = @XeOtoID";
             object[] parameters = { xeOtoID };
@@ -99,8 +108,8 @@ namespace DAO
 
         public List<XeOtoDTO> SearchXeOtoByConditions(string keyword)
         {
-            string query = "SELECT * FROM XeOto WHERE HangXe LIKE '%' + @HangXe + '%' OR Model LIKE '%' + @Model + '%' OR LoaiXe LIKE '%' + @LoaiXe + '%'";
-            object[] parameters = { keyword, keyword, keyword };
+            string query = "SELECT * FROM XeOto WHERE XeOtoID LIKE '%' + @XeOtoID + '%' OR HangXe LIKE '%' + @HangXe + '%' OR Model LIKE '%' + @Model + '%' OR LoaiXe LIKE '%' + @LoaiXe + '%' OR TrangThai LIKE '%' + @TrangThai + '%'";
+            object[] parameters = { keyword, keyword, keyword, keyword, keyword };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
 
             List<XeOtoDTO> result = new List<XeOtoDTO>();
@@ -108,7 +117,7 @@ namespace DAO
             {
                 XeOtoDTO xeOto = new XeOtoDTO
                 {
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    XeOtoID = row["XeOtoID"].ToString(),
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),

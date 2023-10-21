@@ -45,10 +45,16 @@ namespace _52100572_52100852_Source_GK
 
         private void CarsManager_Load(object sender, EventArgs e)
         {
-            
+
+            loadData();
+
+
+        }
+
+        private void loadData()
+        {
             List<XeOtoDTO> data = XeOtoBUS.Instance.GetXeOtoList();
             bindingData(data);
-            
         }
         private void bindingData(List<XeOtoDTO> data)
         {
@@ -61,7 +67,7 @@ namespace _52100572_52100852_Source_GK
                 listViewItem.SubItems.Add(item.Model);
                 listViewItem.SubItems.Add(item.LoaiXe);
                 listViewItem.SubItems.Add(item.TrangThai);
-                listViewItem.SubItems.Add(item.Gia.ToString());
+                listViewItem.SubItems.Add(item.Gia.ToString("N0"));
                 lv_CarsManager.Items.Add(listViewItem);
             }
         }
@@ -72,17 +78,16 @@ namespace _52100572_52100852_Source_GK
             {
                 XeOtoDTO xeOto = new XeOtoDTO
                 {
-                    XeOtoID = int.Parse(item.SubItems[0].Text),
+                    XeOtoID = item.SubItems[0].Text,
                     HangXe = item.SubItems[1].Text,
                     Model = item.SubItems[2].Text,
                     LoaiXe = item.SubItems[3].Text,
                     TrangThai = item.SubItems[4].Text,
-                    Gia = int.Parse(item.SubItems[5].Text)
+                    Gia = Double.Parse(item.SubItems[5].Text)
                 };
 
                 CarDetail carDetail = new CarDetail(xeOto);
                 carDetail.ShowDialog();
-                CarsManager_Load(sender, e);
             }
         }
 
@@ -90,7 +95,6 @@ namespace _52100572_52100852_Source_GK
         {
             CarDetail carDetail = new CarDetail(null);
             carDetail.ShowDialog();
-            CarsManager_Load(sender, e);
         }
         private void txt_Search_KeyDown(object sender, KeyEventArgs e)
         {
@@ -101,5 +105,9 @@ namespace _52100572_52100852_Source_GK
             }
         }
 
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace DTO
 {
     public class KhachHangDTO
     {
-        public int KhachHangID { get; set; }
+        public string KhachHangID { get; set; }
         public string Ten { get; set; }
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }

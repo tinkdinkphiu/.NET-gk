@@ -32,7 +32,7 @@ namespace DAO
                 DataRow row = data.Rows[0];
                 AccountDTO account = new AccountDTO
                 {
-                    AccountID = Convert.ToInt32(row["AccountID"]),
+                    AccountID = row["AccountID"].ToString(),
                     Username = row["Username"].ToString(),
                     Password = row["Password"].ToString(),
                     Role = row["Role"].ToString()

@@ -8,8 +8,8 @@ namespace DTO
 {
     public class XeOto_TinhNangDTO
     {
-        public int XeOtoID { get; set; }
-        public int TinhNangID { get; set; }
+        public string XeOtoID { get; set; }
+        public string TinhNangID { get; set; }
     }
 
 }

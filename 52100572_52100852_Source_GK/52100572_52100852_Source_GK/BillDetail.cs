@@ -86,8 +86,8 @@ namespace _52100572_52100852_Source_GK
 
         private void bindingXeOto(XeOtoDTO xeOtoDTO)
         {
-            txt_ID.Text = xeOtoDTO.XeOtoID.ToString();
-            txt_GiaThue.Text = xeOtoDTO.Gia.ToString();
+            txt_ID.Text = xeOtoDTO.XeOtoID;
+            txt_GiaThue.Text = xeOtoDTO.Gia.ToString("N0");
             txt_Model.Text = xeOtoDTO.Model.ToString();
 
             int index = cbb_LoaiXe.FindString(xeOtoDTO.LoaiXe);
@@ -120,7 +120,7 @@ namespace _52100572_52100852_Source_GK
             {
                 MaterialCheckbox checkBox = new MaterialCheckbox();
                 checkBox.Text = tinhNang.TenTinhNang;
-                checkBox.Tag =  tinhNang.TinhNangID;
+                checkBox.Tag =  Convert.ToInt32(tinhNang.TinhNangID);
                 checkBox.CheckedChanged += CheckBox_CheckedChanged;
                 checkBox.Width = 180;
                 if (tinhNangIDList.Contains(tinhNang.TinhNangID.ToString()))

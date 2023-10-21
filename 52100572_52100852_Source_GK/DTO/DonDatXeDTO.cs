@@ -8,12 +8,16 @@ namespace DTO
 {
     public class DonDatXeDTO
     {
-        public int DonDatXeID { get; set; }
-        public int KhachHangID { get; set; }
-        public int XeOtoID { get; set; }
+        public string DonDatXeID { get; set; }
+        public string KhachHangID { get; set; }
+        public string XeOtoID { get; set; }
         public Double GiaThue { get; set; }
         public string NhienLieu { get; set; }
         public DateTime ThoiGianThue { get; set; }
         public bool TinhTrangThanhToan { get; set; }
+
+        public Double Total { get; set; }
+
+        public DateTime? ThoiGianTra { get; set; }
     }
 }
