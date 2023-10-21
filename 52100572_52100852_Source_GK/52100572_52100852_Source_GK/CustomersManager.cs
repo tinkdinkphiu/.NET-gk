@@ -23,13 +23,11 @@ namespace _52100572_52100852_Source_GK
             lv_CustomersManager.Columns.Add("Số điện thoại", 150);
             lv_CustomersManager.Columns.Add("Địa chỉ", 200);
             lv_CustomersManager.Columns.Add("Email", 150);
-
         }
 
-        private void CustomersManager_Load(object sender, EventArgs e)
+        void bindingData(List<KhachHangDTO> data)
         {
-            List<KhachHangDTO> data = KhachHangBUS.Instance.GetKhachHangList();
-
+            lv_CustomersManager.Items.Clear();
             foreach (var item in data)
             {
                 ListViewItem listViewItem = new ListViewItem();
@@ -41,6 +39,57 @@ namespace _52100572_52100852_Source_GK
 
                 lv_CustomersManager.Items.Add(listViewItem);
             }
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+
+            CustomerDetail customerDetail = new CustomerDetail(null);
+            customerDetail.ShowDialog();
+        }
+
+        private void CustomersManager_Load(object sender, EventArgs e)
+        {
+            List<KhachHangDTO> data = KhachHangBUS.Instance.GetKhachHangList();
+           bindingData(data);
+        }
+
+        private void lv_CustomersManager_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in lv_CustomersManager.SelectedItems)
+            {
+                KhachHangDTO khachHang = new KhachHangDTO
+                {
+                    KhachHangID = item.SubItems[0].Text,
+                    Ten = item.SubItems[1].Text,
+                    SoDienThoai = item.SubItems[2].Text,
+                    DiaChi = item.SubItems[3].Text,
+                    Email = item.SubItems[4].Text
+                };
+
+                CustomerDetail customerDetail = new CustomerDetail(khachHang);
+                customerDetail.ShowDialog();
+            }
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            CustomersManager_Load(sender, e);
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string key = txt_Search.Text;
+            List<KhachHangDTO> data;
+            if (key.Length > 0)
+            {
+                data = KhachHangBUS.Instance.Search(key);
+            }
+            else
+            {
+                data = KhachHangBUS.Instance.Search(key);
+            }
+            bindingData(data);
         }
     }
 }

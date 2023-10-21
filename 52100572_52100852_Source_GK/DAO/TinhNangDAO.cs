@@ -32,7 +32,7 @@ namespace DAO
             {
                 TinhNangDTO tinhNang = new TinhNangDTO
                 {
-                    TinhNangID = Convert.ToInt32(row["TinhNangID"]),
+                    TinhNangID = row["TinhNangID"].ToString(),
                     TenTinhNang = row["TenTinhNang"].ToString()
                 };
                 tinhNangList.Add(tinhNang);
@@ -52,7 +52,7 @@ namespace DAO
                 DataRow row = data.Rows[0];
                 TinhNangDTO tinhNang = new TinhNangDTO
                 {
-                    TinhNangID = Convert.ToInt32(row["TinhNangID"]),
+                    TinhNangID = row["TinhNangID"].ToString(),
                     TenTinhNang = row["TenTinhNang"].ToString()
                 };
                 return tinhNang;

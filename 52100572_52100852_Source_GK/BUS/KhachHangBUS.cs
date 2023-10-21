@@ -24,6 +24,11 @@ namespace BUS
         public List<KhachHangDTO> GetKhachHangList()
         {
             return khachHangDAO.GetKhachHangList();
+        }        
+        
+        public List<KhachHangDTO> Search(string key)
+        {
+            return khachHangDAO.SearchKhachHangByNameAndPhone(key);
         }
 
         public bool AddKhachHang(KhachHangDTO khachHang)
@@ -43,12 +48,12 @@ namespace BUS
             return khachHangDAO.UpdateKhachHang(updatedKhachHang);
         }
 
-        public bool DeleteKhachHang(int khachHangID)
+        public bool DeleteKhachHang(string khachHangID)
         {
             return khachHangDAO.DeleteKhachHang(khachHangID);
         }
 
-        public KhachHangDTO GetKhachHangByID(int xeOtoID)
+        public KhachHangDTO GetKhachHangByID(string xeOtoID)
         {
             return khachHangDAO.GetKhachHangByID(xeOtoID);
         }       

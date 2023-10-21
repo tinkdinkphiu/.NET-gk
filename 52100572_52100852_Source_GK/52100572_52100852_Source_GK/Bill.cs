@@ -54,8 +54,15 @@ namespace _52100572_52100852_Source_GK
                 listViewItem.SubItems.Add(item.XeOtoID.ToString());
                 listViewItem.SubItems.Add(item.NhienLieu.ToString());
                 listViewItem.SubItems.Add(item.ThoiGianThue.ToString("dd/MM/yyyy HH:mm:ss"));
-                listViewItem.SubItems.Add(item.GiaThue.ToString());
-                listViewItem.SubItems.Add(item.TinhTrangThanhToan.ToString());
+                listViewItem.SubItems.Add(item.GiaThue.ToString("N0"));
+                if (item.TinhTrangThanhToan)
+                {
+                    listViewItem.SubItems.Add("Đã Thanh Toán");
+                }
+                else
+                {
+                    listViewItem.SubItems.Add("Chưa Thanh Toán");
+                }
                 lv_Bill.Items.Add(listViewItem);
             }
         }
@@ -65,6 +72,7 @@ namespace _52100572_52100852_Source_GK
             List<DonDatXeDTO> data = DonDatXeBUS.Instance.GetDonDatXeList();
             bindingData(data);
         }
+
 
         private void lv_Bill_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -76,20 +84,26 @@ namespace _52100572_52100852_Source_GK
 
                 if (DateTime.TryParseExact(inputDate, format, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result))
                 {
+                    
                     DonDatXeDTO donDatXe = new DonDatXeDTO
                     {
-                        DonDatXeID = int.Parse(item.SubItems[0].Text),
-                        KhachHangID = int.Parse(item.SubItems[1].Text),
-                        XeOtoID = int.Parse(item.SubItems[2].Text),
+                        DonDatXeID = item.SubItems[0].Text,
+                        KhachHangID = item.SubItems[1].Text,
+                        XeOtoID = item.SubItems[2].Text,
                         NhienLieu = item.SubItems[3].Text,
                         ThoiGianThue = result,
                         GiaThue = Double.Parse(item.SubItems[5].Text),
-                        TinhTrangThanhToan = bool.Parse(item.SubItems[6].Text)
+                        TinhTrangThanhToan = item.SubItems[6].Text.Equals("Đã Thanh Toán")
                     };
                     BillDetail billDetail = new BillDetail(null, donDatXe);
                     billDetail.ShowDialog();
                 }
             }
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            Bill_Load(sender, e);
         }
     }
 }

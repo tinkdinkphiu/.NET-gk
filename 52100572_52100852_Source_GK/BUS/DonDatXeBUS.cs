@@ -24,6 +24,16 @@ namespace BUS
             }
         }
 
+        public bool UpDateDonDatXe(DonDatXeDTO donDatXe)
+        {
+            return DonDatXeDAO.Instance.UpdateDonDatXe(donDatXe);
+        }        
+        public bool PaymentComfirm(DonDatXeDTO donDatXe)
+        {
+            XeOtoBUS.Instance.UpdateTrangThai(donDatXe.XeOtoID, true);
+            return DonDatXeDAO.Instance.UpdateDonDatXe(donDatXe);
+        }
+
         public bool AddDonDatXe(KhachHangDTO khachHang, List<string> listtinhNang, DonDatXeDTO donDatXe)
         {
             KhachHangDTO newKH = KhachHangBUS.Instance.GetKhachHangByEmail(khachHang.Email);
@@ -37,7 +47,11 @@ namespace BUS
             }
             newKH = KhachHangBUS.Instance.GetKhachHangByEmail(khachHang.Email);
             donDatXe.KhachHangID = newKH.KhachHangID;
-            return DonDatXeDAO.Instance.CreateDonDatXe(donDatXe,listtinhNang);
+            if (DonDatXeDAO.Instance.CreateDonDatXe(donDatXe, listtinhNang))
+            {
+                return XeOtoBUS.Instance.UpdateTrangThai(donDatXe.XeOtoID, false);
+            }
+            return false;
         }
 
         public List<DonDatXeDTO> GetDonDatXeList()
@@ -50,7 +64,7 @@ namespace BUS
             return DonDatXeDAO.Instance.SearchByConditions(key);
         }
 
-        public List<string> getListTinhNangByID(int donDatXeID)
+        public List<string> getListTinhNangByID(string donDatXeID)
         {
             return DonDatXeDAO.Instance.GetTinhNangListByDonDatXe(donDatXeID);
         }
