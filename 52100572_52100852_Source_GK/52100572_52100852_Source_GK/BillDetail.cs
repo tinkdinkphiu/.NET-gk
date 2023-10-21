@@ -21,17 +21,49 @@ namespace _52100572_52100852_Source_GK
         private Double total;
         private Double giaNhienLieu;
         private string nhienLieu;
-        public BillDetail(XeOtoDTO xeOtoDTO)
+        private KhachHangDTO khachHang;
+        private DonDatXeDTO donDatXe;
+        public BillDetail(XeOtoDTO xeOtoDTO, DonDatXeDTO donDatXe)
         {
             InitializeComponent();
             this.xeOtoDTO = xeOtoDTO;
             tinhNangIDList = new List<string>();
             if (xeOtoDTO != null )
             {
-                txt_ID.Text = xeOtoDTO.XeOtoID.ToString();
-                txt_GiaThue.Text = xeOtoDTO.Gia.ToString();
-                txt_Model.Text = xeOtoDTO.Model.ToString();
+                bindingXeOto(xeOtoDTO);
+
                 this.total = xeOtoDTO.Gia;
+            }
+            if(donDatXe != null)
+            {
+                total = donDatXe.GiaThue;
+                giaNhienLieu = 0;
+
+                //hien them controls
+                lbl_ID_KH.Visible = true;
+                lbl_ID_DonDatXe.Visible = true;
+                lbl_ThoiGianThue.Visible = true;
+                txt_ID_KH.Visible = true;
+                txt_ID_DonDatXe.Visible = true;
+                txt_ThoiGianThue.Visible = true;
+                //disable controls
+                foreach (Control control in this.Controls)
+                {
+                    control.Enabled = false;
+                }
+
+                txt_ID_KH.Text = donDatXe.KhachHangID.ToString();
+                txt_ID_DonDatXe.Text = donDatXe.DonDatXeID.ToString();
+                txt_ThoiGianThue.Text = donDatXe.ThoiGianThue.ToString("dd/MM/yyyy HH:mm:ss");
+
+                this.xeOtoDTO = XeOtoBUS.Instance.GetXeOtoByID(donDatXe.XeOtoID);
+                this.khachHang = KhachHangBUS.Instance.GetKhachHangByID(donDatXe.KhachHangID);
+                this.tinhNangIDList = DonDatXeBUS.Instance.getListTinhNangByID(donDatXe.DonDatXeID);
+                bindingXeOto(this.xeOtoDTO);
+                bindingKH(this.khachHang);
+
+                btn_Confirm.Visible = false;
+                btn_Cancel.Enabled = true;
             }
 
             txt_ID.Enabled = false;
@@ -41,6 +73,39 @@ namespace _52100572_52100852_Source_GK
             cbb_TrangThai.Enabled = false;
             cbb_LoaiXe.Enabled = false;
             bindingTotal();
+        }
+
+        private void bindingKH(KhachHangDTO khachHangDTO)
+        {
+            txt_ID_KH.Text = khachHangDTO.KhachHangID.ToString();
+            txt_Name.Text = khachHangDTO.Ten;
+            txt_Address.Text = khachHangDTO.DiaChi;
+            txt_Email.Text = khachHangDTO.Email;
+            txt_Phone.Text = khachHangDTO.SoDienThoai;
+        }
+
+        private void bindingXeOto(XeOtoDTO xeOtoDTO)
+        {
+            txt_ID.Text = xeOtoDTO.XeOtoID.ToString();
+            txt_GiaThue.Text = xeOtoDTO.Gia.ToString();
+            txt_Model.Text = xeOtoDTO.Model.ToString();
+
+            int index = cbb_LoaiXe.FindString(xeOtoDTO.LoaiXe);
+            if (index != -1)
+            {
+                cbb_LoaiXe.SelectedIndex = index;
+            }
+            index = cbb_HangXe.FindString(xeOtoDTO.HangXe);
+            if (index != -1)
+            {
+                cbb_HangXe.SelectedIndex = index;
+            }
+
+            index = cbb_TrangThai.FindString(xeOtoDTO.TrangThai);
+            if (index != -1)
+            {
+                cbb_TrangThai.SelectedIndex = index;
+            }
         }
 
         private void bindingTotal()
@@ -110,7 +175,7 @@ namespace _52100572_52100852_Source_GK
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            KhachHangDTO khachHang = new KhachHangDTO
+            khachHang = new KhachHangDTO
             {
                 Ten = txt_Name.Text,
                 DiaChi = txt_Address.Text,
@@ -118,7 +183,7 @@ namespace _52100572_52100852_Source_GK
                 SoDienThoai = txt_Phone.Text
             };
 
-            DonDatXeDTO donDatXe = new DonDatXeDTO
+            donDatXe = new DonDatXeDTO
             {
                 XeOtoID = xeOtoDTO.XeOtoID,
                 GiaThue = total + giaNhienLieu,

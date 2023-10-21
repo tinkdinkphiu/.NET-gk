@@ -57,6 +57,12 @@
             this.txt_Address = new MaterialSkin.Controls.MaterialTextBox2();
             this.lbl_Email = new MaterialSkin.Controls.MaterialLabel();
             this.txt_Email = new MaterialSkin.Controls.MaterialTextBox2();
+            this.txt_ID_KH = new MaterialSkin.Controls.MaterialTextBox2();
+            this.lbl_ID_KH = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_ID_DonDatXe = new MaterialSkin.Controls.MaterialTextBox2();
+            this.lbl_ID_DonDatXe = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_ThoiGianThue = new MaterialSkin.Controls.MaterialTextBox2();
+            this.lbl_ThoiGianThue = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // lbl_ID
@@ -68,7 +74,7 @@
             this.lbl_ID.Name = "lbl_ID";
             this.lbl_ID.Size = new System.Drawing.Size(133, 59);
             this.lbl_ID.TabIndex = 0;
-            this.lbl_ID.Text = "ID";
+            this.lbl_ID.Text = "ID Xe";
             this.lbl_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txt_ID
@@ -320,7 +326,7 @@
             this.lbl_TinhNang.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_TinhNang.Depth = 0;
             this.lbl_TinhNang.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_TinhNang.Location = new System.Drawing.Point(32, 378);
+            this.lbl_TinhNang.Location = new System.Drawing.Point(32, 467);
             this.lbl_TinhNang.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_TinhNang.Name = "lbl_TinhNang";
             this.lbl_TinhNang.Size = new System.Drawing.Size(133, 59);
@@ -332,10 +338,10 @@
             // 
             this.fpnl_TinhNang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fpnl_TinhNang.Location = new System.Drawing.Point(32, 439);
+            this.fpnl_TinhNang.Location = new System.Drawing.Point(32, 528);
             this.fpnl_TinhNang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fpnl_TinhNang.Name = "fpnl_TinhNang";
-            this.fpnl_TinhNang.Size = new System.Drawing.Size(1664, 246);
+            this.fpnl_TinhNang.Size = new System.Drawing.Size(1664, 157);
             this.fpnl_TinhNang.TabIndex = 13;
             // 
             // lbl_Total
@@ -628,11 +634,150 @@
             this.txt_Email.TrailingIcon = null;
             this.txt_Email.UseSystemPasswordChar = false;
             // 
+            // txt_ID_KH
+            // 
+            this.txt_ID_KH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ID_KH.AnimateReadOnly = false;
+            this.txt_ID_KH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txt_ID_KH.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_ID_KH.Depth = 0;
+            this.txt_ID_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_ID_KH.HideSelection = true;
+            this.txt_ID_KH.LeadingIcon = null;
+            this.txt_ID_KH.Location = new System.Drawing.Point(1019, 287);
+            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_ID_KH.MaxLength = 32767;
+            this.txt_ID_KH.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_ID_KH.Name = "txt_ID_KH";
+            this.txt_ID_KH.PasswordChar = '\0';
+            this.txt_ID_KH.PrefixSuffixText = null;
+            this.txt_ID_KH.ReadOnly = false;
+            this.txt_ID_KH.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_ID_KH.SelectedText = "";
+            this.txt_ID_KH.SelectionLength = 0;
+            this.txt_ID_KH.SelectionStart = 0;
+            this.txt_ID_KH.ShortcutsEnabled = true;
+            this.txt_ID_KH.Size = new System.Drawing.Size(267, 48);
+            this.txt_ID_KH.TabIndex = 31;
+            this.txt_ID_KH.TabStop = false;
+            this.txt_ID_KH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_ID_KH.TrailingIcon = null;
+            this.txt_ID_KH.UseSystemPasswordChar = false;
+            this.txt_ID_KH.Visible = false;
+            // 
+            // lbl_ID_KH
+            // 
+            this.lbl_ID_KH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_ID_KH.Depth = 0;
+            this.lbl_ID_KH.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_ID_KH.Location = new System.Drawing.Point(880, 287);
+            this.lbl_ID_KH.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_ID_KH.Name = "lbl_ID_KH";
+            this.lbl_ID_KH.Size = new System.Drawing.Size(133, 59);
+            this.lbl_ID_KH.TabIndex = 30;
+            this.lbl_ID_KH.Text = "Khách Hàng ID";
+            this.lbl_ID_KH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_ID_KH.Visible = false;
+            // 
+            // txt_ID_DonDatXe
+            // 
+            this.txt_ID_DonDatXe.AnimateReadOnly = false;
+            this.txt_ID_DonDatXe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txt_ID_DonDatXe.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_ID_DonDatXe.Depth = 0;
+            this.txt_ID_DonDatXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_ID_DonDatXe.HideSelection = true;
+            this.txt_ID_DonDatXe.LeadingIcon = null;
+            this.txt_ID_DonDatXe.Location = new System.Drawing.Point(141, 378);
+            this.txt_ID_DonDatXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_ID_DonDatXe.MaxLength = 32767;
+            this.txt_ID_DonDatXe.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_ID_DonDatXe.Name = "txt_ID_DonDatXe";
+            this.txt_ID_DonDatXe.PasswordChar = '\0';
+            this.txt_ID_DonDatXe.PrefixSuffixText = null;
+            this.txt_ID_DonDatXe.ReadOnly = false;
+            this.txt_ID_DonDatXe.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_ID_DonDatXe.SelectedText = "";
+            this.txt_ID_DonDatXe.SelectionLength = 0;
+            this.txt_ID_DonDatXe.SelectionStart = 0;
+            this.txt_ID_DonDatXe.ShortcutsEnabled = true;
+            this.txt_ID_DonDatXe.Size = new System.Drawing.Size(267, 48);
+            this.txt_ID_DonDatXe.TabIndex = 33;
+            this.txt_ID_DonDatXe.TabStop = false;
+            this.txt_ID_DonDatXe.Text = "100";
+            this.txt_ID_DonDatXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_ID_DonDatXe.TrailingIcon = null;
+            this.txt_ID_DonDatXe.UseSystemPasswordChar = false;
+            this.txt_ID_DonDatXe.Visible = false;
+            // 
+            // lbl_ID_DonDatXe
+            // 
+            this.lbl_ID_DonDatXe.Depth = 0;
+            this.lbl_ID_DonDatXe.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_ID_DonDatXe.Location = new System.Drawing.Point(2, 378);
+            this.lbl_ID_DonDatXe.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_ID_DonDatXe.Name = "lbl_ID_DonDatXe";
+            this.lbl_ID_DonDatXe.Size = new System.Drawing.Size(133, 59);
+            this.lbl_ID_DonDatXe.TabIndex = 32;
+            this.lbl_ID_DonDatXe.Text = "ID Đơn Đặt xe";
+            this.lbl_ID_DonDatXe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_ID_DonDatXe.Visible = false;
+            // 
+            // txt_ThoiGianThue
+            // 
+            this.txt_ThoiGianThue.AnimateReadOnly = false;
+            this.txt_ThoiGianThue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txt_ThoiGianThue.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_ThoiGianThue.Depth = 0;
+            this.txt_ThoiGianThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_ThoiGianThue.HideSelection = true;
+            this.txt_ThoiGianThue.LeadingIcon = null;
+            this.txt_ThoiGianThue.Location = new System.Drawing.Point(594, 378);
+            this.txt_ThoiGianThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_ThoiGianThue.MaxLength = 32767;
+            this.txt_ThoiGianThue.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_ThoiGianThue.Name = "txt_ThoiGianThue";
+            this.txt_ThoiGianThue.PasswordChar = '\0';
+            this.txt_ThoiGianThue.PrefixSuffixText = null;
+            this.txt_ThoiGianThue.ReadOnly = false;
+            this.txt_ThoiGianThue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_ThoiGianThue.SelectedText = "";
+            this.txt_ThoiGianThue.SelectionLength = 0;
+            this.txt_ThoiGianThue.SelectionStart = 0;
+            this.txt_ThoiGianThue.ShortcutsEnabled = true;
+            this.txt_ThoiGianThue.Size = new System.Drawing.Size(267, 48);
+            this.txt_ThoiGianThue.TabIndex = 35;
+            this.txt_ThoiGianThue.TabStop = false;
+            this.txt_ThoiGianThue.Text = "100";
+            this.txt_ThoiGianThue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_ThoiGianThue.TrailingIcon = null;
+            this.txt_ThoiGianThue.UseSystemPasswordChar = false;
+            this.txt_ThoiGianThue.Visible = false;
+            // 
+            // lbl_ThoiGianThue
+            // 
+            this.lbl_ThoiGianThue.Depth = 0;
+            this.lbl_ThoiGianThue.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_ThoiGianThue.Location = new System.Drawing.Point(455, 378);
+            this.lbl_ThoiGianThue.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_ThoiGianThue.Name = "lbl_ThoiGianThue";
+            this.lbl_ThoiGianThue.Size = new System.Drawing.Size(133, 59);
+            this.lbl_ThoiGianThue.TabIndex = 34;
+            this.lbl_ThoiGianThue.Text = "Thời Gian Thuê";
+            this.lbl_ThoiGianThue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_ThoiGianThue.Visible = false;
+            // 
             // BillDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1728, 1039);
+            this.Controls.Add(this.txt_ThoiGianThue);
+            this.Controls.Add(this.lbl_ThoiGianThue);
+            this.Controls.Add(this.txt_ID_DonDatXe);
+            this.Controls.Add(this.lbl_ID_DonDatXe);
+            this.Controls.Add(this.txt_ID_KH);
+            this.Controls.Add(this.lbl_ID_KH);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.lbl_Email);
             this.Controls.Add(this.txt_Address);
@@ -704,6 +849,11 @@
         private MaterialSkin.Controls.MaterialTextBox2 txt_Address;
         private MaterialSkin.Controls.MaterialLabel lbl_Email;
         private MaterialSkin.Controls.MaterialTextBox2 txt_Email;
-
+        private MaterialSkin.Controls.MaterialTextBox2 txt_ID_KH;
+        private MaterialSkin.Controls.MaterialLabel lbl_ID_KH;
+        private MaterialSkin.Controls.MaterialTextBox2 txt_ID_DonDatXe;
+        private MaterialSkin.Controls.MaterialLabel lbl_ID_DonDatXe;
+        private MaterialSkin.Controls.MaterialTextBox2 txt_ThoiGianThue;
+        private MaterialSkin.Controls.MaterialLabel lbl_ThoiGianThue;
     }
 }
