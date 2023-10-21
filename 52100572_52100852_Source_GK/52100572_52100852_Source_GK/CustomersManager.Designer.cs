@@ -34,6 +34,7 @@
             this.lbl_CarsManager = new MaterialSkin.Controls.MaterialLabel();
             this.lv_CustomersManager = new MaterialSkin.Controls.MaterialListView();
             this.btn_Add = new MaterialSkin.Controls.MaterialButton();
+            this.btn_Export = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // btn_Refresh
@@ -121,7 +122,7 @@
             this.lbl_CarsManager.Name = "lbl_CarsManager";
             this.lbl_CarsManager.Size = new System.Drawing.Size(1053, 74);
             this.lbl_CarsManager.TabIndex = 6;
-            this.lbl_CarsManager.Text = "Quản lý xe";
+            this.lbl_CarsManager.Text = "Quản lý khách hàng";
             this.lbl_CarsManager.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lv_CustomersManager
@@ -170,11 +171,33 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
+            // btn_Export
+            // 
+            this.btn_Export.AutoSize = false;
+            this.btn_Export.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Export.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Export.Depth = 0;
+            this.btn_Export.HighEmphasis = true;
+            this.btn_Export.Icon = null;
+            this.btn_Export.Location = new System.Drawing.Point(681, 73);
+            this.btn_Export.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Export.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Export.Name = "btn_Export";
+            this.btn_Export.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Export.Size = new System.Drawing.Size(133, 49);
+            this.btn_Export.TabIndex = 12;
+            this.btn_Export.Text = "Xuất File";
+            this.btn_Export.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Export.UseAccentColor = false;
+            this.btn_Export.UseVisualStyleBackColor = true;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
+            // 
             // CustomersManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 568);
+            this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.lv_CustomersManager);
             this.Controls.Add(this.btn_Refresh);
@@ -196,5 +219,6 @@
         private MaterialSkin.Controls.MaterialLabel lbl_CarsManager;
         private MaterialSkin.Controls.MaterialListView lv_CustomersManager;
         private MaterialSkin.Controls.MaterialButton btn_Add;
+        private MaterialSkin.Controls.MaterialButton btn_Export;
     }
 }

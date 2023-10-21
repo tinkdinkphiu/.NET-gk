@@ -91,5 +91,14 @@ namespace _52100572_52100852_Source_GK
             }
             bindingData(data);
         }
+
+        private void btn_Export_Click(object sender, EventArgs e)
+        {
+            List<KhachHangDTO> data = KhachHangBUS.Instance.GetKhachHangList();
+            if (ExcelHelper.Instance.addCustomerToExcel(data))
+            {
+                MessageBox.Show("Đã xuất ra file tại: /Output/CustomerList.xlsx");
+            }
+        }
     }
 }
