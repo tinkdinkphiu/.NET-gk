@@ -88,7 +88,7 @@
             this.btn_Search.Depth = 0;
             this.btn_Search.HighEmphasis = true;
             this.btn_Search.Icon = null;
-            this.btn_Search.Location = new System.Drawing.Point(240, 65);
+            this.btn_Search.Location = new System.Drawing.Point(239, 62);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Search.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Search.Name = "btn_Search";
@@ -109,12 +109,12 @@
             this.btn_Add.Depth = 0;
             this.btn_Add.HighEmphasis = true;
             this.btn_Add.Icon = null;
-            this.btn_Add.Location = new System.Drawing.Point(616, 65);
+            this.btn_Add.Location = new System.Drawing.Point(616, 62);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Add.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Add.Size = new System.Drawing.Size(150, 36);
+            this.btn_Add.Size = new System.Drawing.Size(150, 40);
             this.btn_Add.TabIndex = 11;
             this.btn_Add.Text = "Thêm mới";
             this.btn_Add.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
