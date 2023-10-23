@@ -32,7 +32,7 @@ namespace DAO
             {
                 KhachHangDTO khachHang = new KhachHangDTO
                 {
-                    KhachHangID = Convert.ToInt32(row["KhachHangID"]),
+                    KhachHangID = row["KhachHangID"].ToString(),
                     Ten = row["Ten"].ToString(),
                     SoDienThoai = row["SoDienThoai"].ToString(),
                     DiaChi = row["DiaChi"].ToString(),
@@ -43,7 +43,7 @@ namespace DAO
             return khachHangList;
         }
 
-        public KhachHangDTO GetKhachHangByID(int khachHangID)
+        public KhachHangDTO GetKhachHangByID(string khachHangID)
         {
             string query = "SELECT * FROM KhachHang WHERE KhachHangID = @KhachHangID";
             object[] parameters = { khachHangID };
@@ -54,7 +54,32 @@ namespace DAO
                 DataRow row = data.Rows[0];
                 KhachHangDTO khachHang = new KhachHangDTO
                 {
-                    KhachHangID = Convert.ToInt32(row["KhachHangID"]),
+                    KhachHangID = row["KhachHangID"].ToString(),
+                    Ten = row["Ten"].ToString(),
+                    SoDienThoai = row["SoDienThoai"].ToString(),
+                    DiaChi = row["DiaChi"].ToString(),
+                    Email = row["Email"].ToString()
+                };
+                return khachHang;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public KhachHangDTO GetKhachHangByEmail(string email)
+        {
+            string query = "SELECT * FROM KhachHang WHERE Email = @KhachHangID ";
+            object[] parameters = { email };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                KhachHangDTO khachHang = new KhachHangDTO
+                {
+                    KhachHangID = row["KhachHangID"].ToString(),
                     Ten = row["Ten"].ToString(),
                     SoDienThoai = row["SoDienThoai"].ToString(),
                     DiaChi = row["DiaChi"].ToString(),
@@ -71,7 +96,7 @@ namespace DAO
         public bool AddKhachHang(KhachHangDTO khachHang)
         {
             string query = "INSERT INTO KhachHang (Ten, SoDienThoai, DiaChi, Email) " +
-                           "VALUES (@Ten, @SoDienThoai, @DiaChi, @Email)";
+                           " VALUES ( @Ten , @SoDienThoai , @DiaChi , @Email ) ";
             object[] parameters = { khachHang.Ten, khachHang.SoDienThoai, khachHang.DiaChi, khachHang.Email };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
@@ -79,13 +104,13 @@ namespace DAO
         public bool UpdateKhachHang(KhachHangDTO khachHang)
         {
             string query = "UPDATE KhachHang " +
-                           "SET Ten = @Ten, SoDienThoai = @SoDienThoai, DiaChi = @DiaChi, Email = @Email " +
+                           "SET Ten = @Ten , SoDienThoai = @SoDienThoai , DiaChi = @DiaChi , Email = @Email " +
                            "WHERE KhachHangID = @KhachHangID";
             object[] parameters = { khachHang.Ten, khachHang.SoDienThoai, khachHang.DiaChi, khachHang.Email, khachHang.KhachHangID };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
 
-        public bool DeleteKhachHang(int khachHangID)
+        public bool DeleteKhachHang(string khachHangID)
         {
             string query = "DELETE FROM KhachHang WHERE KhachHangID = @KhachHangID";
             object[] parameters = { khachHangID };
@@ -94,7 +119,7 @@ namespace DAO
 
         public List<KhachHangDTO> SearchKhachHangByNameAndPhone(string keyword)
         {
-            string query = "SELECT * FROM KhachHang WHERE TenKhachHang LIKE @TenKhachHang or SoDienThoai LIKE @SoDienThoai";
+            string query = "SELECT * FROM KhachHang WHERE Ten LIKE @TenKhachHang or SoDienThoai LIKE @SoDienThoai";
             object[] parameters = { "%" + keyword + "%", "%" + keyword + "%" };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
 
@@ -103,8 +128,8 @@ namespace DAO
             {
                 KhachHangDTO khachHang = new KhachHangDTO
                 {
-                    KhachHangID = Convert.ToInt32(row["KhachHangID"]),
-                    Ten = row["TenKhachHang"].ToString(),
+                    KhachHangID = row["KhachHangID"].ToString(),
+                    Ten = row["Ten"].ToString(),
                     SoDienThoai = row["SoDienThoai"].ToString(),
                     Email = row["Email"].ToString(),
                     DiaChi = row["DiaChi"].ToString()

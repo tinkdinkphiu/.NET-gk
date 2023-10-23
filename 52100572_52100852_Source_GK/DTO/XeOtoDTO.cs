@@ -8,7 +8,7 @@ namespace DTO
 {
     public class XeOtoDTO
     {
-        public int XeOtoID { get; set; }
+        public string XeOtoID { get; set; }
         public string HangXe { get; set; }
         public string Model { get; set; }
         public string LoaiXe { get; set; }

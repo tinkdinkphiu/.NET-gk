@@ -44,8 +44,6 @@
     <Compile Include="AccountDTO.cs" />
     <Compile Include="DonDatXeDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
-    <Compile Include="LoaiXeDTO.cs" />
-    <Compile Include="NhienLieuDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionManager.cs" />
     <Compile Include="TinhNangDTO.cs" />

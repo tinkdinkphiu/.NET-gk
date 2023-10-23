@@ -65,7 +65,7 @@ namespace _52100572_52100852_Source_GK
             {
                 XeOtoDTO xeOto = new XeOtoDTO
                 {
-                    XeOtoID = int.Parse(item.SubItems[0].Text),
+                    XeOtoID = item.SubItems[0].Text,
                     HangXe = item.SubItems[1].Text,
                     Model = item.SubItems[2].Text,
                     LoaiXe = item.SubItems[3].Text,
@@ -73,7 +73,7 @@ namespace _52100572_52100852_Source_GK
                     Gia = int.Parse(item.SubItems[5].Text)
                 };
 
-                BillDetail billDetails = new BillDetail(xeOto);
+                BillDetail billDetails = new BillDetail(xeOto,null);
                 billDetails.ShowDialog();
             }
         }

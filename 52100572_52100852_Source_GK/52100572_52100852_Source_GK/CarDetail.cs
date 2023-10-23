@@ -26,7 +26,7 @@ namespace _52100572_52100852_Source_GK
             if (xeOtoDTO != null )
             {
                 txt_ID.Text = xeOtoDTO.XeOtoID.ToString();
-                txt_GiaThue.Text = xeOtoDTO.Gia.ToString();
+                txt_GiaThue.Text = xeOtoDTO.Gia.ToString("N0");
                 txt_Model.Text = xeOtoDTO.Model.ToString();
                 int index = cbb_LoaiXe.FindString(xeOtoDTO.LoaiXe);
                 if (index != -1)
@@ -100,7 +100,7 @@ namespace _52100572_52100852_Source_GK
             if (xeOtoDTO != null)
             {
                 txt_ID.Text = xeOtoDTO.XeOtoID.ToString();
-                txt_GiaThue.Text = xeOtoDTO.Gia.ToString();
+                txt_GiaThue.Text = xeOtoDTO.Gia.ToString("N0");
                 txt_Model.Text = xeOtoDTO.Model.ToString();
                 int index = cbb_LoaiXe.FindString(xeOtoDTO.LoaiXe);
                 if (index != -1)

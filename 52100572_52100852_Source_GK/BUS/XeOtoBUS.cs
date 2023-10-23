@@ -29,10 +29,6 @@ namespace BUS
             return xeOtoDAO.GetXeOtoList();
         }        
         
-        public List<string> GetXeOto_TinhNangListByXeOtoID(int xeOToID)
-        {
-            return xeOtoDAO.GetXeOto_TinhNangListByXeOtoID(xeOToID);
-        }
 
         public List<TinhNangDTO> GetTinhNangList()
         {
@@ -63,7 +59,17 @@ namespace BUS
             return xeOtoDAO.UpdateXeOto(xeOto);
         }
 
-        public bool DeleteXeOto(int xeOtoID)
+        public bool UpdateTrangThai(string xeOtoID, bool isAvaiable)
+        {
+            // Thêm xử lý validation nếu cần
+            if (isAvaiable)
+            {
+                return xeOtoDAO.UpdateTrangThai(xeOtoID, "Sẵn sàng");
+            }
+            return xeOtoDAO.UpdateTrangThai(xeOtoID, "Đang cho thuê");
+        }
+
+        public bool DeleteXeOto(string xeOtoID)
         {
             return xeOtoDAO.DeleteXeOto(xeOtoID);
         }
@@ -73,9 +79,14 @@ namespace BUS
             return xeOtoDAO.SearchXeOtoByConditions(keyword);
         }
 
-        public XeOtoDTO GetXeOtoByID(int xeOtoID)
+        public XeOtoDTO GetXeOtoByID(string xeOtoID)
         {
             return xeOtoDAO.GetXeOtoByID(xeOtoID);
+        }
+
+        public bool isAvaiable(string xeOtoID)
+        {
+            return xeOtoDAO.GetXeOtoByID(xeOtoID).TrangThai.Equals("Sẵn sàng");
         }
     }
 

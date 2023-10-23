@@ -32,6 +32,7 @@
             this.txt_Search = new MaterialSkin.Controls.MaterialTextBox2();
             this.btn_Search = new MaterialSkin.Controls.MaterialButton();
             this.lv_Bill = new MaterialSkin.Controls.MaterialListView();
+            this.btn_Refresh = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // lbl_Bill
@@ -123,18 +124,41 @@
             this.lv_Bill.TabIndex = 11;
             this.lv_Bill.UseCompatibleStateImageBehavior = false;
             this.lv_Bill.View = System.Windows.Forms.View.Details;
+            this.lv_Bill.SelectedIndexChanged += new System.EventHandler(this.lv_Bill_SelectedIndexChanged);
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.AutoSize = false;
+            this.btn_Refresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Refresh.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Refresh.Depth = 0;
+            this.btn_Refresh.HighEmphasis = true;
+            this.btn_Refresh.Icon = null;
+            this.btn_Refresh.Location = new System.Drawing.Point(513, 80);
+            this.btn_Refresh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Refresh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Refresh.Size = new System.Drawing.Size(133, 49);
+            this.btn_Refresh.TabIndex = 12;
+            this.btn_Refresh.Text = "Làm Mới";
+            this.btn_Refresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Refresh.UseAccentColor = false;
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 615);
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.lv_Bill);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.lbl_Bill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Bill";
             this.Text = "Bill";
             this.Load += new System.EventHandler(this.Bill_Load);
@@ -148,5 +172,6 @@
         private MaterialSkin.Controls.MaterialTextBox2 txt_Search;
         private MaterialSkin.Controls.MaterialButton btn_Search;
         private MaterialSkin.Controls.MaterialListView lv_Bill;
+        private MaterialSkin.Controls.MaterialButton btn_Refresh;
     }
 }

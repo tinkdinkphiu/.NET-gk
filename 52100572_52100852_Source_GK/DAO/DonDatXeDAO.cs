@@ -29,44 +29,71 @@ namespace DAO
             List<DonDatXeDTO> donDatXeList = new List<DonDatXeDTO>();
             foreach (DataRow row in data.Rows)
             {
+                DateTime? thoigiantra = null;
+                try
+                {
+                    thoigiantra = Convert.ToDateTime(row["ThoiGianTra"]);
+                }
+                catch
+                {
+
+                }
+
                 DonDatXeDTO donDatXe = new DonDatXeDTO
                 {
-                    DonDatXeID = Convert.ToInt32(row["DonDatXeID"]),
-                    KhachHangID = Convert.ToInt32(row["KhachHangID"]),
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    DonDatXeID = row["DonDatXeID"].ToString(),
+                    KhachHangID = row["KhachHangID"].ToString(),
+                    XeOtoID = row["XeOtoID"].ToString(),
                     GiaThue = Double.Parse(row["GiaThue"].ToString()),
                     NhienLieu = row["NhienLieu"].ToString(),
                     ThoiGianThue = Convert.ToDateTime(row["ThoiGianThue"]),
-                    TinhTrangThanhToan = Convert.ToBoolean(row["TinhTrangThanhToan"])
+                    TinhTrangThanhToan = Convert.ToBoolean(row["TinhTrangThanhToan"]),
+                    Total = Double.Parse(row["Total"].ToString()),
+                    ThoiGianTra = thoigiantra
                 };
                 donDatXeList.Add(donDatXe);
             }
             return donDatXeList;
         }
 
-        public bool CreateDonDatXe(DonDatXeDTO donDatXe, List<string>tinhNangIDList)
+        public bool CreateDonDatXe(DonDatXeDTO donDatXe, List<string> tinhNangIDList)
         {
             string query = "INSERT INTO DonDatXe (KhachHangID, XeOtoID, ThoiGianThue, TinhTrangThanhToan, NhienLieu, GiaThue) " +
-                           "VALUES (@KhachHangID , @XeOtoID , @ThoiGianThue , @TinhTrangThanhToan , @NhienLieu , @GiaThue )";
-            object[] parameters = { donDatXe.KhachHangID, donDatXe.XeOtoID, donDatXe.ThoiGianThue, donDatXe.TinhTrangThanhToan, donDatXe.NhienLieu,donDatXe.GiaThue};
+                           "VALUES ( @KhachHangID , @XeOtoID , @ThoiGianThue , @TinhTrangThanhToan , @NhienLieu , @GiaThue ); " +
+                           "SELECT SCOPE_IDENTITY();";
+            object[] parameters = { donDatXe.KhachHangID, donDatXe.XeOtoID, donDatXe.ThoiGianThue, donDatXe.TinhTrangThanhToan, donDatXe.NhienLieu, donDatXe.GiaThue };
             int donDatXeID = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query, parameters));
             foreach (string item in tinhNangIDList)
             {
-                AddTinhNangToDonDatXe(donDatXeID,int.Parse(item));
+                AddTinhNangToDonDatXe(donDatXeID, int.Parse(item));
             }
 
-            return donDatXeID > 0;
+            return donDatXeID >= 0;
         }
-
         public bool UpdateDonDatXe(DonDatXeDTO donDatXe)
         {
-            string query = "UPDATE DonDatXe " +
-                           "SET KhachHangID = @KhachHangID, XeOtoID = @XeOtoID, " +
-                           "ThoiGianThue = @ThoiGianThue , TinhTrangThanhToan = @TinhTrangThanhToan " +
+            string query = "UPDATE [dbo].[DonDatXe] " +
+                           "SET [KhachHangID] = @KhachHangID , " +
+                               "[XeOtoID] = @XeOtoID , " +
+                               "[ThoiGianThue] = @ThoiGianThue , " +
+                               "[TinhTrangThanhToan] = @TinhTrangThanhToan , " +
+                               "[Total] = @Total , " +
+                               "[ThoiGianTra] = @ThoiGianTra " +
                            "WHERE DonDatXeID = @DonDatXeID";
-            object[] parameters = { donDatXe.KhachHangID, donDatXe.XeOtoID, donDatXe.ThoiGianThue, donDatXe.TinhTrangThanhToan, donDatXe.DonDatXeID };
+
+            object[] parameters = {
+                donDatXe.KhachHangID,
+                donDatXe.XeOtoID,
+                donDatXe.ThoiGianThue,
+                donDatXe.TinhTrangThanhToan,
+                donDatXe.Total,
+                donDatXe.ThoiGianTra,
+                donDatXe.DonDatXeID
+            };
+
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
+
 
         public bool DeleteDonDatXe(int donDatXeID)
         {
@@ -89,13 +116,13 @@ namespace DAO
 
             // Nếu chưa có liên kết, thêm liên kết mới
             string query = "INSERT INTO DonDatXe_TinhNang (DonDatXeID, TinhNangID) " +
-                           "VALUES ( @DonDatXeID , @TinhNangID)";
+                           "VALUES ( @DonDatXeID , @TinhNangID )";
             object[] parameters = { donDatXeID, tinhNangID };
 
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
 
-        public List<string> GetTinhNangListByDonDatXe(int donDatXeID)
+        public List<string> GetTinhNangListByDonDatXe(string donDatXeID)
         {
             List<string> tinhNangList = new List<string>();
 
@@ -113,22 +140,34 @@ namespace DAO
 
         public List<DonDatXeDTO> SearchByConditions(string keyword)
         {
-            string query = "SELECT * FROM DonDatXe WHERE TenKhachHang LIKE '%' + @TenKhachHang + '%' OR DonDatXeID LIKE '%' + @DonDatXeID + '%' OR XeOtoID LIKE '%' + @XeOtoID + '%' OR KhachHangID LIKE '%' + @KhachHangID + '%'";
-            object[] parameters = { keyword, keyword, keyword,keyword };
+            string query = "SELECT * FROM DonDatXe WHERE  DonDatXeID LIKE '%' + @DonDatXeID + '%' OR XeOtoID LIKE '%' + @XeOtoID + '%' OR KhachHangID LIKE '%' + @KhachHangID + '%' ";
+            object[] parameters = { keyword, keyword, keyword };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
 
             List<DonDatXeDTO> donDatXeList = new List<DonDatXeDTO>();
             foreach (DataRow row in data.Rows)
             {
+                DateTime? thoigiantra = null;
+                try
+                {
+                    thoigiantra = Convert.ToDateTime(row["ThoiGianTra"]);
+                }
+                catch
+                {
+
+                }
+
                 DonDatXeDTO donDatXe = new DonDatXeDTO
                 {
-                    DonDatXeID = Convert.ToInt32(row["DonDatXeID"]),
-                    KhachHangID = Convert.ToInt32(row["KhachHangID"]),
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    DonDatXeID = row["DonDatXeID"].ToString(),
+                    KhachHangID = row["KhachHangID"].ToString(),
+                    XeOtoID = row["XeOtoID"].ToString(),
                     GiaThue = Double.Parse(row["GiaThue"].ToString()),
                     NhienLieu = row["NhienLieu"].ToString(),
                     ThoiGianThue = Convert.ToDateTime(row["ThoiGianThue"]),
-                    TinhTrangThanhToan = Convert.ToBoolean(row["TinhTrangThanhToan"])
+                    TinhTrangThanhToan = Convert.ToBoolean(row["TinhTrangThanhToan"]),
+                    Total = Double.Parse(row["Total"].ToString()),
+                    ThoiGianTra = thoigiantra
                 };
                 donDatXeList.Add(donDatXe);
             }
@@ -138,3 +177,4 @@ namespace DAO
     }
 
 }
+

@@ -32,7 +32,7 @@ namespace DAO
             {
                 XeOtoDTO xeOto = new XeOtoDTO
                 {
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    XeOtoID = row["XeOtoID"].ToString(),
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
@@ -44,7 +44,7 @@ namespace DAO
             return xeOtoList;
         }
 
-        public XeOtoDTO GetXeOtoByID(int xeOtoID)
+        public XeOtoDTO GetXeOtoByID(string xeOtoID)
         {
             string query = "SELECT * FROM XeOto WHERE XeOtoID = @XeOtoID";
             object[] parameters = { xeOtoID };
@@ -55,7 +55,7 @@ namespace DAO
                 DataRow row = data.Rows[0];
                 XeOtoDTO xeOto = new XeOtoDTO
                 {
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    XeOtoID = row["XeOtoID"].ToString(),
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
@@ -88,9 +88,18 @@ namespace DAO
                            "WHERE XeOtoID = @XeOtoID ";
             object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.TrangThai,xeOto.Gia, xeOto.XeOtoID };
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
+        } 
+        
+        public bool UpdateTrangThai(string xeOtoID, string trangThai)
+        {
+            string query = "UPDATE XeOto " +
+                           "SET TrangThai = @TrangThai " +
+                           "WHERE XeOtoID = @XeOtoID ";
+            object[] parameters = { trangThai, xeOtoID };
+            return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
         }
 
-        public bool DeleteXeOto(int xeOtoID)
+        public bool DeleteXeOto(string xeOtoID)
         {
             string query = "DELETE FROM XeOto WHERE XeOtoID = @XeOtoID";
             object[] parameters = { xeOtoID };
@@ -99,8 +108,8 @@ namespace DAO
 
         public List<XeOtoDTO> SearchXeOtoByConditions(string keyword)
         {
-            string query = "SELECT * FROM XeOto WHERE HangXe LIKE '%' + @HangXe + '%' OR Model LIKE '%' + @Model + '%' OR LoaiXe LIKE '%' + @LoaiXe + '%'";
-            object[] parameters = { keyword, keyword, keyword };
+            string query = "SELECT * FROM XeOto WHERE XeOtoID LIKE '%' + @XeOtoID + '%' OR HangXe LIKE '%' + @HangXe + '%' OR Model LIKE '%' + @Model + '%' OR LoaiXe LIKE '%' + @LoaiXe + '%' OR TrangThai LIKE '%' + @TrangThai + '%'";
+            object[] parameters = { keyword, keyword, keyword, keyword, keyword };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
 
             List<XeOtoDTO> result = new List<XeOtoDTO>();
@@ -108,7 +117,7 @@ namespace DAO
             {
                 XeOtoDTO xeOto = new XeOtoDTO
                 {
-                    XeOtoID = Convert.ToInt32(row["XeOtoID"]),
+                    XeOtoID = row["XeOtoID"].ToString(),
                     HangXe = row["HangXe"].ToString(),
                     Model = row["Model"].ToString(),
                     LoaiXe = row["LoaiXe"].ToString(),
@@ -119,65 +128,7 @@ namespace DAO
             }
             return result;
         }
-        public bool AddTinhNangToXeOto(int xeOtoID, int tinhNangID)
-        {
-            // Kiểm tra xem xe ô tô và tính năng đã được liên kết chưa, nếu đã liên kết thì không thêm nữa
-            string checkQuery = "SELECT COUNT(*) FROM XeOto_TinhNang WHERE XeOtoID = @XeOtoID AND TinhNangID = @TinhNangID";
-            object[] checkParameters = { xeOtoID, tinhNangID };
-            int count = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(checkQuery, checkParameters));
-
-            if (count > 0)
-            {
-                return false; // Xe ô tô đã có tính năng này
-            }
-
-            // Nếu chưa có liên kết, thêm liên kết mới
-            string query = "INSERT INTO XeOto_TinhNang (XeOtoID, TinhNangID) " +
-                           "VALUES (@XeOtoID, @TinhNangID)";
-            object[] parameters = { xeOtoID, tinhNangID };
-
-            return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
-        }
-
-        public List<LoaiXeDTO> GetLoaiXeList()
-        {
-            List<LoaiXeDTO> loaiXeList = new List<LoaiXeDTO>();
-
-            string query = "SELECT * FROM LoaiXe";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-
-            foreach (DataRow row in data.Rows)
-            {
-                LoaiXeDTO loaiXe = new LoaiXeDTO
-                {
-                    LoaiXeID = Convert.ToInt32(row["LoaiXeID"]),
-                    TenLoaiXe = row["TenLoaiXe"].ToString(),
-                    // Các trường thông tin khác về loại xe
-                };
-
-                loaiXeList.Add(loaiXe);
-            }
-
-            return loaiXeList;
-        }
-
-
-
-        public List<string> GetXeOto_TinhNangListByXeOtoID(int xeOtoID)
-        {
-            List<string> xeOto_TinhNangList = new List<string>();
-
-            string query = "SELECT * FROM XeOto_TinhNang WHERE XeOtoID = @XeOtoID";
-            object[] parameters = { xeOtoID };
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
-
-            foreach (DataRow row in data.Rows)
-            {
-                xeOto_TinhNangList.Add(row["TinhNangID"].ToString());
-            }
-
-            return xeOto_TinhNangList;
-        }
+      
     }
 
 }
