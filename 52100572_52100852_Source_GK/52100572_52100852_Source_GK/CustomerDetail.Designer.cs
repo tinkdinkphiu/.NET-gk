@@ -380,7 +380,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustomerDetail";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
-            this.Text = "Chi Khách Hàng";
+            this.Text = "Chi tiết khách hàng";
             this.ResumeLayout(false);
 
         }

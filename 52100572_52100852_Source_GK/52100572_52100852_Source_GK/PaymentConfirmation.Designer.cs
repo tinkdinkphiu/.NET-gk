@@ -56,7 +56,7 @@
             this.txt_ID_KH.HideSelection = true;
             this.txt_ID_KH.LeadingIcon = null;
             this.txt_ID_KH.Location = new System.Drawing.Point(172, 146);
-            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID_KH.MaxLength = 32767;
             this.txt_ID_KH.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID_KH.Name = "txt_ID_KH";
@@ -100,7 +100,7 @@
             this.txt_ThoiGianThue.HideSelection = true;
             this.txt_ThoiGianThue.LeadingIcon = null;
             this.txt_ThoiGianThue.Location = new System.Drawing.Point(534, 146);
-            this.txt_ThoiGianThue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ThoiGianThue.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ThoiGianThue.MaxLength = 32767;
             this.txt_ThoiGianThue.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ThoiGianThue.Name = "txt_ThoiGianThue";
@@ -145,7 +145,7 @@
             this.txt_ID_DonDatXe.HideSelection = true;
             this.txt_ID_DonDatXe.LeadingIcon = null;
             this.txt_ID_DonDatXe.Location = new System.Drawing.Point(172, 88);
-            this.txt_ID_DonDatXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ID_DonDatXe.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID_DonDatXe.MaxLength = 32767;
             this.txt_ID_DonDatXe.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID_DonDatXe.Name = "txt_ID_DonDatXe";
@@ -190,7 +190,7 @@
             this.txt_GiaThue.HideSelection = true;
             this.txt_GiaThue.LeadingIcon = null;
             this.txt_GiaThue.Location = new System.Drawing.Point(534, 88);
-            this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(2);
             this.txt_GiaThue.MaxLength = 32767;
             this.txt_GiaThue.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_GiaThue.Name = "txt_GiaThue";
@@ -234,7 +234,7 @@
             this.txt_ID.HideSelection = true;
             this.txt_ID.LeadingIcon = null;
             this.txt_ID.Location = new System.Drawing.Point(172, 204);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID.MaxLength = 32767;
             this.txt_ID.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID.Name = "txt_ID";
@@ -286,13 +286,14 @@
             this.lbl_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Total.Depth = 0;
             this.lbl_Total.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Total.Location = new System.Drawing.Point(24, 326);
+            this.lbl_Total.Location = new System.Drawing.Point(24, 310);
             this.lbl_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Total.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(249, 22);
+            this.lbl_Total.Size = new System.Drawing.Size(300, 48);
             this.lbl_Total.TabIndex = 46;
             this.lbl_Total.Text = "Thành Tiền:";
+            this.lbl_Total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btn_Cancel
             // 
@@ -344,7 +345,7 @@
             this.dtpk_ThoiGianTra.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dtpk_ThoiGianTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpk_ThoiGianTra.Location = new System.Drawing.Point(534, 204);
-            this.dtpk_ThoiGianTra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpk_ThoiGianTra.Margin = new System.Windows.Forms.Padding(2);
             this.dtpk_ThoiGianTra.MaxDate = new System.DateTime(2300, 12, 31, 0, 0, 0, 0);
             this.dtpk_ThoiGianTra.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpk_ThoiGianTra.MinimumSize = new System.Drawing.Size(200, 48);
@@ -373,7 +374,7 @@
             this.Controls.Add(this.lbl_ID_DonDatXe);
             this.Controls.Add(this.txt_ID_KH);
             this.Controls.Add(this.lbl_ID_KH);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PaymentConfirmation";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "PaymentConfirmation";

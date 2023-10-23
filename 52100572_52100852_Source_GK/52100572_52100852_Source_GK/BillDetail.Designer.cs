@@ -88,7 +88,7 @@
             this.txt_ID.HideSelection = true;
             this.txt_ID.LeadingIcon = null;
             this.txt_ID.Location = new System.Drawing.Point(107, 88);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID.MaxLength = 32767;
             this.txt_ID.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID.Name = "txt_ID";
@@ -152,7 +152,7 @@
             "Ssangyong",
             "Land Rover"});
             this.cbb_HangXe.Location = new System.Drawing.Point(415, 88);
-            this.cbb_HangXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_HangXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_HangXe.MaxDropDownItems = 4;
             this.cbb_HangXe.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_HangXe.Name = "cbb_HangXe";
@@ -183,7 +183,7 @@
             this.txt_Model.HideSelection = true;
             this.txt_Model.LeadingIcon = null;
             this.txt_Model.Location = new System.Drawing.Point(107, 160);
-            this.txt_Model.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Model.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Model.MaxLength = 32767;
             this.txt_Model.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Model.Name = "txt_Model";
@@ -225,7 +225,7 @@
             "7 cho (MPV Gam thap)",
             "Ban tai"});
             this.cbb_LoaiXe.Location = new System.Drawing.Point(415, 160);
-            this.cbb_LoaiXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_LoaiXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_LoaiXe.MaxDropDownItems = 4;
             this.cbb_LoaiXe.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_LoaiXe.Name = "cbb_LoaiXe";
@@ -277,7 +277,7 @@
             "Sẵn sàng",
             "Đang cho thuê"});
             this.cbb_TrangThai.Location = new System.Drawing.Point(107, 232);
-            this.cbb_TrangThai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_TrangThai.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_TrangThai.MaxDropDownItems = 4;
             this.cbb_TrangThai.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_TrangThai.Name = "cbb_TrangThai";
@@ -308,7 +308,7 @@
             this.txt_GiaThue.HideSelection = true;
             this.txt_GiaThue.LeadingIcon = null;
             this.txt_GiaThue.Location = new System.Drawing.Point(415, 232);
-            this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(2);
             this.txt_GiaThue.MaxLength = 32767;
             this.txt_GiaThue.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_GiaThue.Name = "txt_GiaThue";
@@ -346,7 +346,7 @@
             this.fpnl_TinhNang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fpnl_TinhNang.Location = new System.Drawing.Point(24, 429);
-            this.fpnl_TinhNang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fpnl_TinhNang.Margin = new System.Windows.Forms.Padding(2);
             this.fpnl_TinhNang.Name = "fpnl_TinhNang";
             this.fpnl_TinhNang.Size = new System.Drawing.Size(1248, 128);
             this.fpnl_TinhNang.TabIndex = 13;
@@ -360,7 +360,7 @@
             this.lbl_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Total.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(100, 48);
+            this.lbl_Total.Size = new System.Drawing.Size(300, 48);
             this.lbl_Total.TabIndex = 14;
             this.lbl_Total.Text = "Tổng:";
             this.lbl_Total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -524,7 +524,7 @@
             this.txt_Name.HideSelection = true;
             this.txt_Name.LeadingIcon = null;
             this.txt_Name.Location = new System.Drawing.Point(764, 88);
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Name.MaxLength = 32767;
             this.txt_Name.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Name.Name = "txt_Name";
@@ -554,7 +554,7 @@
             this.txt_Phone.HideSelection = true;
             this.txt_Phone.LeadingIcon = null;
             this.txt_Phone.Location = new System.Drawing.Point(764, 160);
-            this.txt_Phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Phone.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Phone.MaxLength = 32767;
             this.txt_Phone.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Phone.Name = "txt_Phone";
@@ -584,7 +584,7 @@
             this.txt_Address.HideSelection = true;
             this.txt_Address.LeadingIcon = null;
             this.txt_Address.Location = new System.Drawing.Point(1072, 88);
-            this.txt_Address.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Address.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Address.MaxLength = 32767;
             this.txt_Address.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Address.Name = "txt_Address";
@@ -628,7 +628,7 @@
             this.txt_Email.HideSelection = true;
             this.txt_Email.LeadingIcon = null;
             this.txt_Email.Location = new System.Drawing.Point(1072, 160);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Email.MaxLength = 32767;
             this.txt_Email.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Email.Name = "txt_Email";
@@ -658,7 +658,7 @@
             this.txt_ID_KH.HideSelection = true;
             this.txt_ID_KH.LeadingIcon = null;
             this.txt_ID_KH.Location = new System.Drawing.Point(764, 233);
-            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID_KH.MaxLength = 32767;
             this.txt_ID_KH.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID_KH.Name = "txt_ID_KH";
@@ -703,7 +703,7 @@
             this.txt_ID_DonDatXe.HideSelection = true;
             this.txt_ID_DonDatXe.LeadingIcon = null;
             this.txt_ID_DonDatXe.Location = new System.Drawing.Point(106, 307);
-            this.txt_ID_DonDatXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ID_DonDatXe.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID_DonDatXe.MaxLength = 32767;
             this.txt_ID_DonDatXe.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID_DonDatXe.Name = "txt_ID_DonDatXe";
@@ -748,7 +748,7 @@
             this.txt_ThoiGianThue.HideSelection = true;
             this.txt_ThoiGianThue.LeadingIcon = null;
             this.txt_ThoiGianThue.Location = new System.Drawing.Point(416, 307);
-            this.txt_ThoiGianThue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ThoiGianThue.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ThoiGianThue.MaxLength = 32767;
             this.txt_ThoiGianThue.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ThoiGianThue.Name = "txt_ThoiGianThue";
@@ -823,7 +823,7 @@
             this.Controls.Add(this.lbl_HangXe);
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.lbl_ID);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BillDetail";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Chi Tiết Đơn Đặt Xe";
