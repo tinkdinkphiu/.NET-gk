@@ -45,10 +45,7 @@ namespace _52100572_52100852_Source_GK
 
         private void CarsManager_Load(object sender, EventArgs e)
         {
-
             loadData();
-
-
         }
 
         private void loadData()

@@ -130,10 +130,7 @@ namespace _52100572_52100852_Source_GK
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            if (validateInput())
-            {
-                toggle(true);
-            }
+            toggle(true);
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
