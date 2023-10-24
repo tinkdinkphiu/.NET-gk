@@ -147,7 +147,7 @@
             this.txt_ID_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ID_KH.HideSelection = true;
             this.txt_ID_KH.LeadingIcon = null;
-            this.txt_ID_KH.Location = new System.Drawing.Point(172, 204);
+            this.txt_ID_KH.Location = new System.Drawing.Point(172, 320);
             this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID_KH.MaxLength = 32767;
             this.txt_ID_KH.MouseState = MaterialSkin.MouseState.OUT;
@@ -172,7 +172,7 @@
             // 
             this.lbl_ID_KH.Depth = 0;
             this.lbl_ID_KH.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ID_KH.Location = new System.Drawing.Point(24, 204);
+            this.lbl_ID_KH.Location = new System.Drawing.Point(24, 320);
             this.lbl_ID_KH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ID_KH.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ID_KH.Name = "lbl_ID_KH";
@@ -281,7 +281,7 @@
             this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Email.HideSelection = true;
             this.txt_Email.LeadingIcon = null;
-            this.txt_Email.Location = new System.Drawing.Point(172, 320);
+            this.txt_Email.Location = new System.Drawing.Point(172, 262);
             this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Email.MaxLength = 32767;
             this.txt_Email.MouseState = MaterialSkin.MouseState.OUT;
@@ -305,7 +305,7 @@
             // 
             this.lbl_Email.Depth = 0;
             this.lbl_Email.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Email.Location = new System.Drawing.Point(24, 320);
+            this.lbl_Email.Location = new System.Drawing.Point(24, 262);
             this.lbl_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Email.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Email.Name = "lbl_Email";
@@ -325,7 +325,7 @@
             this.txt_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Address.HideSelection = true;
             this.txt_Address.LeadingIcon = null;
-            this.txt_Address.Location = new System.Drawing.Point(172, 262);
+            this.txt_Address.Location = new System.Drawing.Point(172, 204);
             this.txt_Address.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Address.MaxLength = 32767;
             this.txt_Address.MouseState = MaterialSkin.MouseState.OUT;
@@ -349,7 +349,7 @@
             // 
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(24, 262);
+            this.materialLabel1.Location = new System.Drawing.Point(24, 204);
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";

@@ -8,8 +8,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace _52100572_52100852_Source_GK
 {
@@ -175,32 +177,109 @@ namespace _52100572_52100852_Source_GK
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            khachHang = new KhachHangDTO
+            if(validateInput())
             {
-                Ten = txt_Name.Text,
-                DiaChi = txt_Address.Text,
-                Email = txt_Email.Text,
-                SoDienThoai = txt_Phone.Text
-            };
+                khachHang = new KhachHangDTO
+                {
+                    Ten = txt_Name.Text,
+                    DiaChi = txt_Address.Text,
+                    Email = txt_Email.Text,
+                    SoDienThoai = txt_Phone.Text
+                };
 
-            donDatXe = new DonDatXeDTO
+                donDatXe = new DonDatXeDTO
+                {
+                    XeOtoID = xeOtoDTO.XeOtoID,
+                    GiaThue = total + giaNhienLieu,
+                    NhienLieu = nhienLieu,
+                    TinhTrangThanhToan = false,
+                    ThoiGianThue = DateTime.Now
+                };
+                bool task = DonDatXeBUS.Instance.AddDonDatXe(khachHang,tinhNangIDList, donDatXe);
+                if (task)
+                {
+                    MessageBox.Show("Thuê xe thành công!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi xảy ra!");
+                }
+            }
+        }
+
+        private bool validateInput()
+        {
+            string name = txt_Name.Text;
+            string phone = txt_Phone.Text;
+            string address = txt_Address.Text;
+            string email = txt_Email.Text;
+            if(!IsValidName(name) || !IsValidPhone(phone) || !IsValidAddress(address) || !IsValidEmail(email))
             {
-                XeOtoID = xeOtoDTO.XeOtoID,
-                GiaThue = total + giaNhienLieu,
-                NhienLieu = nhienLieu,
-                TinhTrangThanhToan = false,
-                ThoiGianThue = DateTime.Now
-            };
-            bool task = DonDatXeBUS.Instance.AddDonDatXe(khachHang,tinhNangIDList, donDatXe);
-            if (task)
-            {
-                MessageBox.Show("Thuê xe thành công!");
-                this.Close();
+                return false;
             }
             else
             {
-                MessageBox.Show("Có lỗi xảy ra!");
+                return true;
             }
+        }
+
+        private bool IsValidName(string name)
+        {
+            string pattern = @"^[\p{L} ]+$";
+            if(string.IsNullOrEmpty (name))
+            {
+                MessageBox.Show("Vui lòng nhập Họ tên", "Họ tên rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if(!Regex.IsMatch(name, pattern))
+            {
+                MessageBox.Show("Họ tên chỉ được chứa ký tự là chữ", "Họ tên không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool IsValidPhone(string phone)
+        {
+            string pattern = "^[0-9]{10}$";
+            if (string.IsNullOrEmpty(phone))
+            {
+                MessageBox.Show("Vui lòng nhập Số điện thoại", "Số điện thoại rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!Regex.IsMatch(phone, pattern))
+            {
+                MessageBox.Show("Số điện thoại chỉ được chứa số và phải đủ 10 ký tự", "Số điện thoại không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool IsValidAddress(string address)
+        {
+            if (string.IsNullOrEmpty(address))
+            {
+                MessageBox.Show("Vui lòng nhập Địa chỉ", "Địa chỉ rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[\w\.-]+@[\w\.-]+\.\w+$";
+            if(string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Vui lòng nhập Email", "Email rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if(!Regex.IsMatch(email, pattern))
+            {
+                MessageBox.Show("Email không đúng cú pháp", "Email không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

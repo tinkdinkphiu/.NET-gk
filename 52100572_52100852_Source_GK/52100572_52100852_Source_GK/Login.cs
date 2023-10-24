@@ -53,7 +53,7 @@ namespace _52100572_52100852_Source_GK
             }
             else
             {
-                MessageBox.Show("Tài Khoản hoặc mật khẩu không đúng!", "Sai thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tài Khoản hoặc mật khẩu không đúng!", "Sai thông tin đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

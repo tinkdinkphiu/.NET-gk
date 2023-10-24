@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -129,48 +130,55 @@ namespace _52100572_52100852_Source_GK
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            toggle(true);
+            if (validateInput())
+            {
+                toggle(true);
+            }
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (xeOtoDTO != null)
+            if(validateInput())
             {
-                xeOtoDTO.Model = txt_Model.Text;
-                xeOtoDTO.HangXe = cbb_HangXe.Text;
-                xeOtoDTO.LoaiXe = cbb_LoaiXe.Text;
-                xeOtoDTO.TrangThai = cbb_TrangThai.Text;
-                xeOtoDTO.Gia = double.Parse(txt_GiaThue.Text);
+                if (xeOtoDTO != null)
+                {
+                    xeOtoDTO.Model = txt_Model.Text;
+                    xeOtoDTO.HangXe = cbb_HangXe.Text;
+                    xeOtoDTO.LoaiXe = cbb_LoaiXe.Text;
+                    xeOtoDTO.TrangThai = cbb_TrangThai.Text;
+                    xeOtoDTO.Gia = double.Parse(txt_GiaThue.Text);
                 
-                if (XeOtoBUS.Instance.UpdateXeOto(xeOtoDTO))
-                {
-                    MessageBox.Show("Cập nhật thành công");
-                    this.Close();
+                    if (XeOtoBUS.Instance.UpdateXeOto(xeOtoDTO))
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật không thành công");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật không thành công");
-                }
-            }
-            else
-            {
-                xeOtoDTO = new XeOtoDTO();
-                xeOtoDTO.Model = txt_Model.Text;
-                xeOtoDTO.HangXe = cbb_HangXe.Text;
-                xeOtoDTO.LoaiXe = cbb_LoaiXe.Text;
-                xeOtoDTO.TrangThai = cbb_TrangThai.Text;
-                xeOtoDTO.Gia = double.Parse(txt_GiaThue.Text);
+                    xeOtoDTO = new XeOtoDTO();
+                    xeOtoDTO.Model = txt_Model.Text;
+                    xeOtoDTO.HangXe = cbb_HangXe.Text;
+                    xeOtoDTO.LoaiXe = cbb_LoaiXe.Text;
+                    xeOtoDTO.TrangThai = cbb_TrangThai.Text;
+                    xeOtoDTO.Gia = double.Parse(txt_GiaThue.Text);
        
-                if (XeOtoBUS.Instance.AddXeOto(xeOtoDTO))
-                {
-                    MessageBox.Show("Cập nhật thành công");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Cập nhật không thành công");
+                    if (XeOtoBUS.Instance.AddXeOto(xeOtoDTO))
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật không thành công");
+                    }
                 }
             }
+
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -189,5 +197,51 @@ namespace _52100572_52100852_Source_GK
                 }
             }
         }
+
+        private bool validateInput()
+        {
+            string model = txt_Model.Text;
+            string price = txt_GiaThue.Text;
+            if (!IsValidModel(model) || !IsValidPrice(price)) {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool IsValidModel(string model)
+        {
+            string pattern = @"^[a-zA-Z0-9\s]+$";
+            if (string.IsNullOrEmpty(model))
+            {
+                MessageBox.Show("Vui lòng nhập Model", "Model rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!Regex.IsMatch(model, pattern))
+            {
+                MessageBox.Show("Model chỉ được chứa ký tự là chữ và số", "Model không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool IsValidPrice(string price)
+        {
+            string pattern = @"^[0-9]+$";
+            if (string.IsNullOrEmpty(price))
+            {
+                MessageBox.Show("Vui lòng nhập Giá", "Giá rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!Regex.IsMatch(price, pattern))
+            {
+                MessageBox.Show("Giá chỉ được chứa các chữ số", "Giá không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
     }
 }
