@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -75,43 +76,46 @@ namespace _52100572_52100852_Source_GK
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (customerDTO != null)
+            if(validateInput())
             {
-                customerDTO.Ten = txt_Name.Text;
-                customerDTO.SoDienThoai = txt_Phone.Text;
-                customerDTO.DiaChi = txt_Address.Text;
-                customerDTO.Email = txt_Email.Text;
-
-                // Handle the save operation for the customer
-                // You need to update the customer data here
-                if (KhachHangBUS.Instance.UpdateKhachHang(customerDTO))
+                if (customerDTO != null)
                 {
-                    MessageBox.Show("Cập nhật thành công");
-                    this.Close();
+                    customerDTO.Ten = txt_Name.Text;
+                    customerDTO.SoDienThoai = txt_Phone.Text;
+                    customerDTO.DiaChi = txt_Address.Text;
+                    customerDTO.Email = txt_Email.Text;
+
+                    // Handle the save operation for the customer
+                    // You need to update the customer data here
+                    if (KhachHangBUS.Instance.UpdateKhachHang(customerDTO))
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật không thành công");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật không thành công");
-                }
-            }
-            else
-            {
-                customerDTO = new KhachHangDTO();
-                customerDTO.Ten = txt_Name.Text;
-                customerDTO.SoDienThoai = txt_Phone.Text;
-                customerDTO.DiaChi = txt_Address.Text;
-                customerDTO.Email = txt_Email.Text;
+                    customerDTO = new KhachHangDTO();
+                    customerDTO.Ten = txt_Name.Text;
+                    customerDTO.SoDienThoai = txt_Phone.Text;
+                    customerDTO.DiaChi = txt_Address.Text;
+                    customerDTO.Email = txt_Email.Text;
 
-                // Handle the create operation for the new customer
-                // You need to insert the new customer data here
-                if (KhachHangBUS.Instance.AddKhachHang(customerDTO))
-                {
-                    MessageBox.Show("Tạo mới thành công");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Tạo mới không thành công");
+                    // Handle the create operation for the new customer
+                    // You need to insert the new customer data here
+                    if (KhachHangBUS.Instance.AddKhachHang(customerDTO))
+                    {
+                        MessageBox.Show("Tạo mới thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tạo mới không thành công");
+                    }
                 }
             }
         }
@@ -148,6 +152,79 @@ namespace _52100572_52100852_Source_GK
                     MessageBox.Show("Xóa không thành công");
                 }
             }
+        }
+        private bool validateInput()
+        {
+            string name = txt_Name.Text;
+            string phone = txt_Phone.Text;
+            string address = txt_Address.Text;
+            string email = txt_Email.Text;
+            if (!IsValidName(name) || !IsValidPhone(phone) || !IsValidAddress(address) || !IsValidEmail(email))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool IsValidName(string name)
+        {
+            string pattern = @"^[\p{L} ]+$";
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Vui lòng nhập Họ tên", "Họ tên rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!Regex.IsMatch(name, pattern))
+            {
+                MessageBox.Show("Họ tên chỉ được chứa ký tự là chữ", "Họ tên không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool IsValidPhone(string phone)
+        {
+            string pattern = "^[0-9]{10}$";
+            if (string.IsNullOrEmpty(phone))
+            {
+                MessageBox.Show("Vui lòng nhập Số điện thoại", "Số điện thoại rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!Regex.IsMatch(phone, pattern))
+            {
+                MessageBox.Show("Số điện thoại chỉ được chứa số và phải đủ 10 ký tự", "Số điện thoại không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool IsValidAddress(string address)
+        {
+            if (string.IsNullOrEmpty(address))
+            {
+                MessageBox.Show("Vui lòng nhập Địa chỉ", "Địa chỉ rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[\w\.-]+@[\w\.-]+\.\w+$";
+            if (string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Vui lòng nhập Email", "Email rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!Regex.IsMatch(email, pattern))
+            {
+                MessageBox.Show("Email không đúng cú pháp", "Email không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

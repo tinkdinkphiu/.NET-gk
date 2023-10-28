@@ -20,14 +20,26 @@ namespace _52100572_52100852_Source_GK
         public Login()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
             string username = txt_Username.Text;
-            string password = txt_Password.Text;   
-            if (AccountBUS.Instance.Login(username, password))
+            string password = txt_Password.Text;
+
+            if (string.IsNullOrEmpty(username))
+            {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập", "Tên đăng nhập trống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_Username.Focus();
+            }
+            else if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu", "Mật khẩu trống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_Password.Focus();
+            }
+            else if (AccountBUS.Instance.Login(username, password))
             {
                 mainForm = new MainForm();
 
@@ -41,9 +53,18 @@ namespace _52100572_52100852_Source_GK
             }
             else
             {
-                MessageBox.Show("Tài Khoản hoặc mật khẩu không đúng!");
+                MessageBox.Show("Tài Khoản hoặc mật khẩu không đúng!", "Sai thông tin đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
+
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login_Click(sender, e);
+            }
+        }
+
     }
 }

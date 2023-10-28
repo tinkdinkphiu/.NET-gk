@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(800, 504);
             this.Controls.Add(this.lv_CarList);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.lbl_ChooseCar);

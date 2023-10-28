@@ -43,10 +43,9 @@
             this.lbl_Bill.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Bill.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
             this.lbl_Bill.Location = new System.Drawing.Point(0, 0);
-            this.lbl_Bill.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bill.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Bill.Name = "lbl_Bill";
-            this.lbl_Bill.Size = new System.Drawing.Size(1053, 74);
+            this.lbl_Bill.Size = new System.Drawing.Size(790, 60);
             this.lbl_Bill.TabIndex = 8;
             this.lbl_Bill.Text = "Đơn đặt xe";
             this.lbl_Bill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,8 +60,8 @@
             this.txt_Search.HideSelection = true;
             this.txt_Search.Hint = "Nhập từ khóa tìm kiếm";
             this.txt_Search.LeadingIcon = null;
-            this.txt_Search.Location = new System.Drawing.Point(32, 76);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Search.Location = new System.Drawing.Point(24, 62);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Search.MaxLength = 32767;
             this.txt_Search.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Search.Name = "txt_Search";
@@ -74,7 +73,7 @@
             this.txt_Search.SelectionLength = 0;
             this.txt_Search.SelectionStart = 0;
             this.txt_Search.ShortcutsEnabled = true;
-            this.txt_Search.Size = new System.Drawing.Size(267, 48);
+            this.txt_Search.Size = new System.Drawing.Size(200, 48);
             this.txt_Search.TabIndex = 9;
             this.txt_Search.TabStop = false;
             this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -89,12 +88,12 @@
             this.btn_Search.Depth = 0;
             this.btn_Search.HighEmphasis = true;
             this.btn_Search.Icon = null;
-            this.btn_Search.Location = new System.Drawing.Point(320, 80);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Search.Location = new System.Drawing.Point(239, 62);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Search.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Search.Size = new System.Drawing.Size(133, 49);
+            this.btn_Search.Size = new System.Drawing.Size(100, 40);
             this.btn_Search.TabIndex = 10;
             this.btn_Search.Text = "Tìm kiếm";
             this.btn_Search.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -113,14 +112,14 @@
             this.lv_Bill.Depth = 0;
             this.lv_Bill.FullRowSelect = true;
             this.lv_Bill.HideSelection = false;
-            this.lv_Bill.Location = new System.Drawing.Point(32, 165);
-            this.lv_Bill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lv_Bill.MinimumSize = new System.Drawing.Size(267, 123);
+            this.lv_Bill.Location = new System.Drawing.Point(24, 134);
+            this.lv_Bill.Margin = new System.Windows.Forms.Padding(2);
+            this.lv_Bill.MinimumSize = new System.Drawing.Size(200, 100);
             this.lv_Bill.MouseLocation = new System.Drawing.Point(-1, -1);
             this.lv_Bill.MouseState = MaterialSkin.MouseState.OUT;
             this.lv_Bill.Name = "lv_Bill";
             this.lv_Bill.OwnerDraw = true;
-            this.lv_Bill.Size = new System.Drawing.Size(989, 421);
+            this.lv_Bill.Size = new System.Drawing.Size(742, 342);
             this.lv_Bill.TabIndex = 11;
             this.lv_Bill.UseCompatibleStateImageBehavior = false;
             this.lv_Bill.View = System.Windows.Forms.View.Details;
@@ -134,12 +133,12 @@
             this.btn_Refresh.Depth = 0;
             this.btn_Refresh.HighEmphasis = true;
             this.btn_Refresh.Icon = null;
-            this.btn_Refresh.Location = new System.Drawing.Point(513, 80);
-            this.btn_Refresh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Refresh.Location = new System.Drawing.Point(355, 62);
+            this.btn_Refresh.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Refresh.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Refresh.Size = new System.Drawing.Size(133, 49);
+            this.btn_Refresh.Size = new System.Drawing.Size(100, 40);
             this.btn_Refresh.TabIndex = 12;
             this.btn_Refresh.Text = "Làm Mới";
             this.btn_Refresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -149,16 +148,15 @@
             // 
             // Bill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 615);
+            this.ClientSize = new System.Drawing.Size(790, 500);
             this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.lv_Bill);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.lbl_Bill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Bill";
             this.Text = "Bill";
             this.Load += new System.EventHandler(this.Bill_Load);

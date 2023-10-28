@@ -53,12 +53,12 @@
             this.btn_Save.Depth = 0;
             this.btn_Save.HighEmphasis = true;
             this.btn_Save.Icon = null;
-            this.btn_Save.Location = new System.Drawing.Point(291, 564);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Save.Location = new System.Drawing.Point(372, 416);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Save.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Save.Size = new System.Drawing.Size(133, 49);
+            this.btn_Save.Size = new System.Drawing.Size(100, 40);
             this.btn_Save.TabIndex = 15;
             this.btn_Save.Text = "Lưu lại";
             this.btn_Save.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -77,12 +77,12 @@
             this.btn_Cancel.Depth = 0;
             this.btn_Cancel.HighEmphasis = true;
             this.btn_Cancel.Icon = null;
-            this.btn_Cancel.Location = new System.Drawing.Point(23, 564);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Cancel.Location = new System.Drawing.Point(24, 416);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Cancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Cancel.Size = new System.Drawing.Size(133, 49);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 40);
             this.btn_Cancel.TabIndex = 16;
             this.btn_Cancel.Text = "Hủy";
             this.btn_Cancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -100,12 +100,12 @@
             this.btn_Edit.Depth = 0;
             this.btn_Edit.HighEmphasis = true;
             this.btn_Edit.Icon = null;
-            this.btn_Edit.Location = new System.Drawing.Point(291, 564);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Edit.Location = new System.Drawing.Point(372, 416);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Edit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Edit.Size = new System.Drawing.Size(133, 49);
+            this.btn_Edit.Size = new System.Drawing.Size(100, 40);
             this.btn_Edit.TabIndex = 17;
             this.btn_Edit.Text = "Chỉnh sửa";
             this.btn_Edit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -123,12 +123,12 @@
             this.btn_Delete.Depth = 0;
             this.btn_Delete.HighEmphasis = true;
             this.btn_Delete.Icon = null;
-            this.btn_Delete.Location = new System.Drawing.Point(23, 564);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Delete.Location = new System.Drawing.Point(24, 416);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Delete.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Delete.Size = new System.Drawing.Size(133, 49);
+            this.btn_Delete.Size = new System.Drawing.Size(100, 40);
             this.btn_Delete.TabIndex = 18;
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -138,7 +138,8 @@
             // 
             // txt_ID_KH
             // 
-            this.txt_ID_KH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ID_KH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_ID_KH.AnimateReadOnly = false;
             this.txt_ID_KH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_ID_KH.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -146,8 +147,8 @@
             this.txt_ID_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ID_KH.HideSelection = true;
             this.txt_ID_KH.LeadingIcon = null;
-            this.txt_ID_KH.Location = new System.Drawing.Point(157, 269);
-            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_ID_KH.Location = new System.Drawing.Point(172, 320);
+            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ID_KH.MaxLength = 32767;
             this.txt_ID_KH.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID_KH.Name = "txt_ID_KH";
@@ -159,7 +160,7 @@
             this.txt_ID_KH.SelectionLength = 0;
             this.txt_ID_KH.SelectionStart = 0;
             this.txt_ID_KH.ShortcutsEnabled = true;
-            this.txt_ID_KH.Size = new System.Drawing.Size(267, 48);
+            this.txt_ID_KH.Size = new System.Drawing.Size(300, 48);
             this.txt_ID_KH.TabIndex = 37;
             this.txt_ID_KH.TabStop = false;
             this.txt_ID_KH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -169,13 +170,13 @@
             // 
             // lbl_ID_KH
             // 
-            this.lbl_ID_KH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ID_KH.Depth = 0;
             this.lbl_ID_KH.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ID_KH.Location = new System.Drawing.Point(18, 269);
+            this.lbl_ID_KH.Location = new System.Drawing.Point(24, 320);
+            this.lbl_ID_KH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ID_KH.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ID_KH.Name = "lbl_ID_KH";
-            this.lbl_ID_KH.Size = new System.Drawing.Size(133, 59);
+            this.lbl_ID_KH.Size = new System.Drawing.Size(120, 48);
             this.lbl_ID_KH.TabIndex = 36;
             this.lbl_ID_KH.Text = "Khách Hàng ID";
             this.lbl_ID_KH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -183,7 +184,8 @@
             // 
             // txt_Phone
             // 
-            this.txt_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Phone.AnimateReadOnly = false;
             this.txt_Phone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_Phone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -191,8 +193,8 @@
             this.txt_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Phone.HideSelection = true;
             this.txt_Phone.LeadingIcon = null;
-            this.txt_Phone.Location = new System.Drawing.Point(157, 179);
-            this.txt_Phone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Phone.Location = new System.Drawing.Point(172, 146);
+            this.txt_Phone.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Phone.MaxLength = 32767;
             this.txt_Phone.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Phone.Name = "txt_Phone";
@@ -204,7 +206,7 @@
             this.txt_Phone.SelectionLength = 0;
             this.txt_Phone.SelectionStart = 0;
             this.txt_Phone.ShortcutsEnabled = true;
-            this.txt_Phone.Size = new System.Drawing.Size(267, 48);
+            this.txt_Phone.Size = new System.Drawing.Size(300, 48);
             this.txt_Phone.TabIndex = 35;
             this.txt_Phone.TabStop = false;
             this.txt_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -213,7 +215,8 @@
             // 
             // txt_Name
             // 
-            this.txt_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Name.AnimateReadOnly = false;
             this.txt_Name.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_Name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -221,8 +224,8 @@
             this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Name.HideSelection = true;
             this.txt_Name.LeadingIcon = null;
-            this.txt_Name.Location = new System.Drawing.Point(157, 90);
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Name.Location = new System.Drawing.Point(172, 88);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Name.MaxLength = 32767;
             this.txt_Name.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Name.Name = "txt_Name";
@@ -234,7 +237,7 @@
             this.txt_Name.SelectionLength = 0;
             this.txt_Name.SelectionStart = 0;
             this.txt_Name.ShortcutsEnabled = true;
-            this.txt_Name.Size = new System.Drawing.Size(267, 48);
+            this.txt_Name.Size = new System.Drawing.Size(300, 48);
             this.txt_Name.TabIndex = 34;
             this.txt_Name.TabStop = false;
             this.txt_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -243,33 +246,34 @@
             // 
             // lbl_Phone
             // 
-            this.lbl_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Phone.Depth = 0;
             this.lbl_Phone.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Phone.Location = new System.Drawing.Point(18, 179);
+            this.lbl_Phone.Location = new System.Drawing.Point(24, 146);
+            this.lbl_Phone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Phone.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Phone.Name = "lbl_Phone";
-            this.lbl_Phone.Size = new System.Drawing.Size(133, 59);
+            this.lbl_Phone.Size = new System.Drawing.Size(120, 48);
             this.lbl_Phone.TabIndex = 33;
             this.lbl_Phone.Text = "Số điện thoại";
             this.lbl_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Name
             // 
-            this.lbl_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Name.Depth = 0;
             this.lbl_Name.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Name.Location = new System.Drawing.Point(18, 90);
+            this.lbl_Name.Location = new System.Drawing.Point(24, 88);
+            this.lbl_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Name.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(133, 59);
+            this.lbl_Name.Size = new System.Drawing.Size(120, 48);
             this.lbl_Name.TabIndex = 32;
             this.lbl_Name.Text = "Họ tên";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txt_Email
             // 
-            this.txt_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Email.AnimateReadOnly = false;
             this.txt_Email.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_Email.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -277,8 +281,8 @@
             this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Email.HideSelection = true;
             this.txt_Email.LeadingIcon = null;
-            this.txt_Email.Location = new System.Drawing.Point(157, 443);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Email.Location = new System.Drawing.Point(172, 262);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Email.MaxLength = 32767;
             this.txt_Email.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Email.Name = "txt_Email";
@@ -290,7 +294,7 @@
             this.txt_Email.SelectionLength = 0;
             this.txt_Email.SelectionStart = 0;
             this.txt_Email.ShortcutsEnabled = true;
-            this.txt_Email.Size = new System.Drawing.Size(267, 48);
+            this.txt_Email.Size = new System.Drawing.Size(300, 48);
             this.txt_Email.TabIndex = 41;
             this.txt_Email.TabStop = false;
             this.txt_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -299,20 +303,21 @@
             // 
             // lbl_Email
             // 
-            this.lbl_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Email.Depth = 0;
             this.lbl_Email.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Email.Location = new System.Drawing.Point(19, 443);
+            this.lbl_Email.Location = new System.Drawing.Point(24, 262);
+            this.lbl_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Email.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(133, 59);
+            this.lbl_Email.Size = new System.Drawing.Size(120, 48);
             this.lbl_Email.TabIndex = 40;
             this.lbl_Email.Text = "Email";
             this.lbl_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txt_Address
             // 
-            this.txt_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Address.AnimateReadOnly = false;
             this.txt_Address.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_Address.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -320,8 +325,8 @@
             this.txt_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Address.HideSelection = true;
             this.txt_Address.LeadingIcon = null;
-            this.txt_Address.Location = new System.Drawing.Point(157, 354);
-            this.txt_Address.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Address.Location = new System.Drawing.Point(172, 204);
+            this.txt_Address.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Address.MaxLength = 32767;
             this.txt_Address.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Address.Name = "txt_Address";
@@ -333,7 +338,7 @@
             this.txt_Address.SelectionLength = 0;
             this.txt_Address.SelectionStart = 0;
             this.txt_Address.ShortcutsEnabled = true;
-            this.txt_Address.Size = new System.Drawing.Size(267, 48);
+            this.txt_Address.Size = new System.Drawing.Size(300, 48);
             this.txt_Address.TabIndex = 39;
             this.txt_Address.TabStop = false;
             this.txt_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -342,22 +347,22 @@
             // 
             // materialLabel1
             // 
-            this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(19, 356);
+            this.materialLabel1.Location = new System.Drawing.Point(24, 204);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(133, 59);
+            this.materialLabel1.Size = new System.Drawing.Size(120, 48);
             this.materialLabel1.TabIndex = 38;
             this.materialLabel1.Text = "Địa chỉ";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CustomerDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 923);
+            this.ClientSize = new System.Drawing.Size(496, 480);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.lbl_Email);
             this.Controls.Add(this.txt_Address);
@@ -372,10 +377,10 @@
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Save);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustomerDetail";
-            this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
-            this.Text = "Chi Khách Hàng";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.Text = "Chi tiết khách hàng";
             this.ResumeLayout(false);
 
         }

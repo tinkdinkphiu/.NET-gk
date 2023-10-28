@@ -39,6 +39,8 @@ namespace _52100572_52100852_Source_GK
             // 
             // lbl_Username
             // 
+            this.lbl_Username.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Username.AutoSize = true;
             this.lbl_Username.Depth = 0;
             this.lbl_Username.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -52,6 +54,8 @@ namespace _52100572_52100852_Source_GK
             // 
             // txt_Username
             // 
+            this.txt_Username.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Username.AnimateReadOnly = false;
             this.txt_Username.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_Username.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -81,6 +85,8 @@ namespace _52100572_52100852_Source_GK
             // 
             // lbl_Password
             // 
+            this.lbl_Password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Depth = 0;
             this.lbl_Password.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -94,6 +100,8 @@ namespace _52100572_52100852_Source_GK
             // 
             // txt_Password
             // 
+            this.txt_Password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Password.AnimateReadOnly = false;
             this.txt_Password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txt_Password.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -123,6 +131,8 @@ namespace _52100572_52100852_Source_GK
             // 
             // btn_Login
             // 
+            this.btn_Login.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Login.AutoSize = false;
             this.btn_Login.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_Login.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -155,6 +165,7 @@ namespace _52100572_52100852_Source_GK
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -55,7 +55,7 @@
             this.btn_back.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_back.Name = "btn_back";
             this.btn_back.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_back.Size = new System.Drawing.Size(100, 36);
+            this.btn_back.Size = new System.Drawing.Size(100, 40);
             this.btn_back.TabIndex = 4;
             this.btn_back.Text = "Trở lại";
             this.btn_back.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -287,7 +287,7 @@
             this.btn_Finish.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Finish.Name = "btn_Finish";
             this.btn_Finish.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Finish.Size = new System.Drawing.Size(100, 36);
+            this.btn_Finish.Size = new System.Drawing.Size(100, 40);
             this.btn_Finish.TabIndex = 13;
             this.btn_Finish.Text = "Hoàn tất";
             this.btn_Finish.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -298,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 530);
+            this.ClientSize = new System.Drawing.Size(348, 534);
             this.Controls.Add(this.btn_Finish);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.lbl_Email);
