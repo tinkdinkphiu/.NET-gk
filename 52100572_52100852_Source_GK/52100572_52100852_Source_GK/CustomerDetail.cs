@@ -46,10 +46,12 @@ namespace _52100572_52100852_Source_GK
             if (isEditing)
             {
                 txt_ID_KH.Enabled = false;
+
                 txt_Name.Enabled = true;
                 txt_Phone.Enabled = true;
                 txt_Address.Enabled = true;
                 txt_Email.Enabled = true;
+
                 btn_Cancel.Visible = true;
                 btn_Save.Visible = true;
                 btn_Edit.Visible = false;
@@ -58,10 +60,12 @@ namespace _52100572_52100852_Source_GK
             else
             {
                 txt_ID_KH.Enabled = false;
+
                 txt_Name.Enabled = false;
                 txt_Phone.Enabled = false;
                 txt_Address.Enabled = false;
                 txt_Email.Enabled = false;
+
                 btn_Cancel.Visible = false;
                 btn_Save.Visible = false;
                 btn_Edit.Visible = true;
@@ -94,7 +98,7 @@ namespace _52100572_52100852_Source_GK
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật không thành công");
+                        MessageBox.Show("Cập nhật thất bại");
                     }
                 }
                 else
@@ -114,7 +118,7 @@ namespace _52100572_52100852_Source_GK
                     }
                     else
                     {
-                        MessageBox.Show("Tạo mới không thành công");
+                        MessageBox.Show("Tạo mới thất bại");
                     }
                 }
             }
@@ -149,7 +153,7 @@ namespace _52100572_52100852_Source_GK
                 }
                 else
                 {
-                    MessageBox.Show("Xóa không thành công");
+                    MessageBox.Show("Xóa thất bại");
                 }
             }
         }

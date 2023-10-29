@@ -157,6 +157,7 @@
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.lbl_Bill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(790, 500);
             this.Name = "Bill";
             this.Text = "Bill";
             this.Load += new System.EventHandler(this.Bill_Load);

@@ -99,7 +99,7 @@
             this.txt_ThoiGianThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ThoiGianThue.HideSelection = true;
             this.txt_ThoiGianThue.LeadingIcon = null;
-            this.txt_ThoiGianThue.Location = new System.Drawing.Point(534, 146);
+            this.txt_ThoiGianThue.Location = new System.Drawing.Point(536, 146);
             this.txt_ThoiGianThue.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ThoiGianThue.MaxLength = 32767;
             this.txt_ThoiGianThue.MouseState = MaterialSkin.MouseState.OUT;
@@ -125,7 +125,7 @@
             this.lbl_ThoiGianThue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ThoiGianThue.Depth = 0;
             this.lbl_ThoiGianThue.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ThoiGianThue.Location = new System.Drawing.Point(386, 146);
+            this.lbl_ThoiGianThue.Location = new System.Drawing.Point(388, 146);
             this.lbl_ThoiGianThue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ThoiGianThue.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ThoiGianThue.Name = "lbl_ThoiGianThue";
@@ -189,7 +189,7 @@
             this.txt_GiaThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_GiaThue.HideSelection = true;
             this.txt_GiaThue.LeadingIcon = null;
-            this.txt_GiaThue.Location = new System.Drawing.Point(534, 88);
+            this.txt_GiaThue.Location = new System.Drawing.Point(536, 88);
             this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(2);
             this.txt_GiaThue.MaxLength = 32767;
             this.txt_GiaThue.MouseState = MaterialSkin.MouseState.OUT;
@@ -214,7 +214,7 @@
             this.lbl_GiaThue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_GiaThue.Depth = 0;
             this.lbl_GiaThue.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_GiaThue.Location = new System.Drawing.Point(386, 88);
+            this.lbl_GiaThue.Location = new System.Drawing.Point(388, 88);
             this.lbl_GiaThue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_GiaThue.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_GiaThue.Name = "lbl_GiaThue";
@@ -272,7 +272,7 @@
             this.lbl_NgayTra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_NgayTra.Depth = 0;
             this.lbl_NgayTra.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_NgayTra.Location = new System.Drawing.Point(386, 204);
+            this.lbl_NgayTra.Location = new System.Drawing.Point(388, 204);
             this.lbl_NgayTra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_NgayTra.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_NgayTra.Name = "lbl_NgayTra";
@@ -286,7 +286,7 @@
             this.lbl_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Total.Depth = 0;
             this.lbl_Total.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Total.Location = new System.Drawing.Point(24, 310);
+            this.lbl_Total.Location = new System.Drawing.Point(24, 305);
             this.lbl_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Total.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Total.Name = "lbl_Total";
@@ -304,7 +304,7 @@
             this.btn_Cancel.Depth = 0;
             this.btn_Cancel.HighEmphasis = true;
             this.btn_Cancel.Icon = null;
-            this.btn_Cancel.Location = new System.Drawing.Point(24, 373);
+            this.btn_Cancel.Location = new System.Drawing.Point(24, 368);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Cancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Cancel.Name = "btn_Cancel";
@@ -326,7 +326,7 @@
             this.btn_Confirm.Depth = 0;
             this.btn_Confirm.HighEmphasis = true;
             this.btn_Confirm.Icon = null;
-            this.btn_Confirm.Location = new System.Drawing.Point(634, 373);
+            this.btn_Confirm.Location = new System.Drawing.Point(636, 368);
             this.btn_Confirm.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Confirm.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Confirm.Name = "btn_Confirm";
@@ -344,7 +344,7 @@
             this.dtpk_ThoiGianTra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpk_ThoiGianTra.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dtpk_ThoiGianTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpk_ThoiGianTra.Location = new System.Drawing.Point(534, 204);
+            this.dtpk_ThoiGianTra.Location = new System.Drawing.Point(536, 204);
             this.dtpk_ThoiGianTra.Margin = new System.Windows.Forms.Padding(2);
             this.dtpk_ThoiGianTra.MaxDate = new System.DateTime(2300, 12, 31, 0, 0, 0, 0);
             this.dtpk_ThoiGianTra.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
@@ -358,7 +358,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 435);
+            this.ClientSize = new System.Drawing.Size(760, 430);
             this.Controls.Add(this.dtpk_ThoiGianTra);
             this.Controls.Add(this.btn_Confirm);
             this.Controls.Add(this.btn_Cancel);
@@ -375,6 +375,7 @@
             this.Controls.Add(this.txt_ID_KH);
             this.Controls.Add(this.lbl_ID_KH);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(760, 430);
             this.Name = "PaymentConfirmation";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "PaymentConfirmation";

@@ -315,7 +315,6 @@ namespace _52100572_52100852_Source_GK
             this.lbl_GiaThue.Size = new System.Drawing.Size(69, 19);
             this.lbl_GiaThue.TabIndex = 10;
             this.lbl_GiaThue.Text = "Giá Thuê:";
-            this.lbl_GiaThue.Click += new System.EventHandler(this.lbl_GiaThue_Click);
             // 
             // txt_GiaThue
             // 
@@ -463,6 +462,7 @@ namespace _52100572_52100852_Source_GK
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.lbl_ID);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(348, 750);
             this.Name = "CarDetail";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Chi Tiết Xe";

@@ -162,6 +162,7 @@ namespace _52100572_52100852_Source_GK
             this.Controls.Add(this.lbl_Password);
             this.Controls.Add(this.txt_Username);
             this.Controls.Add(this.lbl_Username);
+            this.MinimumSize = new System.Drawing.Size(382, 404);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";

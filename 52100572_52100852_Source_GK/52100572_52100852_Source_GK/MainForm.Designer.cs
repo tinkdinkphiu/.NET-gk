@@ -50,10 +50,9 @@ namespace _52100572_52100852_Source_GK
             // 
             this.panel_body.Controls.Add(this.menuControl);
             this.panel_body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_body.Location = new System.Drawing.Point(0, 79);
-            this.panel_body.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_body.Location = new System.Drawing.Point(0, 64);
             this.panel_body.Name = "panel_body";
-            this.panel_body.Size = new System.Drawing.Size(1600, 906);
+            this.panel_body.Size = new System.Drawing.Size(1200, 736);
             this.panel_body.TabIndex = 1;
             // 
             // menuControl
@@ -69,12 +68,11 @@ namespace _52100572_52100852_Source_GK
             this.menuControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuControl.ImageList = this.imageList;
             this.menuControl.Location = new System.Drawing.Point(0, 0);
-            this.menuControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.menuControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.menuControl.Multiline = true;
             this.menuControl.Name = "menuControl";
             this.menuControl.SelectedIndex = 0;
-            this.menuControl.Size = new System.Drawing.Size(1600, 906);
+            this.menuControl.Size = new System.Drawing.Size(1200, 736);
             this.menuControl.TabIndex = 0;
             this.menuControl.SelectedIndexChanged += new System.EventHandler(this.menuControl_SelectedIndexChanged);
             // 
@@ -83,10 +81,9 @@ namespace _52100572_52100852_Source_GK
             this.tab_Home.BackColor = System.Drawing.Color.White;
             this.tab_Home.ImageKey = "home.png";
             this.tab_Home.Location = new System.Drawing.Point(4, 39);
-            this.tab_Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_Home.Name = "tab_Home";
-            this.tab_Home.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_Home.Size = new System.Drawing.Size(1592, 863);
+            this.tab_Home.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tab_Home.Size = new System.Drawing.Size(1192, 693);
             this.tab_Home.TabIndex = 0;
             this.tab_Home.Text = "Trang chủ";
             // 
@@ -95,10 +92,9 @@ namespace _52100572_52100852_Source_GK
             this.tab_CarsManager.BackColor = System.Drawing.Color.White;
             this.tab_CarsManager.ImageKey = "car.png";
             this.tab_CarsManager.Location = new System.Drawing.Point(4, 39);
-            this.tab_CarsManager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_CarsManager.Name = "tab_CarsManager";
-            this.tab_CarsManager.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_CarsManager.Size = new System.Drawing.Size(1592, 863);
+            this.tab_CarsManager.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tab_CarsManager.Size = new System.Drawing.Size(1192, 693);
             this.tab_CarsManager.TabIndex = 1;
             this.tab_CarsManager.Text = "Quản lý xe";
             // 
@@ -107,9 +103,8 @@ namespace _52100572_52100852_Source_GK
             this.tab_Customer.BackColor = System.Drawing.Color.White;
             this.tab_Customer.ImageKey = "customer.png";
             this.tab_Customer.Location = new System.Drawing.Point(4, 39);
-            this.tab_Customer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_Customer.Name = "tab_Customer";
-            this.tab_Customer.Size = new System.Drawing.Size(1592, 863);
+            this.tab_Customer.Size = new System.Drawing.Size(1192, 693);
             this.tab_Customer.TabIndex = 2;
             this.tab_Customer.Text = "Khách hàng";
             // 
@@ -118,9 +113,8 @@ namespace _52100572_52100852_Source_GK
             this.tab_Bill.BackColor = System.Drawing.Color.White;
             this.tab_Bill.ImageKey = "bill.png";
             this.tab_Bill.Location = new System.Drawing.Point(4, 39);
-            this.tab_Bill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_Bill.Name = "tab_Bill";
-            this.tab_Bill.Size = new System.Drawing.Size(1592, 863);
+            this.tab_Bill.Size = new System.Drawing.Size(1192, 693);
             this.tab_Bill.TabIndex = 3;
             this.tab_Bill.Text = "Đơn đặt xe";
             // 
@@ -129,9 +123,8 @@ namespace _52100572_52100852_Source_GK
             this.tab_Schedule.BackColor = System.Drawing.Color.White;
             this.tab_Schedule.ImageKey = "schedule.png";
             this.tab_Schedule.Location = new System.Drawing.Point(4, 39);
-            this.tab_Schedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_Schedule.Name = "tab_Schedule";
-            this.tab_Schedule.Size = new System.Drawing.Size(1592, 863);
+            this.tab_Schedule.Size = new System.Drawing.Size(1192, 693);
             this.tab_Schedule.TabIndex = 4;
             this.tab_Schedule.Text = "Lịch trình";
             // 
@@ -140,9 +133,8 @@ namespace _52100572_52100852_Source_GK
             this.tab_Statistic.BackColor = System.Drawing.Color.White;
             this.tab_Statistic.ImageKey = "statistic.png";
             this.tab_Statistic.Location = new System.Drawing.Point(4, 39);
-            this.tab_Statistic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_Statistic.Name = "tab_Statistic";
-            this.tab_Statistic.Size = new System.Drawing.Size(1592, 863);
+            this.tab_Statistic.Size = new System.Drawing.Size(1192, 693);
             this.tab_Statistic.TabIndex = 5;
             this.tab_Statistic.Text = "Báo cáo thống kê";
             // 
@@ -151,9 +143,8 @@ namespace _52100572_52100852_Source_GK
             this.tab_Admin.BackColor = System.Drawing.Color.White;
             this.tab_Admin.ImageKey = "employee.png";
             this.tab_Admin.Location = new System.Drawing.Point(4, 39);
-            this.tab_Admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tab_Admin.Name = "tab_Admin";
-            this.tab_Admin.Size = new System.Drawing.Size(1592, 863);
+            this.tab_Admin.Size = new System.Drawing.Size(1192, 693);
             this.tab_Admin.TabIndex = 6;
             this.tab_Admin.Text = "Nhân viên";
             // 
@@ -172,15 +163,15 @@ namespace _52100572_52100852_Source_GK
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 985);
+            this.ClientSize = new System.Drawing.Size(1200, 800);
             this.Controls.Add(this.panel_body);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.menuControl;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1200, 800);
             this.Name = "MainForm";
-            this.Padding = new System.Windows.Forms.Padding(0, 79, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(0, 64, 0, 0);
             this.panel_body.ResumeLayout(false);
             this.menuControl.ResumeLayout(false);
             this.ResumeLayout(false);

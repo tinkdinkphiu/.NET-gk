@@ -79,11 +79,6 @@ namespace _52100572_52100852_Source_GK
             }
         }
 
-        private void lbl_GiaThue_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CarDetail_Load(object sender, EventArgs e)
         {
             if (xeOtoDTO != null)
@@ -152,7 +147,7 @@ namespace _52100572_52100852_Source_GK
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật không thành công");
+                        MessageBox.Show("Cập nhật thất bại");
                     }
                 }
                 else
@@ -171,7 +166,7 @@ namespace _52100572_52100852_Source_GK
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật không thành công");
+                        MessageBox.Show("Cập nhật thất bại");
                     }
                 }
             }
@@ -190,7 +185,7 @@ namespace _52100572_52100852_Source_GK
                 }
                 else
                 {
-                    MessageBox.Show("Xóa không thành công");
+                    MessageBox.Show("Xóa thất bại");
                 }
             }
         }

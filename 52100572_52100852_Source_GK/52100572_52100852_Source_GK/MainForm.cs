@@ -23,8 +23,14 @@ namespace _52100572_52100852_Source_GK
             materialSkinManager.EnforceBackcolorOnAllComponents = true;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Blue700, TextShade.WHITE);
-        
+            materialSkinManager.ColorScheme = new ColorScheme(
+                MaterialSkin.Primary.Indigo500,
+                MaterialSkin.Primary.Indigo700,
+                MaterialSkin.Primary.Indigo100,
+                MaterialSkin.Accent.Blue700,
+                TextShade.WHITE
+            );
+
             // Khởi tạo lúc vừa chạy form
             CarRental carRentalForm = new CarRental();
             EmbedFormInTabPage(carRentalForm, tab_Home);

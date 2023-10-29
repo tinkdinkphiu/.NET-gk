@@ -182,6 +182,7 @@
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.lbl_CarsManager);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(790, 400);
             this.Name = "CarsManager";
             this.Text = "7";
             this.Load += new System.EventHandler(this.CarsManager_Load);

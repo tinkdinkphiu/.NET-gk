@@ -119,7 +119,7 @@
             this.lbl_CarsManager.Location = new System.Drawing.Point(0, 0);
             this.lbl_CarsManager.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_CarsManager.Name = "lbl_CarsManager";
-            this.lbl_CarsManager.Size = new System.Drawing.Size(1000, 60);
+            this.lbl_CarsManager.Size = new System.Drawing.Size(820, 60);
             this.lbl_CarsManager.TabIndex = 6;
             this.lbl_CarsManager.Text = "Quản lý khách hàng";
             this.lbl_CarsManager.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,7 +142,7 @@
             this.lv_CustomersManager.MouseState = MaterialSkin.MouseState.OUT;
             this.lv_CustomersManager.Name = "lv_CustomersManager";
             this.lv_CustomersManager.OwnerDraw = true;
-            this.lv_CustomersManager.Size = new System.Drawing.Size(952, 440);
+            this.lv_CustomersManager.Size = new System.Drawing.Size(772, 340);
             this.lv_CustomersManager.TabIndex = 10;
             this.lv_CustomersManager.UseCompatibleStateImageBehavior = false;
             this.lv_CustomersManager.View = System.Windows.Forms.View.Details;
@@ -157,7 +157,7 @@
             this.btn_Add.Depth = 0;
             this.btn_Add.HighEmphasis = true;
             this.btn_Add.Icon = null;
-            this.btn_Add.Location = new System.Drawing.Point(826, 64);
+            this.btn_Add.Location = new System.Drawing.Point(646, 64);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Add.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Add.Name = "btn_Add";
@@ -179,7 +179,7 @@
             this.btn_Export.Depth = 0;
             this.btn_Export.HighEmphasis = true;
             this.btn_Export.Icon = null;
-            this.btn_Export.Location = new System.Drawing.Point(710, 64);
+            this.btn_Export.Location = new System.Drawing.Point(530, 64);
             this.btn_Export.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Export.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Export.Name = "btn_Export";
@@ -196,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(820, 500);
             this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.lv_CustomersManager);
@@ -206,6 +206,7 @@
             this.Controls.Add(this.lbl_CarsManager);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(820, 400);
             this.Name = "CustomersManager";
             this.Text = "CustomersManager";
             this.Load += new System.EventHandler(this.CustomersManager_Load);
