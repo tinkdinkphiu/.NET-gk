@@ -91,7 +91,7 @@
             this.lbl_cartype.Location = new System.Drawing.Point(0, 0);
             this.lbl_cartype.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_cartype.Name = "lbl_cartype";
-            this.lbl_cartype.Size = new System.Drawing.Size(955, 60);
+            this.lbl_cartype.Size = new System.Drawing.Size(800, 60);
             this.lbl_cartype.TabIndex = 0;
             this.lbl_cartype.Text = "Chọn loại xe";
             this.lbl_cartype.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,7 +102,7 @@
             this.pn_mini.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
             this.pn_mini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_mini.Controls.Add(this.pn_inner_mini);
-            this.pn_mini.Location = new System.Drawing.Point(39, 76);
+            this.pn_mini.Location = new System.Drawing.Point(20, 55);
             this.pn_mini.Name = "pn_mini";
             this.pn_mini.Size = new System.Drawing.Size(160, 160);
             this.pn_mini.TabIndex = 22;
@@ -150,7 +150,7 @@
             this.pn_sedan.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
             this.pn_sedan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_sedan.Controls.Add(this.pn_inner_sedan);
-            this.pn_sedan.Location = new System.Drawing.Point(277, 76);
+            this.pn_sedan.Location = new System.Drawing.Point(220, 55);
             this.pn_sedan.Name = "pn_sedan";
             this.pn_sedan.Size = new System.Drawing.Size(160, 160);
             this.pn_sedan.TabIndex = 24;
@@ -212,7 +212,7 @@
             this.tableLayoutPanel.RowCount = 2;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(955, 626);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(800, 540);
             this.tableLayoutPanel.TabIndex = 25;
             // 
             // pn_truck
@@ -221,7 +221,7 @@
             this.pn_truck.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
             this.pn_truck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_truck.Controls.Add(this.pn_inner_truck);
-            this.pn_truck.Location = new System.Drawing.Point(515, 389);
+            this.pn_truck.Location = new System.Drawing.Point(420, 325);
             this.pn_truck.Name = "pn_truck";
             this.pn_truck.Size = new System.Drawing.Size(160, 160);
             this.pn_truck.TabIndex = 28;
@@ -269,7 +269,7 @@
             this.pn_mpv.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
             this.pn_mpv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_mpv.Controls.Add(this.pn_inner_mpv);
-            this.pn_mpv.Location = new System.Drawing.Point(277, 389);
+            this.pn_mpv.Location = new System.Drawing.Point(220, 325);
             this.pn_mpv.Name = "pn_mpv";
             this.pn_mpv.Size = new System.Drawing.Size(160, 160);
             this.pn_mpv.TabIndex = 27;
@@ -317,7 +317,7 @@
             this.pn_suv.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
             this.pn_suv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_suv.Controls.Add(this.pn_inner_suv);
-            this.pn_suv.Location = new System.Drawing.Point(39, 389);
+            this.pn_suv.Location = new System.Drawing.Point(20, 325);
             this.pn_suv.Name = "pn_suv";
             this.pn_suv.Size = new System.Drawing.Size(160, 160);
             this.pn_suv.TabIndex = 26;
@@ -365,7 +365,7 @@
             this.pn_hatchback.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
             this.pn_hatchback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_hatchback.Controls.Add(this.pn_inner_hatchback);
-            this.pn_hatchback.Location = new System.Drawing.Point(515, 76);
+            this.pn_hatchback.Location = new System.Drawing.Point(420, 55);
             this.pn_hatchback.Name = "pn_hatchback";
             this.pn_hatchback.Size = new System.Drawing.Size(160, 160);
             this.pn_hatchback.TabIndex = 41;
@@ -413,7 +413,7 @@
             this.pn_cuv.BackgroundImage = global::_52100572_52100852_Source_GK.Properties.Resources.rounded;
             this.pn_cuv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_cuv.Controls.Add(this.pn_inner_cuv);
-            this.pn_cuv.Location = new System.Drawing.Point(754, 76);
+            this.pn_cuv.Location = new System.Drawing.Point(620, 55);
             this.pn_cuv.Name = "pn_cuv";
             this.pn_cuv.Size = new System.Drawing.Size(160, 160);
             this.pn_cuv.TabIndex = 25;
@@ -460,11 +460,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(955, 686);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.tableLayoutPanel);
             this.Controls.Add(this.lbl_cartype);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "CarRental";
             this.Text = "Thuê xe";
             this.pn_mini.ResumeLayout(false);

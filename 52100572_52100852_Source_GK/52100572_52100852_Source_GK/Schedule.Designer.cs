@@ -47,7 +47,7 @@
             this.lbl_Schedule.Location = new System.Drawing.Point(0, 0);
             this.lbl_Schedule.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Schedule.Name = "lbl_Schedule";
-            this.lbl_Schedule.Size = new System.Drawing.Size(851, 60);
+            this.lbl_Schedule.Size = new System.Drawing.Size(850, 60);
             this.lbl_Schedule.TabIndex = 8;
             this.lbl_Schedule.Text = "Lịch trình";
             this.lbl_Schedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,7 +70,7 @@
             this.lv_Schedule.MouseState = MaterialSkin.MouseState.OUT;
             this.lv_Schedule.Name = "lv_Schedule";
             this.lv_Schedule.OwnerDraw = true;
-            this.lv_Schedule.Size = new System.Drawing.Size(803, 342);
+            this.lv_Schedule.Size = new System.Drawing.Size(802, 342);
             this.lv_Schedule.TabIndex = 9;
             this.lv_Schedule.UseCompatibleStateImageBehavior = false;
             this.lv_Schedule.View = System.Windows.Forms.View.Details;
@@ -156,7 +156,7 @@
             this.btn_CheckCar.Depth = 0;
             this.btn_CheckCar.HighEmphasis = true;
             this.btn_CheckCar.Icon = null;
-            this.btn_CheckCar.Location = new System.Drawing.Point(727, 62);
+            this.btn_CheckCar.Location = new System.Drawing.Point(726, 62);
             this.btn_CheckCar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_CheckCar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_CheckCar.Name = "btn_CheckCar";
@@ -180,7 +180,7 @@
             this.txt_XeOToID.HideSelection = true;
             this.txt_XeOToID.Hint = "Nhập mã xe";
             this.txt_XeOToID.LeadingIcon = null;
-            this.txt_XeOToID.Location = new System.Drawing.Point(512, 62);
+            this.txt_XeOToID.Location = new System.Drawing.Point(511, 62);
             this.txt_XeOToID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_XeOToID.MaxLength = 32767;
             this.txt_XeOToID.MouseState = MaterialSkin.MouseState.OUT;
@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 500);
+            this.ClientSize = new System.Drawing.Size(850, 500);
             this.Controls.Add(this.txt_XeOToID);
             this.Controls.Add(this.btn_CheckCar);
             this.Controls.Add(this.btn_Refresh);
@@ -213,6 +213,7 @@
             this.Controls.Add(this.lv_Schedule);
             this.Controls.Add(this.lbl_Schedule);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(850, 500);
             this.Name = "Schedule";
             this.Text = "Schedule";
             this.Load += new System.EventHandler(this.Schedule_Load);

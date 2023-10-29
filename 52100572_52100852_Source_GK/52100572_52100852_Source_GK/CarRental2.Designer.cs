@@ -102,6 +102,7 @@
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.lbl_ChooseCar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(800, 504);
             this.Name = "CarRental2";
             this.Text = "CarRental2";
             this.Load += new System.EventHandler(this.CarRental2_Load);

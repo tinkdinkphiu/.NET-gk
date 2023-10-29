@@ -177,7 +177,7 @@ namespace _52100572_52100852_Source_GK
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            if(validateInput())
+            if(validateInput() && validateFuel())
             {
                 khachHang = new KhachHangDTO
                 {
@@ -205,6 +205,19 @@ namespace _52100572_52100852_Source_GK
                 {
                     MessageBox.Show("Có lỗi xảy ra!");
                 }
+            }
+        }
+
+        private bool validateFuel()
+        {
+            if(rdb_Xang.Checked || rdb_Dau.Checked || rdb_Dien.Checked) 
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn loại nhiên liệu", "Chưa chọn nhiên liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
         }
 

@@ -32,7 +32,8 @@
             this.txt_Search = new MaterialSkin.Controls.MaterialTextBox2();
             this.btn_Search = new MaterialSkin.Controls.MaterialButton();
             this.btn_Add = new MaterialSkin.Controls.MaterialButton();
-            this.lv_CustomersManager = new MaterialSkin.Controls.MaterialListView();
+            this.lv_EmployeeManager = new MaterialSkin.Controls.MaterialListView();
+            this.btn_Refresh = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // lbl_EmployeesManager
@@ -99,6 +100,7 @@
             this.btn_Search.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_Search.UseAccentColor = false;
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Add
             // 
@@ -120,43 +122,69 @@
             this.btn_Add.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_Add.UseAccentColor = false;
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // lv_CustomersManager
+            // lv_EmployeeManager
             // 
-            this.lv_CustomersManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lv_EmployeeManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lv_CustomersManager.AutoSizeTable = false;
-            this.lv_CustomersManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lv_CustomersManager.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lv_CustomersManager.Depth = 0;
-            this.lv_CustomersManager.FullRowSelect = true;
-            this.lv_CustomersManager.HideSelection = false;
-            this.lv_CustomersManager.Location = new System.Drawing.Point(24, 134);
-            this.lv_CustomersManager.Margin = new System.Windows.Forms.Padding(2);
-            this.lv_CustomersManager.MinimumSize = new System.Drawing.Size(200, 100);
-            this.lv_CustomersManager.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.lv_CustomersManager.MouseState = MaterialSkin.MouseState.OUT;
-            this.lv_CustomersManager.Name = "lv_CustomersManager";
-            this.lv_CustomersManager.OwnerDraw = true;
-            this.lv_CustomersManager.Size = new System.Drawing.Size(742, 342);
-            this.lv_CustomersManager.TabIndex = 12;
-            this.lv_CustomersManager.UseCompatibleStateImageBehavior = false;
-            this.lv_CustomersManager.View = System.Windows.Forms.View.Details;
+            this.lv_EmployeeManager.AutoSizeTable = false;
+            this.lv_EmployeeManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lv_EmployeeManager.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lv_EmployeeManager.Depth = 0;
+            this.lv_EmployeeManager.FullRowSelect = true;
+            this.lv_EmployeeManager.HideSelection = false;
+            this.lv_EmployeeManager.Location = new System.Drawing.Point(24, 134);
+            this.lv_EmployeeManager.Margin = new System.Windows.Forms.Padding(2);
+            this.lv_EmployeeManager.MinimumSize = new System.Drawing.Size(200, 100);
+            this.lv_EmployeeManager.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.lv_EmployeeManager.MouseState = MaterialSkin.MouseState.OUT;
+            this.lv_EmployeeManager.Name = "lv_EmployeeManager";
+            this.lv_EmployeeManager.OwnerDraw = true;
+            this.lv_EmployeeManager.Size = new System.Drawing.Size(742, 342);
+            this.lv_EmployeeManager.TabIndex = 12;
+            this.lv_EmployeeManager.UseCompatibleStateImageBehavior = false;
+            this.lv_EmployeeManager.View = System.Windows.Forms.View.Details;
+            this.lv_EmployeeManager.SelectedIndexChanged += new System.EventHandler(this.lv_EmployeeManager_SelectedIndexChanged);
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.AutoSize = false;
+            this.btn_Refresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Refresh.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Refresh.Depth = 0;
+            this.btn_Refresh.HighEmphasis = true;
+            this.btn_Refresh.Icon = null;
+            this.btn_Refresh.Location = new System.Drawing.Point(354, 62);
+            this.btn_Refresh.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btn_Refresh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Refresh.Size = new System.Drawing.Size(100, 40);
+            this.btn_Refresh.TabIndex = 13;
+            this.btn_Refresh.Text = "Làm Mới";
+            this.btn_Refresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Refresh.UseAccentColor = false;
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // EmployeesManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 500);
-            this.Controls.Add(this.lv_CustomersManager);
+            this.Controls.Add(this.btn_Refresh);
+            this.Controls.Add(this.lv_EmployeeManager);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.lbl_EmployeesManager);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(790, 400);
             this.Name = "EmployeesManager";
             this.Text = "EmployeesManager";
+            this.Load += new System.EventHandler(this.EmployeesManager_Load);
             this.ResumeLayout(false);
 
         }
@@ -167,6 +195,7 @@
         private MaterialSkin.Controls.MaterialTextBox2 txt_Search;
         private MaterialSkin.Controls.MaterialButton btn_Search;
         private MaterialSkin.Controls.MaterialButton btn_Add;
-        private MaterialSkin.Controls.MaterialListView lv_CustomersManager;
+        private MaterialSkin.Controls.MaterialListView lv_EmployeeManager;
+        private MaterialSkin.Controls.MaterialButton btn_Refresh;
     }
 }

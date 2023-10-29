@@ -378,6 +378,7 @@
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Save);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(496, 480);
             this.Name = "CustomerDetail";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Chi tiết khách hàng";
