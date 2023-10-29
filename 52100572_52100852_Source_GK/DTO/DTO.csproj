@@ -45,6 +45,7 @@
     <Compile Include="DonDatXeDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticsDTO.cs" />
     <Compile Include="SessionManager.cs" />
     <Compile Include="TinhNangDTO.cs" />
     <Compile Include="XeOtoDTO.cs" />

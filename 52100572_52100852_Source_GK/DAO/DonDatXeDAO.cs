@@ -1,8 +1,10 @@
 ﻿using DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -174,6 +176,93 @@ namespace DAO
             return donDatXeList;
         }
 
+
+        public List<StaticsDTO> GetRevenueByHang(DateTime start, DateTime end)
+        {
+            string query = "SELECT XeOto.HangXe,  " +
+                   "COUNT(DonDatXe.DonDatXeID) AS SoLuong, " +
+                   "  SUM(DonDatXe.GiaThue) AS DoanhThu FROM DonDatXe " +
+                   "JOIN XeOto ON DonDatXe.XeOtoID = XeOto.XeOtoID " +
+                   "WHERE DonDatXe.ThoiGianThue BETWEEN @StartDate AND @EndDate " +
+                   "GROUP BY XeOto.HangXe";
+
+            object[] parameters = { start, end };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
+            List<StaticsDTO> revenues = new List<StaticsDTO>();
+            foreach (DataRow row in data.Rows)
+            {
+               StaticsDTO revenue = new StaticsDTO
+               {
+                   item1 = row["HangXe"].ToString(),
+                   item2 = row["SoLuong"].ToString(),
+                   item3 = row["DoanhThu"].ToString()
+               };
+                revenues.Add(revenue);
+            }
+            return revenues;
+        }
+
+        public List<StaticsDTO> GetRevenueByModel(DateTime start, DateTime end)
+        {
+            string query = "SELECT XeOto.Model,  " +
+                   "COUNT(DonDatXe.DonDatXeID) AS SoLuong, " +
+                   "  SUM(DonDatXe.GiaThue) AS DoanhThu FROM DonDatXe " +
+                   "JOIN XeOto ON DonDatXe.XeOtoID = XeOto.XeOtoID " +
+                   "WHERE DonDatXe.ThoiGianThue BETWEEN @StartDate AND @EndDate " +
+                   "GROUP BY XeOto.Model";
+
+            object[] parameters = { start, end };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
+            List<StaticsDTO> revenues = new List<StaticsDTO>();
+            foreach (DataRow row in data.Rows)
+            {
+                StaticsDTO revenue = new StaticsDTO
+                {
+                    item1 = row["Model"].ToString(),
+                    item2 = row["SoLuong"].ToString(),
+                    item3 = row["DoanhThu"].ToString()
+                };
+                revenues.Add(revenue);
+            }
+            return revenues;
+        }
+        public List<StaticsDTO> GetCarDistributionByType()
+        {
+            string query = "SELECT LoaiXe, COUNT(XeOtoID) AS SoLuong " +
+                "FROM XeOto GROUP BY LoaiXe";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            List<StaticsDTO> revenues = new List<StaticsDTO>();
+            foreach (DataRow row in data.Rows)
+            {
+                StaticsDTO revenue = new StaticsDTO
+                {
+                    item1 = row["LoaiXe"].ToString(),
+                    item2 = row["SoLuong"].ToString(),
+                };
+                revenues.Add(revenue);
+            }
+            return revenues;
+        }
+
+        public List<StaticsDTO> GetRevenueOfYear(int year)
+        {
+            string query = "SELECT MONTH(ThoiGianThue) as Thang,  SUM(GiaThue) as DoanhThu " +
+                "FROM DonDatXe WHERE YEAR(ThoiGianThue) = @Year GROUP BY MONTH(ThoiGianThue)";
+            object[] parameters = { year };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,parameters);
+            List<StaticsDTO> revenues = new List<StaticsDTO>();
+            foreach (DataRow row in data.Rows)
+            {
+                StaticsDTO revenue = new StaticsDTO
+                {
+                    item1 = row["Thang"].ToString(),
+                    item2 = row["DoanhThu"].ToString(),
+                };
+                revenues.Add(revenue);
+            }
+            return revenues;
+        }
     }
 
 }

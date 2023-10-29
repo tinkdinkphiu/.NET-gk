@@ -69,5 +69,23 @@ namespace BUS
             return DonDatXeDAO.Instance.GetTinhNangListByDonDatXe(donDatXeID);
         }
         
+        public List<StaticsDTO> GetRevenueByHang(DateTime start, DateTime dateTime)
+        {
+            return DonDatXeDAO.Instance.GetRevenueByHang(start, dateTime);
+        }
+
+        public List<StaticsDTO> GetRevenueByModel(DateTime start, DateTime dateTime)
+        {
+            return DonDatXeDAO.Instance.GetRevenueByModel(start, dateTime);
+        }        
+        public List<StaticsDTO> GetCarDistributionByType()
+        {
+            return DonDatXeDAO.Instance.GetCarDistributionByType();
+        }        
+        
+        public List<StaticsDTO> GetRevenueOfYear(int year)
+        {
+            return DonDatXeDAO.Instance.GetRevenueOfYear(year);
+        }
     }
 }

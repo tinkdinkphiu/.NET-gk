@@ -157,3 +157,33 @@ BEGIN
     SET @i = @i + 1;
 END;
 GO
+
+DECLARE @counter INT = 0;
+DECLARE @randomDateStart DATE, @randomDateEnd DATE;
+DECLARE @randomKhachHangID INT, @randomXeOtoID INT;
+DECLARE @randomGiaThue DECIMAL(18, 2), @randomTotal DECIMAL(18, 2);
+DECLARE @randomNhienLieu NVARCHAR(20);
+DECLARE @maxKhachHangID INT, @maxXeOtoID INT;
+
+-- Lấy số lượng tối đa của ID trong các bảng liên quan
+SELECT @maxKhachHangID = MAX(KhachHangID) FROM KhachHang;
+SELECT @maxXeOtoID = MAX(XeOtoID) FROM XeOto;
+
+WHILE @counter < 100
+BEGIN
+    -- Tạo dữ liệu ngẫu nhiên
+    SET @randomDateStart = DATEADD(DAY, (RAND() * 665), '2022-01-01');
+    SET @randomDateEnd = DATEADD(DAY, (RAND() * 10), @randomDateStart); -- giả sử thời gian thuê từ 1-10 ngày
+    SET @randomKhachHangID = CAST(RAND() * @maxKhachHangID AS INT) + 1;
+    SET @randomXeOtoID = CAST(RAND() * @maxXeOtoID AS INT) + 1;
+    SET @randomGiaThue = CAST(RAND() * 1000 + 100 AS DECIMAL(18, 2));
+    SET @randomTotal = @randomGiaThue * (DATEDIFF(DAY, @randomDateStart, @randomDateEnd) + 1);
+    SET @randomNhienLieu = CASE WHEN RAND() < 0.5 THEN N'Xăng' ELSE N'Dầu' END;
+
+    -- Thêm dữ liệu vào bảng DonDatXe
+    INSERT INTO DonDatXe (KhachHangID, XeOtoID, GiaThue, NhienLieu, ThoiGianThue, TinhTrangThanhToan, Total, ThoiGianTra)
+    VALUES (@randomKhachHangID, @randomXeOtoID, @randomGiaThue, @randomNhienLieu, @randomDateStart, 1, @randomTotal, @randomDateEnd);
+
+    SET @counter = @counter + 1;
+END
+go

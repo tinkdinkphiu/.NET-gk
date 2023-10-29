@@ -81,7 +81,8 @@ namespace _52100572_52100852_Source_GK
                     EmbedFormInTabPage(scheduleForm, tab_Schedule);
                     break;
                 case 5: // Báo cáo thống kê
-                    // Báo cáo thống kê chưa code
+                    Revenue revenueForm = new Revenue();
+                    EmbedFormInTabPage(revenueForm, tab_Statistic);
                     break;
                 case 6: // Quản lý nhân viên
                     EmployeesManager employeesManagerForm = new EmployeesManager();
