@@ -14,7 +14,9 @@ namespace _52100572_52100852_Source_GK
 {
     public partial class CarRental2 : Form
     {
-        private string startCarRental2CarType;
+        public string startCarRental2CarType;
+        public List<XeOtoDTO> data;
+        private bool isReloading = false;
         public CarRental2(string carTypeFromRental1)
         {
             InitializeComponent();
@@ -37,10 +39,11 @@ namespace _52100572_52100852_Source_GK
 
         private void CarRental2_Load(object sender, EventArgs e)
         {
-            List<XeOtoDTO> data = XeOtoBUS.Instance.SearchXeOto(startCarRental2CarType);
+            data = XeOtoBUS.Instance.SearchXeOto(startCarRental2CarType);
             bindingData(data);
+            
         }
-        private void bindingData(List<XeOtoDTO> data)
+        public void bindingData(List<XeOtoDTO> data)
         {
             lv_CarList.Items.Clear();
             foreach (var item in data)
@@ -58,9 +61,15 @@ namespace _52100572_52100852_Source_GK
                 }
                 
             }
+            
         }
         private void lv_CarList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (isReloading)
+            {
+                isReloading = false;
+                return;
+            }
             foreach (ListViewItem item in lv_CarList.SelectedItems)
             {
                 XeOtoDTO xeOto = new XeOtoDTO
@@ -75,6 +84,8 @@ namespace _52100572_52100852_Source_GK
 
                 BillDetail billDetails = new BillDetail(xeOto,null);
                 billDetails.ShowDialog();
+                isReloading = true;
+                CarRental2_Load(sender, e);
             }
         }
     }

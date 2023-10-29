@@ -14,6 +14,7 @@ namespace _52100572_52100852_Source_GK
 {
     public partial class EmployeesManager : Form
     {
+        private bool isReloading = false;
         public EmployeesManager()
         {
             InitializeComponent();
@@ -45,6 +46,11 @@ namespace _52100572_52100852_Source_GK
 
         private void lv_EmployeeManager_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (isReloading)
+            {
+                isReloading = false;
+                return;
+            }
             foreach(ListViewItem item in lv_EmployeeManager.SelectedItems)
             {
                 AccountDTO account = new AccountDTO
@@ -56,6 +62,9 @@ namespace _52100572_52100852_Source_GK
 
                 EmployeeDetail employeeDetail = new EmployeeDetail(account);
                 employeeDetail.ShowDialog();
+                EmployeesManager_Load(sender, e);
+                isReloading=true;
+                break;
             }
         }
 
@@ -83,6 +92,7 @@ namespace _52100572_52100852_Source_GK
         {
             EmployeeDetail employeeDetail = new EmployeeDetail(null);
             employeeDetail.ShowDialog();
+            EmployeesManager_Load(sender, e);
         }
     }
 }

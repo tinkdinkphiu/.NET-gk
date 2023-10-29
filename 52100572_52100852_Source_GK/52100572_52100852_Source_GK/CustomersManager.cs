@@ -14,6 +14,7 @@ namespace _52100572_52100852_Source_GK
 {
     public partial class CustomersManager : Form
     {
+        private bool isReloading = false;
         public CustomersManager()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace _52100572_52100852_Source_GK
 
             CustomerDetail customerDetail = new CustomerDetail(null);
             customerDetail.ShowDialog();
+            CustomersManager_Load(sender, e);
         }
 
         private void CustomersManager_Load(object sender, EventArgs e)
@@ -56,6 +58,11 @@ namespace _52100572_52100852_Source_GK
 
         private void lv_CustomersManager_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (isReloading)
+            {
+                isReloading = false;
+                return;
+            }
             foreach (ListViewItem item in lv_CustomersManager.SelectedItems)
             {
                 KhachHangDTO khachHang = new KhachHangDTO
@@ -69,6 +76,9 @@ namespace _52100572_52100852_Source_GK
 
                 CustomerDetail customerDetail = new CustomerDetail(khachHang);
                 customerDetail.ShowDialog();
+                CustomersManager_Load(sender, e);
+                isReloading = true;
+
             }
         }
 

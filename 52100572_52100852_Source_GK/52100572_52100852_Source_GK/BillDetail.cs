@@ -25,6 +25,7 @@ namespace _52100572_52100852_Source_GK
         private string nhienLieu;
         private KhachHangDTO khachHang;
         private DonDatXeDTO donDatXe;
+
         public BillDetail(XeOtoDTO xeOtoDTO, DonDatXeDTO donDatXe)
         {
             InitializeComponent();

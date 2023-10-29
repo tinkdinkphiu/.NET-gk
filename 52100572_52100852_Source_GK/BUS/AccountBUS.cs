@@ -50,9 +50,9 @@ namespace BUS
             return accountDAO.UpdateAccount(updatedAccount);
         }
 
-        public bool DeleteAccount(string accountID)
+        public bool DeleteAccount(string username)
         {
-            return accountDAO.DeleteAccount(accountID);
+            return accountDAO.DeleteAccount(username);
         }
 
         public AccountDTO GetAccountByID(string xeOtoID)

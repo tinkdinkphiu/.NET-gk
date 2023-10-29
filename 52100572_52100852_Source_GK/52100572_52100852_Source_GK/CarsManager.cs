@@ -16,6 +16,7 @@ namespace _52100572_52100852_Source_GK
 {
     public partial class CarsManager : Form
     {
+        private bool _loading = false;
         public CarsManager()
         {
             InitializeComponent();
@@ -71,6 +72,11 @@ namespace _52100572_52100852_Source_GK
 
         private void lv_CarsManager_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (_loading)
+            {
+                _loading = false;
+                return;
+            }
             foreach (ListViewItem item in lv_CarsManager.SelectedItems)
             {
                 XeOtoDTO xeOto = new XeOtoDTO
@@ -85,6 +91,8 @@ namespace _52100572_52100852_Source_GK
 
                 CarDetail carDetail = new CarDetail(xeOto);
                 carDetail.ShowDialog();
+                loadData();
+                _loading = true;
             }
         }
 
@@ -92,6 +100,7 @@ namespace _52100572_52100852_Source_GK
         {
             CarDetail carDetail = new CarDetail(null);
             carDetail.ShowDialog();
+            loadData();
         }
         private void txt_Search_KeyDown(object sender, KeyEventArgs e)
         {

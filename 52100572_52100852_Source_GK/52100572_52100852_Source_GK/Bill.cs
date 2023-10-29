@@ -15,6 +15,7 @@ namespace _52100572_52100852_Source_GK
 {
     public partial class Bill : Form
     {
+        private bool isReloading = false;
         public Bill()
         {
             InitializeComponent();
@@ -76,6 +77,11 @@ namespace _52100572_52100852_Source_GK
 
         private void lv_Bill_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (isReloading)
+            {
+                isReloading = false;
+                return; 
+            }
             foreach (ListViewItem item in lv_Bill.SelectedItems)
             {
 
@@ -97,6 +103,8 @@ namespace _52100572_52100852_Source_GK
                     };
                     BillDetail billDetail = new BillDetail(null, donDatXe);
                     billDetail.ShowDialog();
+                    Bill_Load(sender, e); 
+                    isReloading = true;
                 }
             }
         }

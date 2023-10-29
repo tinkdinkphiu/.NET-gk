@@ -84,13 +84,31 @@ namespace _52100572_52100852_Source_GK
                     MessageBox.Show("Cập nhật thất bại");
                 }
             }
+            else
+            {
+                accountDTO = new AccountDTO { 
+                    Username = txt_Username.Text,
+                    Password = txt_Password.Text,
+                    Role = cbb_Role.Text,
+                };
+                if (AccountBUS.Instance.AddAccount(accountDTO))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
+
+            }
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             if(accountDTO != null)
             {
-                if (AccountBUS.Instance.DeleteAccount(accountDTO.AccountID))
+                if (AccountBUS.Instance.DeleteAccount(accountDTO.Username))
                 {
                     MessageBox.Show("Xóa thành công");
                     this.Close();
