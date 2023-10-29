@@ -15,6 +15,7 @@ namespace _52100572_52100852_Source_GK
 {
     public partial class Schedule : Form
     {
+        private bool isReloading = false;
         public Schedule()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace _52100572_52100852_Source_GK
 
         private void bindingData(List<DonDatXeDTO> data)
         {
+
             lv_Schedule.Items.Clear();
             foreach (var item in data)
             {
@@ -76,6 +78,11 @@ namespace _52100572_52100852_Source_GK
 
         private void lv_Schedule_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (isReloading)
+            {
+                isReloading = false;
+                return;
+            }
             foreach (ListViewItem item in lv_Schedule.SelectedItems)
             {
 
@@ -114,7 +121,8 @@ namespace _52100572_52100852_Source_GK
 
                 PaymentConfirmation paymentFrm = new PaymentConfirmation(donDatXe);
                 paymentFrm.ShowDialog();
-                
+                Schedule_Load(sender, e);
+                isReloading = true;
             }
         }
 
