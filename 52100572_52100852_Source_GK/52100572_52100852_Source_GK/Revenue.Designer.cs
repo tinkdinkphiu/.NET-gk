@@ -56,7 +56,7 @@
             this.lv_Revenue.FullRowSelect = true;
             this.lv_Revenue.HideSelection = false;
             this.lv_Revenue.Location = new System.Drawing.Point(24, 135);
-            this.lv_Revenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lv_Revenue.Margin = new System.Windows.Forms.Padding(2);
             this.lv_Revenue.MinimumSize = new System.Drawing.Size(200, 100);
             this.lv_Revenue.MouseLocation = new System.Drawing.Point(-1, -1);
             this.lv_Revenue.MouseState = MaterialSkin.MouseState.OUT;
@@ -100,7 +100,7 @@
             "Hãng xe",
             "Mẫu xe"});
             this.cbb_RevenueBy.Location = new System.Drawing.Point(24, 62);
-            this.cbb_RevenueBy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_RevenueBy.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_RevenueBy.MaxDropDownItems = 4;
             this.cbb_RevenueBy.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_RevenueBy.Name = "cbb_RevenueBy";
@@ -113,7 +113,7 @@
             this.dtpk_BatDau.CustomFormat = "dd/MM/yyyy";
             this.dtpk_BatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpk_BatDau.Location = new System.Drawing.Point(316, 62);
-            this.dtpk_BatDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpk_BatDau.Margin = new System.Windows.Forms.Padding(2);
             this.dtpk_BatDau.MaxDate = new System.DateTime(2300, 12, 31, 0, 0, 0, 0);
             this.dtpk_BatDau.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpk_BatDau.MinimumSize = new System.Drawing.Size(200, 48);
@@ -152,7 +152,7 @@
             this.dtpk_KetThuc.CustomFormat = "dd/MM/yyyy";
             this.dtpk_KetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpk_KetThuc.Location = new System.Drawing.Point(618, 63);
-            this.dtpk_KetThuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpk_KetThuc.Margin = new System.Windows.Forms.Padding(2);
             this.dtpk_KetThuc.MaxDate = new System.DateTime(2300, 12, 31, 0, 0, 0, 0);
             this.dtpk_KetThuc.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpk_KetThuc.MinimumSize = new System.Drawing.Size(200, 48);
@@ -162,8 +162,9 @@
             // 
             // pieChart_Quantity
             // 
-            this.pieChart_Quantity.Location = new System.Drawing.Point(24, 354);
-            this.pieChart_Quantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pieChart_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pieChart_Quantity.Location = new System.Drawing.Point(627, 224);
+            this.pieChart_Quantity.Margin = new System.Windows.Forms.Padding(2);
             this.pieChart_Quantity.Name = "pieChart_Quantity";
             this.pieChart_Quantity.Size = new System.Drawing.Size(150, 150);
             this.pieChart_Quantity.TabIndex = 54;
@@ -171,8 +172,9 @@
             // 
             // pieChart_Revenue
             // 
-            this.pieChart_Revenue.Location = new System.Drawing.Point(278, 354);
-            this.pieChart_Revenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pieChart_Revenue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pieChart_Revenue.Location = new System.Drawing.Point(762, 354);
+            this.pieChart_Revenue.Margin = new System.Windows.Forms.Padding(2);
             this.pieChart_Revenue.Name = "pieChart_Revenue";
             this.pieChart_Revenue.Size = new System.Drawing.Size(150, 150);
             this.pieChart_Revenue.TabIndex = 55;
@@ -180,6 +182,7 @@
             // 
             // lbl_Quantity
             // 
+            this.lbl_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Quantity.Depth = 0;
             this.lbl_Quantity.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Quantity.Location = new System.Drawing.Point(24, 506);
@@ -193,6 +196,7 @@
             // 
             // lbl_Profit
             // 
+            this.lbl_Profit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Profit.Depth = 0;
             this.lbl_Profit.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Profit.Location = new System.Drawing.Point(278, 506);
@@ -206,6 +210,7 @@
             // 
             // btn_Load
             // 
+            this.btn_Load.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Load.AutoSize = false;
             this.btn_Load.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_Load.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -227,8 +232,10 @@
             // 
             // chart_RevenueOfYear
             // 
+            this.chart_RevenueOfYear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chart_RevenueOfYear.Location = new System.Drawing.Point(351, 135);
-            this.chart_RevenueOfYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart_RevenueOfYear.Margin = new System.Windows.Forms.Padding(2);
             this.chart_RevenueOfYear.Name = "chart_RevenueOfYear";
             this.chart_RevenueOfYear.Size = new System.Drawing.Size(600, 200);
             this.chart_RevenueOfYear.TabIndex = 59;
@@ -236,8 +243,9 @@
             // 
             // pieChart_CarDistributionByType
             // 
+            this.pieChart_CarDistributionByType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pieChart_CarDistributionByType.Location = new System.Drawing.Point(532, 354);
-            this.pieChart_CarDistributionByType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pieChart_CarDistributionByType.Margin = new System.Windows.Forms.Padding(2);
             this.pieChart_CarDistributionByType.Name = "pieChart_CarDistributionByType";
             this.pieChart_CarDistributionByType.Size = new System.Drawing.Size(150, 150);
             this.pieChart_CarDistributionByType.TabIndex = 60;
@@ -245,6 +253,7 @@
             // 
             // lbl_CarType
             // 
+            this.lbl_CarType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_CarType.Depth = 0;
             this.lbl_CarType.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_CarType.Location = new System.Drawing.Point(527, 506);
@@ -261,7 +270,7 @@
             this.dtpk_Year.CustomFormat = "yyyy";
             this.dtpk_Year.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpk_Year.Location = new System.Drawing.Point(24, 263);
-            this.dtpk_Year.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpk_Year.Margin = new System.Windows.Forms.Padding(2);
             this.dtpk_Year.MaxDate = new System.DateTime(2300, 12, 31, 0, 0, 0, 0);
             this.dtpk_Year.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpk_Year.MinimumSize = new System.Drawing.Size(200, 48);
