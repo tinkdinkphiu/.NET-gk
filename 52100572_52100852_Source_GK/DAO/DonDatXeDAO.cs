@@ -181,7 +181,7 @@ namespace DAO
         {
             string query = "SELECT XeOto.HangXe,  " +
                    "COUNT(DonDatXe.DonDatXeID) AS SoLuong, " +
-                   "  SUM(DonDatXe.GiaThue) AS DoanhThu FROM DonDatXe " +
+                   "  SUM(DonDatXe.Total) AS DoanhThu FROM DonDatXe " +
                    "JOIN XeOto ON DonDatXe.XeOtoID = XeOto.XeOtoID " +
                    "WHERE DonDatXe.ThoiGianThue BETWEEN @StartDate AND @EndDate " +
                    "GROUP BY XeOto.HangXe";
@@ -206,7 +206,7 @@ namespace DAO
         {
             string query = "SELECT XeOto.Model,  " +
                    "COUNT(DonDatXe.DonDatXeID) AS SoLuong, " +
-                   "  SUM(DonDatXe.GiaThue) AS DoanhThu FROM DonDatXe " +
+                   "  SUM(DonDatXe.Total) AS DoanhThu FROM DonDatXe " +
                    "JOIN XeOto ON DonDatXe.XeOtoID = XeOto.XeOtoID " +
                    "WHERE DonDatXe.ThoiGianThue BETWEEN @StartDate AND @EndDate " +
                    "GROUP BY XeOto.Model";
