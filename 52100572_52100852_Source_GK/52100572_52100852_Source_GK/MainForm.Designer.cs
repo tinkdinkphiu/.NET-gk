@@ -52,7 +52,7 @@ namespace _52100572_52100852_Source_GK
             this.panel_body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_body.Location = new System.Drawing.Point(0, 64);
             this.panel_body.Name = "panel_body";
-            this.panel_body.Size = new System.Drawing.Size(1200, 736);
+            this.panel_body.Size = new System.Drawing.Size(1400, 836);
             this.panel_body.TabIndex = 1;
             // 
             // menuControl
@@ -72,7 +72,7 @@ namespace _52100572_52100852_Source_GK
             this.menuControl.Multiline = true;
             this.menuControl.Name = "menuControl";
             this.menuControl.SelectedIndex = 0;
-            this.menuControl.Size = new System.Drawing.Size(1200, 736);
+            this.menuControl.Size = new System.Drawing.Size(1400, 836);
             this.menuControl.TabIndex = 0;
             this.menuControl.SelectedIndexChanged += new System.EventHandler(this.menuControl_SelectedIndexChanged);
             // 
@@ -82,8 +82,8 @@ namespace _52100572_52100852_Source_GK
             this.tab_Home.ImageKey = "home.png";
             this.tab_Home.Location = new System.Drawing.Point(4, 39);
             this.tab_Home.Name = "tab_Home";
-            this.tab_Home.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tab_Home.Size = new System.Drawing.Size(1192, 693);
+            this.tab_Home.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Home.Size = new System.Drawing.Size(1392, 793);
             this.tab_Home.TabIndex = 0;
             this.tab_Home.Text = "Trang chủ";
             // 
@@ -93,7 +93,7 @@ namespace _52100572_52100852_Source_GK
             this.tab_CarsManager.ImageKey = "car.png";
             this.tab_CarsManager.Location = new System.Drawing.Point(4, 39);
             this.tab_CarsManager.Name = "tab_CarsManager";
-            this.tab_CarsManager.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tab_CarsManager.Padding = new System.Windows.Forms.Padding(3);
             this.tab_CarsManager.Size = new System.Drawing.Size(1192, 693);
             this.tab_CarsManager.TabIndex = 1;
             this.tab_CarsManager.Text = "Quản lý xe";
@@ -165,11 +165,11 @@ namespace _52100572_52100852_Source_GK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(1400, 900);
             this.Controls.Add(this.panel_body);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.menuControl;
-            this.MinimumSize = new System.Drawing.Size(1200, 800);
+            this.MinimumSize = new System.Drawing.Size(1400, 900);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(0, 64, 0, 0);
             this.panel_body.ResumeLayout(false);
