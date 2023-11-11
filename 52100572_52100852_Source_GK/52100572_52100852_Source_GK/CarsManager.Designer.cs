@@ -34,6 +34,7 @@
             this.lv_CarsManager = new MaterialSkin.Controls.MaterialListView();
             this.lbl_CarsManager = new MaterialSkin.Controls.MaterialLabel();
             this.btn_Refresh = new MaterialSkin.Controls.MaterialButton();
+            this.btn_Import = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // txt_Search
@@ -97,7 +98,7 @@
             this.btn_Add.Depth = 0;
             this.btn_Add.HighEmphasis = true;
             this.btn_Add.Icon = null;
-            this.btn_Add.Location = new System.Drawing.Point(616, 62);
+            this.btn_Add.Location = new System.Drawing.Point(626, 62);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Add.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Add.Name = "btn_Add";
@@ -128,7 +129,7 @@
             this.lv_CarsManager.MouseState = MaterialSkin.MouseState.OUT;
             this.lv_CarsManager.Name = "lv_CarsManager";
             this.lv_CarsManager.OwnerDraw = true;
-            this.lv_CarsManager.Size = new System.Drawing.Size(742, 342);
+            this.lv_CarsManager.Size = new System.Drawing.Size(752, 342);
             this.lv_CarsManager.TabIndex = 4;
             this.lv_CarsManager.UseCompatibleStateImageBehavior = false;
             this.lv_CarsManager.View = System.Windows.Forms.View.Details;
@@ -144,7 +145,7 @@
             this.lbl_CarsManager.Location = new System.Drawing.Point(0, 0);
             this.lbl_CarsManager.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_CarsManager.Name = "lbl_CarsManager";
-            this.lbl_CarsManager.Size = new System.Drawing.Size(790, 60);
+            this.lbl_CarsManager.Size = new System.Drawing.Size(800, 60);
             this.lbl_CarsManager.TabIndex = 0;
             this.lbl_CarsManager.Text = "Quản lý xe";
             this.lbl_CarsManager.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,7 +158,7 @@
             this.btn_Refresh.Depth = 0;
             this.btn_Refresh.HighEmphasis = true;
             this.btn_Refresh.Icon = null;
-            this.btn_Refresh.Location = new System.Drawing.Point(370, 62);
+            this.btn_Refresh.Location = new System.Drawing.Point(356, 62);
             this.btn_Refresh.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Refresh.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Refresh.Name = "btn_Refresh";
@@ -170,11 +171,34 @@
             this.btn_Refresh.UseVisualStyleBackColor = true;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
+            // btn_Import
+            // 
+            this.btn_Import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Import.AutoSize = false;
+            this.btn_Import.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Import.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Import.Depth = 0;
+            this.btn_Import.HighEmphasis = true;
+            this.btn_Import.Icon = null;
+            this.btn_Import.Location = new System.Drawing.Point(510, 62);
+            this.btn_Import.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btn_Import.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Import.Name = "btn_Import";
+            this.btn_Import.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Import.Size = new System.Drawing.Size(100, 40);
+            this.btn_Import.TabIndex = 13;
+            this.btn_Import.Text = "Nhập File";
+            this.btn_Import.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Import.UseAccentColor = false;
+            this.btn_Import.UseVisualStyleBackColor = true;
+            this.btn_Import.Click += new System.EventHandler(this.btn_Import_Click);
+            // 
             // CarsManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 500);
+            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.btn_Import);
             this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.lv_CarsManager);
             this.Controls.Add(this.btn_Add);
@@ -182,7 +206,7 @@
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.lbl_CarsManager);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(790, 400);
+            this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "CarsManager";
             this.Text = "7";
             this.Load += new System.EventHandler(this.CarsManager_Load);
@@ -197,5 +221,6 @@
         private MaterialSkin.Controls.MaterialListView lv_CarsManager;
         private MaterialSkin.Controls.MaterialLabel lbl_CarsManager;
         private MaterialSkin.Controls.MaterialButton btn_Refresh;
+        private MaterialSkin.Controls.MaterialButton btn_Import;
     }
 }

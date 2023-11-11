@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using DTO;
+using System.Windows.Markup;
 
 namespace _52100572_52100852_Source_GK
 {
@@ -113,6 +114,28 @@ namespace _52100572_52100852_Source_GK
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
+            loadData();
+        }
+
+        private void btn_Import_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedFilePath = openFileDialog.FileName;
+                    List<XeOtoDTO> importedData = ExcelHelper.Instance.ImportXeOtoFromExcel(selectedFilePath);
+
+                    // Add to database
+                    foreach (var item in importedData)
+                    {
+                        XeOtoBUS.Instance.AddXeOto(item);
+                    }
+                }
+            }
+            // Reload listview
             loadData();
         }
     }

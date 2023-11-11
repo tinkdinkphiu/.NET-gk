@@ -78,5 +78,37 @@ namespace BUS
                 throw;
                 return false; }
         }
+
+        public List<XeOtoDTO> ImportXeOtoFromExcel(string filePath)
+        {
+            List<XeOtoDTO> xeOtos = new List<XeOtoDTO>();
+            try
+            {
+                Workbook workbook = new Workbook();
+                workbook.LoadFromFile(filePath);
+
+                Worksheet worksheet = workbook.Worksheets[0];
+                int rowCount = worksheet.Rows.Length;
+
+                for (int row = 2; row <= rowCount; row++) // Dòng đầu là tiêu đề
+                {
+                    XeOtoDTO xeOto = new XeOtoDTO
+                    {
+                        // Dữ liệu đã được validate trong excel
+                        HangXe = worksheet.Range[row, 1].Value,
+                        Model = worksheet.Range[row, 2].Value,
+                        LoaiXe = worksheet.Range[row, 3].Value,
+                        TrangThai = worksheet.Range[row, 4].Value,
+                        Gia = Double.TryParse(worksheet.Range[row, 5].Value, out double gia) ? gia : 10000 // Mặc định khi gặp lỗi thì giá là 10k
+                    };
+                    xeOtos.Add(xeOto);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            return xeOtos;
+        }
     }
 }
