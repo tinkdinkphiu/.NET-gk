@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -228,7 +229,9 @@ namespace _52100572_52100852_Source_GK
             string phone = txt_Phone.Text;
             string address = txt_Address.Text;
             string email = txt_Email.Text;
-            if(!IsValidName(name) || !IsValidPhone(phone) || !IsValidAddress(address) || !IsValidEmail(email))
+            string location = txt_Location.Text;
+            DateTimePicker returnDate = dtpk_ReturnDate;
+            if(!IsValidName(name) || !IsValidPhone(phone) || !IsValidAddress(address) || !IsValidEmail(email) || IsValidLocation(location) || IsValidReturnDate(returnDate))
             {
                 return false;
             }
@@ -295,5 +298,29 @@ namespace _52100572_52100852_Source_GK
             }
             return true;
         }
+
+        private bool IsValidLocation(string location)
+        {
+            if (string.IsNullOrEmpty(location))
+            {
+                MessageBox.Show("Vui lòng nhập Điểm đến", "Điểm đến rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+
+        }
+
+        private bool IsValidReturnDate(DateTimePicker dtpk_ReturnDate)
+        {
+            DateTime today = DateTime.Today;
+
+            if (dtpk_ReturnDate.Value.Date <= today)
+            {
+                MessageBox.Show("Vui lòng chọn ngày trả xe hợp lệ. Ngày trả xe phải nhiều hơn 1 ngày", "Ngày trả xe không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
     }
 }
