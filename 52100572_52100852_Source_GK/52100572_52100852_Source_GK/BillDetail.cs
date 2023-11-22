@@ -231,7 +231,7 @@ namespace _52100572_52100852_Source_GK
             string email = txt_Email.Text;
             string location = txt_Location.Text;
             DateTimePicker returnDate = dtpk_ReturnDate;
-            if(!IsValidName(name) || !IsValidPhone(phone) || !IsValidAddress(address) || !IsValidEmail(email) || IsValidLocation(location) || IsValidReturnDate(returnDate))
+            if(!IsValidName(name) || !IsValidPhone(phone) || !IsValidAddress(address) || !IsValidEmail(email) || !IsValidLocation(location) || !IsValidReturnDate(returnDate))
             {
                 return false;
             }
