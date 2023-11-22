@@ -67,17 +67,17 @@
             this.txt_Location = new MaterialSkin.Controls.MaterialTextBox2();
             this.lbl_ReturnDate = new MaterialSkin.Controls.MaterialLabel();
             this.dtpk_ReturnDate = new System.Windows.Forms.DateTimePicker();
+            this.btn_Check = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // lbl_ID
             // 
             this.lbl_ID.Depth = 0;
             this.lbl_ID.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ID.Location = new System.Drawing.Point(3, 88);
-            this.lbl_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ID.Location = new System.Drawing.Point(4, 108);
             this.lbl_ID.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ID.Name = "lbl_ID";
-            this.lbl_ID.Size = new System.Drawing.Size(100, 48);
+            this.lbl_ID.Size = new System.Drawing.Size(133, 59);
             this.lbl_ID.TabIndex = 0;
             this.lbl_ID.Text = "ID Xe";
             this.lbl_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -91,8 +91,8 @@
             this.txt_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ID.HideSelection = true;
             this.txt_ID.LeadingIcon = null;
-            this.txt_ID.Location = new System.Drawing.Point(107, 88);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ID.Location = new System.Drawing.Point(143, 108);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ID.MaxLength = 32767;
             this.txt_ID.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID.Name = "txt_ID";
@@ -104,7 +104,7 @@
             this.txt_ID.SelectionLength = 0;
             this.txt_ID.SelectionStart = 0;
             this.txt_ID.ShortcutsEnabled = true;
-            this.txt_ID.Size = new System.Drawing.Size(200, 48);
+            this.txt_ID.Size = new System.Drawing.Size(267, 48);
             this.txt_ID.TabIndex = 1;
             this.txt_ID.TabStop = false;
             this.txt_ID.Text = "100";
@@ -116,11 +116,10 @@
             // 
             this.lbl_HangXe.Depth = 0;
             this.lbl_HangXe.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_HangXe.Location = new System.Drawing.Point(311, 88);
-            this.lbl_HangXe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_HangXe.Location = new System.Drawing.Point(415, 108);
             this.lbl_HangXe.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_HangXe.Name = "lbl_HangXe";
-            this.lbl_HangXe.Size = new System.Drawing.Size(120, 48);
+            this.lbl_HangXe.Size = new System.Drawing.Size(160, 59);
             this.lbl_HangXe.TabIndex = 2;
             this.lbl_HangXe.Text = "Hãng Xe";
             this.lbl_HangXe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -155,12 +154,12 @@
             "Subaru",
             "Ssangyong",
             "Land Rover"});
-            this.cbb_HangXe.Location = new System.Drawing.Point(435, 88);
-            this.cbb_HangXe.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_HangXe.Location = new System.Drawing.Point(580, 108);
+            this.cbb_HangXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbb_HangXe.MaxDropDownItems = 4;
             this.cbb_HangXe.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_HangXe.Name = "cbb_HangXe";
-            this.cbb_HangXe.Size = new System.Drawing.Size(200, 49);
+            this.cbb_HangXe.Size = new System.Drawing.Size(265, 49);
             this.cbb_HangXe.StartIndex = 0;
             this.cbb_HangXe.TabIndex = 3;
             // 
@@ -168,11 +167,10 @@
             // 
             this.lbl_Model.Depth = 0;
             this.lbl_Model.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Model.Location = new System.Drawing.Point(3, 160);
-            this.lbl_Model.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Model.Location = new System.Drawing.Point(4, 197);
             this.lbl_Model.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Model.Name = "lbl_Model";
-            this.lbl_Model.Size = new System.Drawing.Size(100, 48);
+            this.lbl_Model.Size = new System.Drawing.Size(133, 59);
             this.lbl_Model.TabIndex = 4;
             this.lbl_Model.Text = "Model";
             this.lbl_Model.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -186,8 +184,8 @@
             this.txt_Model.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Model.HideSelection = true;
             this.txt_Model.LeadingIcon = null;
-            this.txt_Model.Location = new System.Drawing.Point(107, 160);
-            this.txt_Model.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Model.Location = new System.Drawing.Point(143, 197);
+            this.txt_Model.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Model.MaxLength = 32767;
             this.txt_Model.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Model.Name = "txt_Model";
@@ -199,7 +197,7 @@
             this.txt_Model.SelectionLength = 0;
             this.txt_Model.SelectionStart = 0;
             this.txt_Model.ShortcutsEnabled = true;
-            this.txt_Model.Size = new System.Drawing.Size(200, 48);
+            this.txt_Model.Size = new System.Drawing.Size(267, 48);
             this.txt_Model.TabIndex = 5;
             this.txt_Model.TabStop = false;
             this.txt_Model.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -228,12 +226,12 @@
             "7 cho (SUV Gam cao)",
             "7 cho (MPV Gam thap)",
             "Ban tai"});
-            this.cbb_LoaiXe.Location = new System.Drawing.Point(435, 160);
-            this.cbb_LoaiXe.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_LoaiXe.Location = new System.Drawing.Point(580, 197);
+            this.cbb_LoaiXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbb_LoaiXe.MaxDropDownItems = 4;
             this.cbb_LoaiXe.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_LoaiXe.Name = "cbb_LoaiXe";
-            this.cbb_LoaiXe.Size = new System.Drawing.Size(200, 49);
+            this.cbb_LoaiXe.Size = new System.Drawing.Size(265, 49);
             this.cbb_LoaiXe.StartIndex = 0;
             this.cbb_LoaiXe.TabIndex = 6;
             // 
@@ -241,11 +239,10 @@
             // 
             this.lbl_LoaiXe.Depth = 0;
             this.lbl_LoaiXe.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_LoaiXe.Location = new System.Drawing.Point(311, 160);
-            this.lbl_LoaiXe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_LoaiXe.Location = new System.Drawing.Point(415, 197);
             this.lbl_LoaiXe.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_LoaiXe.Name = "lbl_LoaiXe";
-            this.lbl_LoaiXe.Size = new System.Drawing.Size(120, 48);
+            this.lbl_LoaiXe.Size = new System.Drawing.Size(160, 59);
             this.lbl_LoaiXe.TabIndex = 7;
             this.lbl_LoaiXe.Text = "Loại Xe";
             this.lbl_LoaiXe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -254,11 +251,10 @@
             // 
             this.lbl_TrangThai.Depth = 0;
             this.lbl_TrangThai.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_TrangThai.Location = new System.Drawing.Point(3, 232);
-            this.lbl_TrangThai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TrangThai.Location = new System.Drawing.Point(4, 286);
             this.lbl_TrangThai.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_TrangThai.Name = "lbl_TrangThai";
-            this.lbl_TrangThai.Size = new System.Drawing.Size(100, 48);
+            this.lbl_TrangThai.Size = new System.Drawing.Size(133, 59);
             this.lbl_TrangThai.TabIndex = 8;
             this.lbl_TrangThai.Text = "Trạng Thái";
             this.lbl_TrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -280,12 +276,12 @@
             this.cbb_TrangThai.Items.AddRange(new object[] {
             "Sẵn sàng",
             "Đang cho thuê"});
-            this.cbb_TrangThai.Location = new System.Drawing.Point(107, 232);
-            this.cbb_TrangThai.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_TrangThai.Location = new System.Drawing.Point(143, 286);
+            this.cbb_TrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbb_TrangThai.MaxDropDownItems = 4;
             this.cbb_TrangThai.MouseState = MaterialSkin.MouseState.OUT;
             this.cbb_TrangThai.Name = "cbb_TrangThai";
-            this.cbb_TrangThai.Size = new System.Drawing.Size(200, 49);
+            this.cbb_TrangThai.Size = new System.Drawing.Size(265, 49);
             this.cbb_TrangThai.StartIndex = 0;
             this.cbb_TrangThai.TabIndex = 9;
             // 
@@ -293,11 +289,10 @@
             // 
             this.lbl_GiaThue.Depth = 0;
             this.lbl_GiaThue.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_GiaThue.Location = new System.Drawing.Point(311, 233);
-            this.lbl_GiaThue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_GiaThue.Location = new System.Drawing.Point(415, 287);
             this.lbl_GiaThue.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_GiaThue.Name = "lbl_GiaThue";
-            this.lbl_GiaThue.Size = new System.Drawing.Size(120, 48);
+            this.lbl_GiaThue.Size = new System.Drawing.Size(160, 59);
             this.lbl_GiaThue.TabIndex = 10;
             this.lbl_GiaThue.Text = "Giá Thuê:";
             this.lbl_GiaThue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -311,8 +306,8 @@
             this.txt_GiaThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_GiaThue.HideSelection = true;
             this.txt_GiaThue.LeadingIcon = null;
-            this.txt_GiaThue.Location = new System.Drawing.Point(435, 233);
-            this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_GiaThue.Location = new System.Drawing.Point(580, 287);
+            this.txt_GiaThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_GiaThue.MaxLength = 32767;
             this.txt_GiaThue.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_GiaThue.Name = "txt_GiaThue";
@@ -324,7 +319,7 @@
             this.txt_GiaThue.SelectionLength = 0;
             this.txt_GiaThue.SelectionStart = 0;
             this.txt_GiaThue.ShortcutsEnabled = true;
-            this.txt_GiaThue.Size = new System.Drawing.Size(200, 48);
+            this.txt_GiaThue.Size = new System.Drawing.Size(267, 48);
             this.txt_GiaThue.TabIndex = 11;
             this.txt_GiaThue.TabStop = false;
             this.txt_GiaThue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -336,11 +331,10 @@
             this.lbl_TinhNang.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_TinhNang.Depth = 0;
             this.lbl_TinhNang.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_TinhNang.Location = new System.Drawing.Point(24, 379);
-            this.lbl_TinhNang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TinhNang.Location = new System.Drawing.Point(32, 466);
             this.lbl_TinhNang.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_TinhNang.Name = "lbl_TinhNang";
-            this.lbl_TinhNang.Size = new System.Drawing.Size(100, 48);
+            this.lbl_TinhNang.Size = new System.Drawing.Size(133, 59);
             this.lbl_TinhNang.TabIndex = 12;
             this.lbl_TinhNang.Text = "Tính Năng";
             this.lbl_TinhNang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -349,10 +343,10 @@
             // 
             this.fpnl_TinhNang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fpnl_TinhNang.Location = new System.Drawing.Point(24, 429);
-            this.fpnl_TinhNang.Margin = new System.Windows.Forms.Padding(2);
+            this.fpnl_TinhNang.Location = new System.Drawing.Point(32, 528);
+            this.fpnl_TinhNang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fpnl_TinhNang.Name = "fpnl_TinhNang";
-            this.fpnl_TinhNang.Size = new System.Drawing.Size(1247, 128);
+            this.fpnl_TinhNang.Size = new System.Drawing.Size(1663, 158);
             this.fpnl_TinhNang.TabIndex = 13;
             // 
             // lbl_Total
@@ -360,11 +354,10 @@
             this.lbl_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Total.Depth = 0;
             this.lbl_Total.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Total.Location = new System.Drawing.Point(24, 689);
-            this.lbl_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Total.Location = new System.Drawing.Point(32, 848);
             this.lbl_Total.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(300, 48);
+            this.lbl_Total.Size = new System.Drawing.Size(400, 59);
             this.lbl_Total.TabIndex = 14;
             this.lbl_Total.Text = "Tổng:";
             this.lbl_Total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,12 +371,12 @@
             this.btn_Confirm.Depth = 0;
             this.btn_Confirm.HighEmphasis = true;
             this.btn_Confirm.Icon = null;
-            this.btn_Confirm.Location = new System.Drawing.Point(1171, 766);
-            this.btn_Confirm.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btn_Confirm.Location = new System.Drawing.Point(1561, 943);
+            this.btn_Confirm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Confirm.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Confirm.Size = new System.Drawing.Size(100, 40);
+            this.btn_Confirm.Size = new System.Drawing.Size(133, 49);
             this.btn_Confirm.TabIndex = 15;
             this.btn_Confirm.Text = "Xác nhận";
             this.btn_Confirm.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -400,12 +393,12 @@
             this.btn_Cancel.Depth = 0;
             this.btn_Cancel.HighEmphasis = true;
             this.btn_Cancel.Icon = null;
-            this.btn_Cancel.Location = new System.Drawing.Point(24, 766);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btn_Cancel.Location = new System.Drawing.Point(32, 943);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Cancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_Cancel.Size = new System.Drawing.Size(100, 40);
+            this.btn_Cancel.Size = new System.Drawing.Size(133, 49);
             this.btn_Cancel.TabIndex = 16;
             this.btn_Cancel.Text = "Hủy";
             this.btn_Cancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -418,11 +411,10 @@
             this.lbl_NhienLieu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_NhienLieu.Depth = 0;
             this.lbl_NhienLieu.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_NhienLieu.Location = new System.Drawing.Point(24, 583);
-            this.lbl_NhienLieu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_NhienLieu.Location = new System.Drawing.Point(32, 718);
             this.lbl_NhienLieu.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_NhienLieu.Name = "lbl_NhienLieu";
-            this.lbl_NhienLieu.Size = new System.Drawing.Size(100, 48);
+            this.lbl_NhienLieu.Size = new System.Drawing.Size(133, 59);
             this.lbl_NhienLieu.TabIndex = 18;
             this.lbl_NhienLieu.Text = "Nhiên Liệu";
             this.lbl_NhienLieu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -430,13 +422,13 @@
             // rdb_Xang
             // 
             this.rdb_Xang.Depth = 0;
-            this.rdb_Xang.Location = new System.Drawing.Point(24, 631);
+            this.rdb_Xang.Location = new System.Drawing.Point(32, 777);
             this.rdb_Xang.Margin = new System.Windows.Forms.Padding(0);
             this.rdb_Xang.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdb_Xang.MouseState = MaterialSkin.MouseState.HOVER;
             this.rdb_Xang.Name = "rdb_Xang";
             this.rdb_Xang.Ripple = true;
-            this.rdb_Xang.Size = new System.Drawing.Size(150, 48);
+            this.rdb_Xang.Size = new System.Drawing.Size(200, 59);
             this.rdb_Xang.TabIndex = 19;
             this.rdb_Xang.TabStop = true;
             this.rdb_Xang.Text = "Xăng";
@@ -446,13 +438,13 @@
             // rdb_Dau
             // 
             this.rdb_Dau.Depth = 0;
-            this.rdb_Dau.Location = new System.Drawing.Point(174, 631);
+            this.rdb_Dau.Location = new System.Drawing.Point(232, 777);
             this.rdb_Dau.Margin = new System.Windows.Forms.Padding(0);
             this.rdb_Dau.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdb_Dau.MouseState = MaterialSkin.MouseState.HOVER;
             this.rdb_Dau.Name = "rdb_Dau";
             this.rdb_Dau.Ripple = true;
-            this.rdb_Dau.Size = new System.Drawing.Size(150, 48);
+            this.rdb_Dau.Size = new System.Drawing.Size(200, 59);
             this.rdb_Dau.TabIndex = 20;
             this.rdb_Dau.TabStop = true;
             this.rdb_Dau.Text = "Dầu Diesel";
@@ -462,13 +454,13 @@
             // rdb_Dien
             // 
             this.rdb_Dien.Depth = 0;
-            this.rdb_Dien.Location = new System.Drawing.Point(333, 631);
+            this.rdb_Dien.Location = new System.Drawing.Point(444, 777);
             this.rdb_Dien.Margin = new System.Windows.Forms.Padding(0);
             this.rdb_Dien.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdb_Dien.MouseState = MaterialSkin.MouseState.HOVER;
             this.rdb_Dien.Name = "rdb_Dien";
             this.rdb_Dien.Ripple = true;
-            this.rdb_Dien.Size = new System.Drawing.Size(150, 48);
+            this.rdb_Dien.Size = new System.Drawing.Size(200, 59);
             this.rdb_Dien.TabIndex = 21;
             this.rdb_Dien.TabStop = true;
             this.rdb_Dien.Text = "Điện";
@@ -480,11 +472,10 @@
             this.lbl_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Name.Depth = 0;
             this.lbl_Name.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Name.Location = new System.Drawing.Point(639, 88);
-            this.lbl_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Name.Location = new System.Drawing.Point(852, 200);
             this.lbl_Name.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(120, 48);
+            this.lbl_Name.Size = new System.Drawing.Size(160, 59);
             this.lbl_Name.TabIndex = 22;
             this.lbl_Name.Text = "Họ tên";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -494,11 +485,10 @@
             this.lbl_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Phone.Depth = 0;
             this.lbl_Phone.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Phone.Location = new System.Drawing.Point(639, 160);
-            this.lbl_Phone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Phone.Location = new System.Drawing.Point(852, 108);
             this.lbl_Phone.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Phone.Name = "lbl_Phone";
-            this.lbl_Phone.Size = new System.Drawing.Size(120, 48);
+            this.lbl_Phone.Size = new System.Drawing.Size(160, 59);
             this.lbl_Phone.TabIndex = 23;
             this.lbl_Phone.Text = "Số điện thoại";
             this.lbl_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -508,11 +498,10 @@
             this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(967, 89);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel1.Location = new System.Drawing.Point(1305, 200);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(100, 48);
+            this.materialLabel1.Size = new System.Drawing.Size(133, 59);
             this.materialLabel1.TabIndex = 24;
             this.materialLabel1.Text = "Địa chỉ";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -527,8 +516,8 @@
             this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Name.HideSelection = true;
             this.txt_Name.LeadingIcon = null;
-            this.txt_Name.Location = new System.Drawing.Point(763, 88);
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Name.Location = new System.Drawing.Point(1017, 200);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Name.MaxLength = 32767;
             this.txt_Name.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Name.Name = "txt_Name";
@@ -540,7 +529,7 @@
             this.txt_Name.SelectionLength = 0;
             this.txt_Name.SelectionStart = 0;
             this.txt_Name.ShortcutsEnabled = true;
-            this.txt_Name.Size = new System.Drawing.Size(200, 48);
+            this.txt_Name.Size = new System.Drawing.Size(267, 48);
             this.txt_Name.TabIndex = 25;
             this.txt_Name.TabStop = false;
             this.txt_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -557,8 +546,8 @@
             this.txt_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Phone.HideSelection = true;
             this.txt_Phone.LeadingIcon = null;
-            this.txt_Phone.Location = new System.Drawing.Point(763, 160);
-            this.txt_Phone.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Phone.Location = new System.Drawing.Point(1017, 108);
+            this.txt_Phone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Phone.MaxLength = 32767;
             this.txt_Phone.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Phone.Name = "txt_Phone";
@@ -570,7 +559,7 @@
             this.txt_Phone.SelectionLength = 0;
             this.txt_Phone.SelectionStart = 0;
             this.txt_Phone.ShortcutsEnabled = true;
-            this.txt_Phone.Size = new System.Drawing.Size(200, 48);
+            this.txt_Phone.Size = new System.Drawing.Size(267, 48);
             this.txt_Phone.TabIndex = 26;
             this.txt_Phone.TabStop = false;
             this.txt_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -587,8 +576,8 @@
             this.txt_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Address.HideSelection = true;
             this.txt_Address.LeadingIcon = null;
-            this.txt_Address.Location = new System.Drawing.Point(1071, 88);
-            this.txt_Address.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Address.Location = new System.Drawing.Point(1444, 198);
+            this.txt_Address.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Address.MaxLength = 32767;
             this.txt_Address.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Address.Name = "txt_Address";
@@ -600,7 +589,7 @@
             this.txt_Address.SelectionLength = 0;
             this.txt_Address.SelectionStart = 0;
             this.txt_Address.ShortcutsEnabled = true;
-            this.txt_Address.Size = new System.Drawing.Size(200, 48);
+            this.txt_Address.Size = new System.Drawing.Size(267, 48);
             this.txt_Address.TabIndex = 27;
             this.txt_Address.TabStop = false;
             this.txt_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -612,11 +601,10 @@
             this.lbl_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Email.Depth = 0;
             this.lbl_Email.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Email.Location = new System.Drawing.Point(967, 160);
-            this.lbl_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Email.Location = new System.Drawing.Point(1305, 287);
             this.lbl_Email.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(100, 48);
+            this.lbl_Email.Size = new System.Drawing.Size(133, 59);
             this.lbl_Email.TabIndex = 28;
             this.lbl_Email.Text = "Email";
             this.lbl_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -631,8 +619,8 @@
             this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Email.HideSelection = true;
             this.txt_Email.LeadingIcon = null;
-            this.txt_Email.Location = new System.Drawing.Point(1071, 160);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Email.Location = new System.Drawing.Point(1444, 287);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Email.MaxLength = 32767;
             this.txt_Email.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Email.Name = "txt_Email";
@@ -644,7 +632,7 @@
             this.txt_Email.SelectionLength = 0;
             this.txt_Email.SelectionStart = 0;
             this.txt_Email.ShortcutsEnabled = true;
-            this.txt_Email.Size = new System.Drawing.Size(200, 48);
+            this.txt_Email.Size = new System.Drawing.Size(267, 48);
             this.txt_Email.TabIndex = 29;
             this.txt_Email.TabStop = false;
             this.txt_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -661,8 +649,8 @@
             this.txt_ID_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ID_KH.HideSelection = true;
             this.txt_ID_KH.LeadingIcon = null;
-            this.txt_ID_KH.Location = new System.Drawing.Point(763, 307);
-            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ID_KH.Location = new System.Drawing.Point(1017, 378);
+            this.txt_ID_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ID_KH.MaxLength = 32767;
             this.txt_ID_KH.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID_KH.Name = "txt_ID_KH";
@@ -674,7 +662,7 @@
             this.txt_ID_KH.SelectionLength = 0;
             this.txt_ID_KH.SelectionStart = 0;
             this.txt_ID_KH.ShortcutsEnabled = true;
-            this.txt_ID_KH.Size = new System.Drawing.Size(200, 48);
+            this.txt_ID_KH.Size = new System.Drawing.Size(267, 48);
             this.txt_ID_KH.TabIndex = 31;
             this.txt_ID_KH.TabStop = false;
             this.txt_ID_KH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -687,11 +675,10 @@
             this.lbl_ID_KH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ID_KH.Depth = 0;
             this.lbl_ID_KH.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ID_KH.Location = new System.Drawing.Point(639, 307);
-            this.lbl_ID_KH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ID_KH.Location = new System.Drawing.Point(852, 378);
             this.lbl_ID_KH.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ID_KH.Name = "lbl_ID_KH";
-            this.lbl_ID_KH.Size = new System.Drawing.Size(120, 48);
+            this.lbl_ID_KH.Size = new System.Drawing.Size(160, 59);
             this.lbl_ID_KH.TabIndex = 30;
             this.lbl_ID_KH.Text = "Khách Hàng ID";
             this.lbl_ID_KH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -706,8 +693,8 @@
             this.txt_ID_DonDatXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ID_DonDatXe.HideSelection = true;
             this.txt_ID_DonDatXe.LeadingIcon = null;
-            this.txt_ID_DonDatXe.Location = new System.Drawing.Point(106, 307);
-            this.txt_ID_DonDatXe.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ID_DonDatXe.Location = new System.Drawing.Point(141, 378);
+            this.txt_ID_DonDatXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ID_DonDatXe.MaxLength = 32767;
             this.txt_ID_DonDatXe.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ID_DonDatXe.Name = "txt_ID_DonDatXe";
@@ -719,7 +706,7 @@
             this.txt_ID_DonDatXe.SelectionLength = 0;
             this.txt_ID_DonDatXe.SelectionStart = 0;
             this.txt_ID_DonDatXe.ShortcutsEnabled = true;
-            this.txt_ID_DonDatXe.Size = new System.Drawing.Size(200, 48);
+            this.txt_ID_DonDatXe.Size = new System.Drawing.Size(267, 48);
             this.txt_ID_DonDatXe.TabIndex = 33;
             this.txt_ID_DonDatXe.TabStop = false;
             this.txt_ID_DonDatXe.Text = "100";
@@ -732,11 +719,10 @@
             // 
             this.lbl_ID_DonDatXe.Depth = 0;
             this.lbl_ID_DonDatXe.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ID_DonDatXe.Location = new System.Drawing.Point(3, 307);
-            this.lbl_ID_DonDatXe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ID_DonDatXe.Location = new System.Drawing.Point(4, 378);
             this.lbl_ID_DonDatXe.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ID_DonDatXe.Name = "lbl_ID_DonDatXe";
-            this.lbl_ID_DonDatXe.Size = new System.Drawing.Size(100, 48);
+            this.lbl_ID_DonDatXe.Size = new System.Drawing.Size(133, 59);
             this.lbl_ID_DonDatXe.TabIndex = 32;
             this.lbl_ID_DonDatXe.Text = "ID Đơn Đặt xe";
             this.lbl_ID_DonDatXe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -751,8 +737,8 @@
             this.txt_ThoiGianThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_ThoiGianThue.HideSelection = true;
             this.txt_ThoiGianThue.LeadingIcon = null;
-            this.txt_ThoiGianThue.Location = new System.Drawing.Point(436, 307);
-            this.txt_ThoiGianThue.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ThoiGianThue.Location = new System.Drawing.Point(581, 378);
+            this.txt_ThoiGianThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ThoiGianThue.MaxLength = 32767;
             this.txt_ThoiGianThue.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_ThoiGianThue.Name = "txt_ThoiGianThue";
@@ -764,7 +750,7 @@
             this.txt_ThoiGianThue.SelectionLength = 0;
             this.txt_ThoiGianThue.SelectionStart = 0;
             this.txt_ThoiGianThue.ShortcutsEnabled = true;
-            this.txt_ThoiGianThue.Size = new System.Drawing.Size(200, 48);
+            this.txt_ThoiGianThue.Size = new System.Drawing.Size(267, 48);
             this.txt_ThoiGianThue.TabIndex = 35;
             this.txt_ThoiGianThue.TabStop = false;
             this.txt_ThoiGianThue.Text = "100";
@@ -777,11 +763,10 @@
             // 
             this.lbl_ThoiGianThue.Depth = 0;
             this.lbl_ThoiGianThue.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ThoiGianThue.Location = new System.Drawing.Point(312, 307);
-            this.lbl_ThoiGianThue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ThoiGianThue.Location = new System.Drawing.Point(416, 378);
             this.lbl_ThoiGianThue.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ThoiGianThue.Name = "lbl_ThoiGianThue";
-            this.lbl_ThoiGianThue.Size = new System.Drawing.Size(120, 48);
+            this.lbl_ThoiGianThue.Size = new System.Drawing.Size(160, 59);
             this.lbl_ThoiGianThue.TabIndex = 34;
             this.lbl_ThoiGianThue.Text = "Thời Gian Thuê";
             this.lbl_ThoiGianThue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -792,11 +777,10 @@
             this.lbl_Location.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Location.Depth = 0;
             this.lbl_Location.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Location.Location = new System.Drawing.Point(639, 233);
-            this.lbl_Location.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Location.Location = new System.Drawing.Point(852, 287);
             this.lbl_Location.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Location.Name = "lbl_Location";
-            this.lbl_Location.Size = new System.Drawing.Size(120, 48);
+            this.lbl_Location.Size = new System.Drawing.Size(160, 59);
             this.lbl_Location.TabIndex = 36;
             this.lbl_Location.Text = "Điểm đến";
             this.lbl_Location.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -811,8 +795,8 @@
             this.txt_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Location.HideSelection = true;
             this.txt_Location.LeadingIcon = null;
-            this.txt_Location.Location = new System.Drawing.Point(763, 233);
-            this.txt_Location.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Location.Location = new System.Drawing.Point(1017, 287);
+            this.txt_Location.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Location.MaxLength = 32767;
             this.txt_Location.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Location.Name = "txt_Location";
@@ -824,7 +808,7 @@
             this.txt_Location.SelectionLength = 0;
             this.txt_Location.SelectionStart = 0;
             this.txt_Location.ShortcutsEnabled = true;
-            this.txt_Location.Size = new System.Drawing.Size(200, 48);
+            this.txt_Location.Size = new System.Drawing.Size(267, 48);
             this.txt_Location.TabIndex = 37;
             this.txt_Location.TabStop = false;
             this.txt_Location.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -836,33 +820,56 @@
             this.lbl_ReturnDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ReturnDate.Depth = 0;
             this.lbl_ReturnDate.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ReturnDate.Location = new System.Drawing.Point(967, 233);
-            this.lbl_ReturnDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ReturnDate.Location = new System.Drawing.Point(1317, 378);
             this.lbl_ReturnDate.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_ReturnDate.Name = "lbl_ReturnDate";
-            this.lbl_ReturnDate.Size = new System.Drawing.Size(100, 48);
+            this.lbl_ReturnDate.Size = new System.Drawing.Size(133, 59);
             this.lbl_ReturnDate.TabIndex = 38;
-            this.lbl_ReturnDate.Text = "Ngày trả xe";
+            this.lbl_ReturnDate.Text = "Ngày trả(Dự Kiến)";
             this.lbl_ReturnDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpk_ReturnDate
             // 
             this.dtpk_ReturnDate.CustomFormat = "dd/MM/yyyy";
             this.dtpk_ReturnDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpk_ReturnDate.Location = new System.Drawing.Point(1071, 233);
-            this.dtpk_ReturnDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpk_ReturnDate.Location = new System.Drawing.Point(1456, 378);
+            this.dtpk_ReturnDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpk_ReturnDate.MaxDate = new System.DateTime(2300, 12, 31, 0, 0, 0, 0);
             this.dtpk_ReturnDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dtpk_ReturnDate.MinimumSize = new System.Drawing.Size(200, 48);
+            this.dtpk_ReturnDate.MinimumSize = new System.Drawing.Size(265, 48);
             this.dtpk_ReturnDate.Name = "dtpk_ReturnDate";
-            this.dtpk_ReturnDate.Size = new System.Drawing.Size(200, 48);
+            this.dtpk_ReturnDate.Size = new System.Drawing.Size(265, 48);
             this.dtpk_ReturnDate.TabIndex = 51;
+            this.dtpk_ReturnDate.Value = new System.DateTime(2023, 11, 23, 0, 0, 0, 0);
+            // 
+            // btn_Check
+            // 
+            this.btn_Check.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Check.AutoSize = false;
+            this.btn_Check.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Check.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Check.Depth = 0;
+            this.btn_Check.HighEmphasis = true;
+            this.btn_Check.Icon = null;
+            this.btn_Check.Location = new System.Drawing.Point(1320, 107);
+            this.btn_Check.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Check.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Check.Name = "btn_Check";
+            this.btn_Check.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Check.Size = new System.Drawing.Size(133, 49);
+            this.btn_Check.TabIndex = 52;
+            this.btn_Check.Text = "Kiểm tra";
+            this.btn_Check.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Check.UseAccentColor = false;
+            this.btn_Check.UseVisualStyleBackColor = true;
+            this.btn_Check.Click += new System.EventHandler(this.btn_Check_Click);
             // 
             // BillDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 830);
+            this.ClientSize = new System.Drawing.Size(1727, 1022);
+            this.Controls.Add(this.btn_Check);
             this.Controls.Add(this.dtpk_ReturnDate);
             this.Controls.Add(this.lbl_ReturnDate);
             this.Controls.Add(this.txt_Location);
@@ -902,10 +909,10 @@
             this.Controls.Add(this.lbl_HangXe);
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.lbl_ID);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(1295, 830);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1727, 1022);
             this.Name = "BillDetail";
-            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.Text = "Chi Tiết Đơn Đặt Xe";
             this.Load += new System.EventHandler(this.CarDetail_Load);
             this.ResumeLayout(false);
@@ -955,5 +962,6 @@
         private MaterialSkin.Controls.MaterialTextBox2 txt_Location;
         private MaterialSkin.Controls.MaterialLabel lbl_ReturnDate;
         private System.Windows.Forms.DateTimePicker dtpk_ReturnDate;
+        private MaterialSkin.Controls.MaterialButton btn_Check;
     }
 }

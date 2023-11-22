@@ -48,6 +48,8 @@ namespace DAO
                     XeOtoID = row["XeOtoID"].ToString(),
                     GiaThue = Double.Parse(row["GiaThue"].ToString()),
                     NhienLieu = row["NhienLieu"].ToString(),
+                    DiemDen = row["DiemDen"].ToString(),
+                    ThoiGianTraDK = Convert.ToDateTime(row["ThoiGianTraDK"]),
                     ThoiGianThue = Convert.ToDateTime(row["ThoiGianThue"]),
                     TinhTrangThanhToan = Convert.ToBoolean(row["TinhTrangThanhToan"]),
                     Total = Double.Parse(row["Total"].ToString()),
@@ -60,10 +62,11 @@ namespace DAO
 
         public bool CreateDonDatXe(DonDatXeDTO donDatXe, List<string> tinhNangIDList)
         {
-            string query = "INSERT INTO DonDatXe (KhachHangID, XeOtoID, ThoiGianThue, TinhTrangThanhToan, NhienLieu, GiaThue) " +
-                           "VALUES ( @KhachHangID , @XeOtoID , @ThoiGianThue , @TinhTrangThanhToan , @NhienLieu , @GiaThue ); " +
+            string query = "INSERT INTO DonDatXe (KhachHangID, XeOtoID, ThoiGianThue, TinhTrangThanhToan, NhienLieu, GiaThue, DiemDen, ThoiGianTraDK) " +
+                           "VALUES ( @KhachHangID , @XeOtoID , @ThoiGianThue , @TinhTrangThanhToan , @NhienLieu , @GiaThue , @DiemDen , @ThoiGianTraDK ); " +
                            "SELECT SCOPE_IDENTITY();";
-            object[] parameters = { donDatXe.KhachHangID, donDatXe.XeOtoID, donDatXe.ThoiGianThue, donDatXe.TinhTrangThanhToan, donDatXe.NhienLieu, donDatXe.GiaThue };
+            object[] parameters = { donDatXe.KhachHangID, donDatXe.XeOtoID, donDatXe.ThoiGianThue, 
+                donDatXe.TinhTrangThanhToan, donDatXe.NhienLieu, donDatXe.GiaThue, donDatXe.DiemDen, donDatXe.ThoiGianTraDK};
             int donDatXeID = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query, parameters));
             foreach (string item in tinhNangIDList)
             {
@@ -81,6 +84,8 @@ namespace DAO
                                "[TinhTrangThanhToan] = @TinhTrangThanhToan , " +
                                "[Total] = @Total , " +
                                "[ThoiGianTra] = @ThoiGianTra " +
+                               "[ThoiGianTraDK] = @ThoiGianTraDK " +
+                               "[DiemDen] = @DiemDen " + 
                            "WHERE DonDatXeID = @DonDatXeID";
 
             object[] parameters = {
@@ -90,7 +95,9 @@ namespace DAO
                 donDatXe.TinhTrangThanhToan,
                 donDatXe.Total,
                 donDatXe.ThoiGianTra,
-                donDatXe.DonDatXeID
+                donDatXe.DonDatXeID,
+                donDatXe.ThoiGianTraDK,
+                donDatXe.DiemDen
             };
 
             return DataProvider.Instance.ExecuteNonQuery(query, parameters) > 0;
@@ -166,6 +173,8 @@ namespace DAO
                     XeOtoID = row["XeOtoID"].ToString(),
                     GiaThue = Double.Parse(row["GiaThue"].ToString()),
                     NhienLieu = row["NhienLieu"].ToString(),
+                    DiemDen = row["DiemDen"].ToString(),
+                    ThoiGianTraDK = Convert.ToDateTime(row["ThoiGianTraDK"]),
                     ThoiGianThue = Convert.ToDateTime(row["ThoiGianThue"]),
                     TinhTrangThanhToan = Convert.ToBoolean(row["TinhTrangThanhToan"]),
                     Total = Double.Parse(row["Total"].ToString()),

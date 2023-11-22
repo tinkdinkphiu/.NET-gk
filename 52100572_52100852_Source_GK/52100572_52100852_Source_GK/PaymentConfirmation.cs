@@ -24,14 +24,14 @@ namespace _52100572_52100852_Source_GK
             if (donDatXe != null)
             {
                 this.donDatXe = donDatXe;
-
                 txt_ID_KH.Text = donDatXe.KhachHangID.ToString();
                 txt_ID_DonDatXe.Text = donDatXe.DonDatXeID.ToString();
                 txt_ThoiGianThue.Text = donDatXe.ThoiGianThue.ToString("dd/MM/yyyy HH:mm:ss");
+                txt_ThoiGianTraDK.Text = donDatXe.ThoiGianTraDK.ToString("dd/MM/yyyy");
                 txt_GiaThue.Text = donDatXe.GiaThue.ToString("N0") + " VND/giờ";
                 txt_ID.Text = donDatXe.XeOtoID.ToString();
                 dtpk_ThoiGianTra.MinDate = donDatXe.ThoiGianThue;
-
+                
                 if (donDatXe.TinhTrangThanhToan)
                 {
                     dtpk_ThoiGianTra.Value = (DateTime)donDatXe.ThoiGianTra;
@@ -47,9 +47,21 @@ namespace _52100572_52100852_Source_GK
         {
             DateTime ngayTra = dtpk_ThoiGianTra.Value;
             this.donDatXe.ThoiGianTra = ngayTra;
-            TimeSpan thoiGianThueSpan = ngayTra - donDatXe.ThoiGianThue;
-            double soGioDaThue = thoiGianThueSpan.TotalHours;
-            this.donDatXe.Total = soGioDaThue * donDatXe.GiaThue;
+            if (ngayTra > donDatXe.ThoiGianTraDK)
+            {
+                double soNgayThueQH = (ngayTra - donDatXe.ThoiGianTraDK).TotalDays;
+                double soNgayThueDK = (donDatXe.ThoiGianTraDK - donDatXe.ThoiGianThue).TotalDays;
+                this.donDatXe.Total = soNgayThueDK * donDatXe.GiaThue + soNgayThueQH*donDatXe.GiaThue*1.1;
+                lbl_QuaHan.Text = $"Quá Hạn(trả thêm 20%): {soNgayThueQH} ngày";
+            }
+            else
+            {
+                TimeSpan thoiGianThueSpan = ngayTra - donDatXe.ThoiGianThue;
+                double soGioDaThue = thoiGianThueSpan.TotalDays;
+                this.donDatXe.Total = soGioDaThue * donDatXe.GiaThue;
+
+                lbl_QuaHan.Text = $"Quá Hạn(trả thêm 20%): {0} ngày";
+            }
             lbl_Total.Text = "Thành Tiền: " + this.donDatXe.Total.ToString("N0") + " VND";
         }
 
@@ -77,6 +89,11 @@ namespace _52100572_52100852_Source_GK
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PaymentConfirmation_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

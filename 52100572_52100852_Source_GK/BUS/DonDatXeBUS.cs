@@ -36,7 +36,7 @@ namespace BUS
 
         public bool AddDonDatXe(KhachHangDTO khachHang, List<string> listtinhNang, DonDatXeDTO donDatXe)
         {
-            KhachHangDTO newKH = KhachHangBUS.Instance.GetKhachHangByEmail(khachHang.Email);
+            KhachHangDTO newKH = KhachHangBUS.Instance.GetKhachHangByPhone(khachHang.SoDienThoai);
             if ( newKH == null )
             {
                bool task = KhachHangBUS.Instance.AddKhachHang(khachHang);
@@ -45,7 +45,7 @@ namespace BUS
                     return false;
                 }
             }
-            newKH = KhachHangBUS.Instance.GetKhachHangByEmail(khachHang.Email);
+            newKH = KhachHangBUS.Instance.GetKhachHangByPhone(khachHang.SoDienThoai);
             donDatXe.KhachHangID = newKH.KhachHangID;
             if (DonDatXeDAO.Instance.CreateDonDatXe(donDatXe, listtinhNang))
             {

@@ -42,7 +42,7 @@ namespace _52100572_52100852_Source_GK
             {
                 total = donDatXe.GiaThue;
                 giaNhienLieu = 0;
-
+                bindingNhienLieu(donDatXe.NhienLieu);
                 //hien them controls
                 lbl_ID_KH.Visible = true;
                 lbl_ID_DonDatXe.Visible = true;
@@ -59,6 +59,7 @@ namespace _52100572_52100852_Source_GK
                 txt_ID_KH.Text = donDatXe.KhachHangID.ToString();
                 txt_ID_DonDatXe.Text = donDatXe.DonDatXeID.ToString();
                 txt_ThoiGianThue.Text = donDatXe.ThoiGianThue.ToString("dd/MM/yyyy HH:mm:ss");
+                dtpk_ReturnDate.Value = donDatXe.ThoiGianTraDK;
 
                 this.xeOtoDTO = XeOtoBUS.Instance.GetXeOtoByID(donDatXe.XeOtoID);
                 this.khachHang = KhachHangBUS.Instance.GetKhachHangByID(donDatXe.KhachHangID);
@@ -73,6 +74,7 @@ namespace _52100572_52100852_Source_GK
             txt_ID.Enabled = false;
             txt_Model.Enabled = false;
             txt_GiaThue.Enabled = false;
+            
             cbb_HangXe.Enabled = false;
             cbb_TrangThai.Enabled = false;
             cbb_LoaiXe.Enabled = false;
@@ -114,7 +116,7 @@ namespace _52100572_52100852_Source_GK
 
         private void bindingTotal()
         {
-            lbl_Total.Text = "Tổng: " + (total+giaNhienLieu).ToString("N0") + " VND/giờ";
+            lbl_Total.Text = "Tổng: " + (total+giaNhienLieu).ToString("N0") + " VND/Ngày";
         }
 
         private void CarDetail_Load(object sender, EventArgs e)
@@ -157,6 +159,20 @@ namespace _52100572_52100852_Source_GK
             this.Close();
         }
 
+        private void bindingNhienLieu(string NL)
+        {
+            if (NL == "Điện")
+            {
+                rdb_Dien.Checked = true;
+            }else if (NL == "Xăng")
+            {
+                rdb_Xang.Checked = true;
+            }
+            else
+            {
+                rdb_Dau.Checked = true;
+            }
+        }
         private void rdb_Dien_CheckedChanged(object sender, EventArgs e)
         {
             if (rdb_Dien.Checked)
@@ -192,10 +208,12 @@ namespace _52100572_52100852_Source_GK
                 donDatXe = new DonDatXeDTO
                 {
                     XeOtoID = xeOtoDTO.XeOtoID,
+                    DiemDen = txt_Location.Text,
                     GiaThue = total + giaNhienLieu,
                     NhienLieu = nhienLieu,
                     TinhTrangThanhToan = false,
-                    ThoiGianThue = DateTime.Now
+                    ThoiGianThue = DateTime.Now,
+                    ThoiGianTraDK = dtpk_ReturnDate.Value
                 };
                 bool task = DonDatXeBUS.Instance.AddDonDatXe(khachHang,tinhNangIDList, donDatXe);
                 if (task)
@@ -322,5 +340,26 @@ namespace _52100572_52100852_Source_GK
             return true;
         }
 
+        private void btn_Check_Click(object sender, EventArgs e)
+        {
+            var soDienThoai = txt_Phone.Text;
+            KhachHangDTO khachHang = KhachHangBUS.Instance.GetKhachHangByPhone(soDienThoai);
+            if (khachHang != null)
+            {
+                txt_Name.Text = khachHang.Ten;
+                txt_Address.Text = khachHang.DiaChi;
+                txt_Email.Text = khachHang.Email;
+
+                txt_Name.Enabled = false;
+                txt_Address.Enabled = false;
+                txt_Email.Enabled = false;
+            }
+            else
+            {
+                txt_Name.Enabled = true;
+                txt_Address.Enabled = true;
+                txt_Email.Enabled = true;
+            }
+        }
     }
 }

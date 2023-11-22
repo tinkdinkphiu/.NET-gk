@@ -25,7 +25,9 @@ namespace _52100572_52100852_Source_GK
             lv_Bill.Columns.Add("Xe ID", 60);
             lv_Bill.Columns.Add("Nhiên Liệu", 100);
             lv_Bill.Columns.Add("Thời gian thuê", 200);
-            lv_Bill.Columns.Add("Giá Thuê (VND/Giờ)", 200);
+            lv_Bill.Columns.Add("Điểm đến", 200);
+            lv_Bill.Columns.Add("Thời gian trả(Dự kiến)", 250);
+            lv_Bill.Columns.Add("Giá Thuê (VND/Ngày)", 200);
             lv_Bill.Columns.Add("Trạng Thái", 150);
         }
 
@@ -55,6 +57,8 @@ namespace _52100572_52100852_Source_GK
                 listViewItem.SubItems.Add(item.XeOtoID.ToString());
                 listViewItem.SubItems.Add(item.NhienLieu.ToString());
                 listViewItem.SubItems.Add(item.ThoiGianThue.ToString("dd/MM/yyyy HH:mm:ss"));
+                listViewItem.SubItems.Add(item.DiemDen.ToString());
+                listViewItem.SubItems.Add(item.ThoiGianTraDK.ToString("dd/MM/yyyy"));
                 listViewItem.SubItems.Add(item.GiaThue.ToString("N0"));
                 if (item.TinhTrangThanhToan)
                 {
@@ -90,7 +94,7 @@ namespace _52100572_52100852_Source_GK
 
                 if (DateTime.TryParseExact(inputDate, format, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result))
                 {
-                    
+                    DateTime.TryParseExact(item.SubItems[6].Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime returnDate);
                     DonDatXeDTO donDatXe = new DonDatXeDTO
                     {
                         DonDatXeID = item.SubItems[0].Text,
@@ -98,8 +102,10 @@ namespace _52100572_52100852_Source_GK
                         XeOtoID = item.SubItems[2].Text,
                         NhienLieu = item.SubItems[3].Text,
                         ThoiGianThue = result,
-                        GiaThue = Double.Parse(item.SubItems[5].Text),
-                        TinhTrangThanhToan = item.SubItems[6].Text.Equals("Đã Thanh Toán")
+                        DiemDen = item.SubItems[5].Text,
+                        ThoiGianTraDK = returnDate,
+                        GiaThue = Double.Parse(item.SubItems[7].Text),
+                        TinhTrangThanhToan = item.SubItems[8].Text.Equals("Đã Thanh Toán")
                     };
                     BillDetail billDetail = new BillDetail(null, donDatXe);
                     billDetail.ShowDialog();

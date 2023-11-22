@@ -23,8 +23,10 @@ namespace _52100572_52100852_Source_GK
             lv_Schedule.Columns.Add("Khách Hàng ID", 120);
             lv_Schedule.Columns.Add("Xe ID", 60);
             lv_Schedule.Columns.Add("Thời gian thuê", 200);
-            lv_Schedule.Columns.Add("Giá Thuê (VND/Giờ)", 200);
+            lv_Schedule.Columns.Add("Giá Thuê (VND/Ngày)", 200);
             lv_Schedule.Columns.Add("Tạm Tính", 200); //5
+            lv_Schedule.Columns.Add("Tuyến Đường", 200);
+            lv_Schedule.Columns.Add("Thời gian trả (Dự Kiến)", 250);
             lv_Schedule.Columns.Add("Thời gian trả", 200);
             lv_Schedule.Columns.Add("Thành Tiền", 200);
             lv_Schedule.Columns.Add("Trạng Thái", 150);
@@ -40,11 +42,14 @@ namespace _52100572_52100852_Source_GK
                 listViewItem.SubItems[0].Text = item.DonDatXeID.ToString();
                 listViewItem.SubItems.Add(item.KhachHangID.ToString());
                 listViewItem.SubItems.Add(item.XeOtoID.ToString());
+
                 listViewItem.SubItems.Add(item.ThoiGianThue.ToString("dd/MM/yyyy HH:mm:ss"));
                 listViewItem.SubItems.Add(item.GiaThue.ToString("N0"));
                 if (item.TinhTrangThanhToan)
                 {
                     listViewItem.SubItems.Add(item.Total.ToString("N0"));
+                    listViewItem.SubItems.Add("Hồ Chí Minh - " + item.DiemDen.ToString());
+                    listViewItem.SubItems.Add(item.ThoiGianTraDK.ToString("dd/MM/yyyy"));
                     listViewItem.SubItems.Add(item.ThoiGianTra?.ToString("dd/MM/yyyy HH:mm:ss"));
                     listViewItem.SubItems.Add(item.Total.ToString("N0"));
                     listViewItem.SubItems.Add("Đã Thanh Toán");
@@ -52,6 +57,8 @@ namespace _52100572_52100852_Source_GK
                 else
                 {
                     listViewItem.SubItems.Add(tamTinh(item.ThoiGianThue, item.GiaThue).ToString("N0"));
+                    listViewItem.SubItems.Add("Hồ Chí Minh - " + item.DiemDen.ToString());
+                    listViewItem.SubItems.Add(item.ThoiGianTraDK.ToString("dd/MM/yyyy"));
                     listViewItem.SubItems.Add("N/A");
                     listViewItem.SubItems.Add("N/A");
                     listViewItem.SubItems.Add("Chưa Thanh Toán");
@@ -89,9 +96,11 @@ namespace _52100572_52100852_Source_GK
                 string inputDate = item.SubItems[3].Text;
                 string format = "dd/MM/yyyy HH:mm:ss";
                 DateTime.TryParseExact(inputDate, format, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime thoiGianThue);
-                DateTime.TryParseExact(item.SubItems[6].Text, format, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime thoiGianTra);
+                DateTime.TryParseExact(item.SubItems[7].Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime thoiGianTraDk);
+                DateTime.TryParseExact(item.SubItems[8].Text, format, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime thoiGianTra);
+               
                 DonDatXeDTO donDatXe;
-                if (item.SubItems[8].Text.Equals("Đã Thanh Toán"))
+                if (item.SubItems[10].Text.Equals("Đã Thanh Toán"))
                 {
                      donDatXe = new DonDatXeDTO
                     {
@@ -100,9 +109,11 @@ namespace _52100572_52100852_Source_GK
                         XeOtoID = item.SubItems[2].Text,
                         ThoiGianThue = thoiGianThue,
                         GiaThue = Double.Parse(item.SubItems[4].Text),
-                        ThoiGianTra = thoiGianTra,
-                        Total = Double.Parse(item.SubItems[7].Text),
-                        TinhTrangThanhToan = item.SubItems[8].Text.Equals("Đã Thanh Toán")
+                        DiemDen = item.SubItems[6].Text,
+                        ThoiGianTraDK = thoiGianTraDk,
+                         ThoiGianTra = thoiGianTra,
+                        Total = Double.Parse(item.SubItems[9].Text),
+                        TinhTrangThanhToan = item.SubItems[10].Text.Equals("Đã Thanh Toán")
                     };
                 }
                 else
@@ -114,8 +125,10 @@ namespace _52100572_52100852_Source_GK
                         XeOtoID = item.SubItems[2].Text,
                         ThoiGianThue = thoiGianThue,
                         GiaThue = Double.Parse(item.SubItems[4].Text),
-                        TinhTrangThanhToan = item.SubItems[8].Text.Equals("Đã Thanh Toán")
-                    };
+                        TinhTrangThanhToan = item.SubItems[10].Text.Equals("Đã Thanh Toán"),
+                         DiemDen = item.SubItems[6].Text,
+                         ThoiGianTraDK = thoiGianTraDk
+                     };
                 }
 
 

@@ -1,3 +1,4 @@
+
 CREATE DATABASE CarRentalDB;
 GO
 USE CarRentalDB;
@@ -44,9 +45,9 @@ go
 -- Chèn dữ liệu giả cho KhachHang
 INSERT INTO KhachHang (Ten, SoDienThoai, DiaChi, Email)
 VALUES
-    (N'Nguyễn Văn A', '0901234567', '123 Đường ABC, Quận 1, TP.HCM', 'nguyenvana@example.com'),
-    (N'Trần Thị B', '0987654321', '456 Đường XYZ, Quận 2, TP.HCM', 'tranthib@example.com'),
-    ( N'Lê Văn C', '0912345678', '789 Đường LMN, Quận 3, TP.HCM', 'levanc@example.com');
+    (N'Nguyễn Văn A', '0901234567', N'123 Đường ABC, Quận 1, TP.HCM', 'nguyenvana@example.com'),
+    (N'Trần Thị B', '0987654321', N'456 Đường XYZ, Quận 2, TP.HCM', 'tranthib@example.com'),
+    ( N'Lê Văn C', '0912345678', N'789 Đường LMN, Quận 3, TP.HCM', 'levanc@example.com');
     GO
 
 CREATE TABLE DonDatXe
@@ -56,7 +57,9 @@ CREATE TABLE DonDatXe
     XeOtoID INT NOT NULL,
     GiaThue DECIMAL(18, 2) NOT NULL,
     NhienLieu NVARCHAR(20) NOT NULL,
+    DiemDen NVARCHAR(100) NOT NULL,
     ThoiGianThue DATETIME NOT NULL,
+    ThoiGianTraDk DATETIME NOT NULL,
     TinhTrangThanhToan BIT NOT null,
     Total DECIMAL(18, 2) DEFAULT 0,
     ThoiGianTra DATETIME NULL,
@@ -159,7 +162,7 @@ END;
 GO
 
 DECLARE @counter INT = 0;
-DECLARE @randomDateStart DATE, @randomDateEnd DATE;
+DECLARE @randomDateStart DATE, @randomDateEnd DATE, @randomDateReturn DATE;
 DECLARE @randomKhachHangID INT, @randomXeOtoID INT;
 DECLARE @randomGiaThue DECIMAL(18, 2), @randomTotal DECIMAL(18, 2);
 DECLARE @randomNhienLieu NVARCHAR(20);
@@ -172,17 +175,48 @@ SELECT @maxXeOtoID = MAX(XeOtoID) FROM XeOto;
 WHILE @counter < 100
 BEGIN
     -- Tạo dữ liệu ngẫu nhiên
-    SET @randomDateStart = DATEADD(DAY, (RAND() * 665), '2022-01-01');
+    SET @randomDateStart = DATEADD(DAY, (RAND() * 365), '2022-10-01');
+    SET @randomDateReturn = DATEADD(DAY, (RAND() * 10), @randomDateStart);
     SET @randomDateEnd = DATEADD(DAY, (RAND() * 10), @randomDateStart); -- giả sử thời gian thuê từ 1-10 ngày
     SET @randomKhachHangID = CAST(RAND() * @maxKhachHangID AS INT) + 1;
     SET @randomXeOtoID = CAST(RAND() * @maxXeOtoID AS INT) + 1;
-    SET @randomGiaThue = CAST(RAND() * 1000 + 100 AS DECIMAL(18, 2));
+    SET @randomGiaThue = CAST(RAND() * 1000 + 13000 AS DECIMAL(18, 2));
     SET @randomTotal = @randomGiaThue * (DATEDIFF(DAY, @randomDateStart, @randomDateEnd) + 1);
     SET @randomNhienLieu = CASE WHEN RAND() < 0.5 THEN N'Xăng' ELSE N'Dầu' END;
 
     -- Thêm dữ liệu vào bảng DonDatXe
-    INSERT INTO DonDatXe (KhachHangID, XeOtoID, GiaThue, NhienLieu, ThoiGianThue, TinhTrangThanhToan, Total, ThoiGianTra)
-    VALUES (@randomKhachHangID, @randomXeOtoID, @randomGiaThue, @randomNhienLieu, @randomDateStart, 1, @randomTotal, @randomDateEnd);
+    INSERT INTO DonDatXe (KhachHangID, XeOtoID, GiaThue, NhienLieu, ThoiGianThue, TinhTrangThanhToan, Total, ThoiGianTra, ThoiGianTraDk, DiemDen)
+    VALUES (@randomKhachHangID, @randomXeOtoID, @randomGiaThue, @randomNhienLieu, @randomDateStart, 1, @randomTotal, @randomDateEnd, @randomDateReturn, N'Nha Trang');
+
+    SET @counter = @counter + 1;
+END
+go
+
+DECLARE @counter INT = 0;
+DECLARE @randomDateStart DATE, @randomDateEnd DATE, @randomDateReturn DATE;
+DECLARE @randomKhachHangID INT, @randomXeOtoID INT;
+DECLARE @randomGiaThue DECIMAL(18, 2), @randomTotal DECIMAL(18, 2);
+DECLARE @randomNhienLieu NVARCHAR(20);
+DECLARE @maxKhachHangID INT, @maxXeOtoID INT;
+
+-- Lấy số lượng tối đa của ID trong các bảng liên quan
+SELECT @maxKhachHangID = MAX(KhachHangID) FROM KhachHang;
+SELECT @maxXeOtoID = MAX(XeOtoID) FROM XeOto;
+WHILE @counter < 100
+BEGIN
+    -- Tạo dữ liệu ngẫu nhiên
+    SET @randomDateStart = DATEADD(DAY, (RAND() * 335), '2023-01-01');
+    SET @randomDateReturn = DATEADD(DAY, (RAND() * 10), @randomDateStart);
+    SET @randomDateEnd = DATEADD(DAY, (RAND() * 10), @randomDateStart); -- giả sử thời gian thuê từ 1-10 ngày
+    SET @randomKhachHangID = CAST(RAND() * @maxKhachHangID AS INT) + 1;
+    SET @randomXeOtoID = CAST(RAND() * @maxXeOtoID AS INT) + 1;
+    SET @randomGiaThue = CAST(RAND() * 1000 + 13000 AS DECIMAL(18, 2));
+    SET @randomTotal = @randomGiaThue * (DATEDIFF(DAY, @randomDateStart, @randomDateEnd) + 1);
+    SET @randomNhienLieu = CASE WHEN RAND() < 0.5 THEN N'Xăng' ELSE N'Dầu' END;
+
+    -- Thêm dữ liệu vào bảng DonDatXe
+    INSERT INTO DonDatXe (KhachHangID, XeOtoID, GiaThue, NhienLieu, ThoiGianThue, TinhTrangThanhToan, Total, ThoiGianTra, ThoiGianTraDk, DiemDen)
+    VALUES (@randomKhachHangID, @randomXeOtoID, @randomGiaThue, @randomNhienLieu, @randomDateStart, 1, @randomTotal, @randomDateEnd, @randomDateReturn, N'Nha Trang');
 
     SET @counter = @counter + 1;
 END

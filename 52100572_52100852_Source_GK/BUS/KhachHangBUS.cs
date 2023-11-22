@@ -58,6 +58,11 @@ namespace BUS
             return khachHangDAO.GetKhachHangByID(xeOtoID);
         }       
         
+        public KhachHangDTO GetKhachHangByPhone(string phone)
+        {
+            return khachHangDAO.GetKhachHangByPhone(phone);
+        }
+
         public KhachHangDTO GetKhachHangByEmail(string email)
         {
             return khachHangDAO.GetKhachHangByEmail(email);

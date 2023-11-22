@@ -68,9 +68,33 @@ namespace DAO
             }
         }
 
+        public KhachHangDTO GetKhachHangByPhone(string phone)
+        {
+            string query = "SELECT * FROM KhachHang WHERE SoDienThoai = @SoDienThoai ";
+            object[] parameters = { phone };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                KhachHangDTO khachHang = new KhachHangDTO
+                {
+                    KhachHangID = row["KhachHangID"].ToString(),
+                    Ten = row["Ten"].ToString(),
+                    SoDienThoai = row["SoDienThoai"].ToString(),
+                    DiaChi = row["DiaChi"].ToString(),
+                    Email = row["Email"].ToString()
+                };
+                return khachHang;
+            }
+            else
+            {
+                return null;
+            }
+        }        
         public KhachHangDTO GetKhachHangByEmail(string email)
         {
-            string query = "SELECT * FROM KhachHang WHERE Email = @KhachHangID ";
+            string query = "SELECT * FROM KhachHang WHERE Email = @Email ";
             object[] parameters = { email };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, parameters);
 

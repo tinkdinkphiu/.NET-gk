@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace _52100572_52100852_Source_GK
 {
@@ -84,42 +85,69 @@ namespace _52100572_52100852_Source_GK
             {
                 if (customerDTO != null)
                 {
-                    customerDTO.Ten = txt_Name.Text;
-                    customerDTO.SoDienThoai = txt_Phone.Text;
-                    customerDTO.DiaChi = txt_Address.Text;
-                    customerDTO.Email = txt_Email.Text;
-
-                    // Handle the save operation for the customer
-                    // You need to update the customer data here
-                    if (KhachHangBUS.Instance.UpdateKhachHang(customerDTO))
+                    var flag = true;
+                    if (txt_Phone.Text != customerDTO.SoDienThoai && KhachHangBUS.Instance.GetKhachHangByPhone(txt_Phone.Text) != null )
                     {
-                        MessageBox.Show("Cập nhật thành công");
-                        this.Close();
+                        MessageBox.Show("Số điện thoại đã tồn tại!", "Số điện thoại không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        flag = false;
                     }
-                    else
+                    else if (txt_Email.Text != customerDTO.Email && KhachHangBUS.Instance.GetKhachHangByEmail(txt_Email.Text) != null)
                     {
-                        MessageBox.Show("Cập nhật thất bại");
+                        MessageBox.Show("Email đã tồn tại!", "Email không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        flag = false;
+                    }
+                    if (flag)
+                    {
+                        customerDTO.Ten = txt_Name.Text;
+                        customerDTO.SoDienThoai = txt_Phone.Text;
+                        customerDTO.DiaChi = txt_Address.Text;
+                        customerDTO.Email = txt_Email.Text;
+                        if (KhachHangBUS.Instance.UpdateKhachHang(customerDTO))
+                        {
+                            MessageBox.Show("Cập nhật thành công");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật thất bại");
+                        }
                     }
                 }
                 else
                 {
-                    customerDTO = new KhachHangDTO();
-                    customerDTO.Ten = txt_Name.Text;
-                    customerDTO.SoDienThoai = txt_Phone.Text;
-                    customerDTO.DiaChi = txt_Address.Text;
-                    customerDTO.Email = txt_Email.Text;
+                    var flag = true;
+                    if (KhachHangBUS.Instance.GetKhachHangByPhone(txt_Phone.Text) != null)
+                    {
+                        MessageBox.Show("Số điện thoại đã tồn tại!", "Số điện thoại không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        flag = false;
+                    }
+                    else if (KhachHangBUS.Instance.GetKhachHangByEmail(txt_Email.Text) != null)
+                    {
+                        MessageBox.Show("Email đã tồn tại!", "Email không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        flag = false;
+                    }
 
-                    // Handle the create operation for the new customer
-                    // You need to insert the new customer data here
-                    if (KhachHangBUS.Instance.AddKhachHang(customerDTO))
+                    if (flag)
                     {
-                        MessageBox.Show("Tạo mới thành công");
-                        this.Close();
+                        customerDTO = new KhachHangDTO();
+                        customerDTO.Ten = txt_Name.Text;
+                        customerDTO.SoDienThoai = txt_Phone.Text;
+                        customerDTO.DiaChi = txt_Address.Text;
+                        customerDTO.Email = txt_Email.Text;
+
+                        // Handle the create operation for the new customer
+                        // You need to insert the new customer data here
+                        if (KhachHangBUS.Instance.AddKhachHang(customerDTO))
+                        {
+                            MessageBox.Show("Tạo mới thành công");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tạo mới thất bại");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Tạo mới thất bại");
-                    }
+
                 }
             }
         }
@@ -228,6 +256,7 @@ namespace _52100572_52100852_Source_GK
                 MessageBox.Show("Email không đúng cú pháp", "Email không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
             return true;
         }
     }
