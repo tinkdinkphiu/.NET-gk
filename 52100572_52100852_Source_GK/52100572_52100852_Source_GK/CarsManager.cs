@@ -27,7 +27,7 @@ namespace _52100572_52100852_Source_GK
             lv_CarsManager.Columns.Add("Model", 100);
             lv_CarsManager.Columns.Add("Loại Xe", 200);
             lv_CarsManager.Columns.Add("Trạng Thái", 150);
-            lv_CarsManager.Columns.Add("Giá Thuê (VND/Giờ)", 200);
+            lv_CarsManager.Columns.Add("Giá Thuê (VND/Ngày)", 200);
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
