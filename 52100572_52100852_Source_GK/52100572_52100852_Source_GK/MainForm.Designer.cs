@@ -94,7 +94,7 @@ namespace _52100572_52100852_Source_GK
             this.tab_CarsManager.Location = new System.Drawing.Point(4, 39);
             this.tab_CarsManager.Name = "tab_CarsManager";
             this.tab_CarsManager.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_CarsManager.Size = new System.Drawing.Size(1192, 693);
+            this.tab_CarsManager.Size = new System.Drawing.Size(1392, 793);
             this.tab_CarsManager.TabIndex = 1;
             this.tab_CarsManager.Text = "Quản lý xe";
             // 
@@ -104,7 +104,7 @@ namespace _52100572_52100852_Source_GK
             this.tab_Customer.ImageKey = "customer.png";
             this.tab_Customer.Location = new System.Drawing.Point(4, 39);
             this.tab_Customer.Name = "tab_Customer";
-            this.tab_Customer.Size = new System.Drawing.Size(1192, 693);
+            this.tab_Customer.Size = new System.Drawing.Size(1392, 793);
             this.tab_Customer.TabIndex = 2;
             this.tab_Customer.Text = "Khách hàng";
             // 
@@ -114,7 +114,7 @@ namespace _52100572_52100852_Source_GK
             this.tab_Bill.ImageKey = "bill.png";
             this.tab_Bill.Location = new System.Drawing.Point(4, 39);
             this.tab_Bill.Name = "tab_Bill";
-            this.tab_Bill.Size = new System.Drawing.Size(1192, 693);
+            this.tab_Bill.Size = new System.Drawing.Size(1392, 793);
             this.tab_Bill.TabIndex = 3;
             this.tab_Bill.Text = "Đơn đặt xe";
             // 
@@ -124,7 +124,7 @@ namespace _52100572_52100852_Source_GK
             this.tab_Schedule.ImageKey = "schedule.png";
             this.tab_Schedule.Location = new System.Drawing.Point(4, 39);
             this.tab_Schedule.Name = "tab_Schedule";
-            this.tab_Schedule.Size = new System.Drawing.Size(1192, 693);
+            this.tab_Schedule.Size = new System.Drawing.Size(1392, 793);
             this.tab_Schedule.TabIndex = 4;
             this.tab_Schedule.Text = "Lịch trình";
             // 
@@ -134,7 +134,7 @@ namespace _52100572_52100852_Source_GK
             this.tab_Statistic.ImageKey = "statistic.png";
             this.tab_Statistic.Location = new System.Drawing.Point(4, 39);
             this.tab_Statistic.Name = "tab_Statistic";
-            this.tab_Statistic.Size = new System.Drawing.Size(1192, 693);
+            this.tab_Statistic.Size = new System.Drawing.Size(1392, 793);
             this.tab_Statistic.TabIndex = 5;
             this.tab_Statistic.Text = "Báo cáo thống kê";
             // 
@@ -144,7 +144,7 @@ namespace _52100572_52100852_Source_GK
             this.tab_Admin.ImageKey = "employee.png";
             this.tab_Admin.Location = new System.Drawing.Point(4, 39);
             this.tab_Admin.Name = "tab_Admin";
-            this.tab_Admin.Size = new System.Drawing.Size(1192, 693);
+            this.tab_Admin.Size = new System.Drawing.Size(1392, 793);
             this.tab_Admin.TabIndex = 6;
             this.tab_Admin.Text = "Nhân viên";
             // 
@@ -172,6 +172,7 @@ namespace _52100572_52100852_Source_GK
             this.MinimumSize = new System.Drawing.Size(1400, 900);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(0, 64, 0, 0);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel_body.ResumeLayout(false);
             this.menuControl.ResumeLayout(false);
             this.ResumeLayout(false);

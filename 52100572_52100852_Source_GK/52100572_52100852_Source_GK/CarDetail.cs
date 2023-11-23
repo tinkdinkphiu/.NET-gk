@@ -46,13 +46,16 @@ namespace _52100572_52100852_Source_GK
                     cbb_TrangThai.SelectedIndex = index; 
                 }
             }
-            
+            txt_ID.Enabled = false;
+
         }
 
         public void toggle(bool isEditing)
         {
             if(isEditing)
             {
+                lbl_ID.Visible = false;
+                txt_ID.Visible = false;
                 txt_ID.Enabled = false;
                 txt_Model.Enabled = true;
                 txt_GiaThue.Enabled = true;
@@ -67,7 +70,7 @@ namespace _52100572_52100852_Source_GK
             else
             {
                 btn_Edit.Visible = true;
-                txt_ID.Enabled = false;
+                
                 txt_Model.Enabled = false;
                 txt_GiaThue.Enabled = false;
                 cbb_HangXe.Enabled = false;
@@ -75,6 +78,7 @@ namespace _52100572_52100852_Source_GK
                 cbb_LoaiXe.Enabled = false;
                 btn_Cancel.Visible = false;
                 btn_Save.Visible = false;
+                
                 btn_Delete.Visible = true;
             }
         }
@@ -161,12 +165,12 @@ namespace _52100572_52100852_Source_GK
        
                     if (XeOtoBUS.Instance.AddXeOto(xeOtoDTO))
                     {
-                        MessageBox.Show("Cập nhật thành công");
+                        MessageBox.Show("Thêm thành công");
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật thất bại");
+                        MessageBox.Show("Thêm thất bại");
                     }
                 }
             }

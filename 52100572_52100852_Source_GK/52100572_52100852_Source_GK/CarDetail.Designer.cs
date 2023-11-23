@@ -465,6 +465,7 @@ namespace _52100572_52100852_Source_GK
             this.MinimumSize = new System.Drawing.Size(348, 750);
             this.Name = "CarDetail";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Xe";
             this.Load += new System.EventHandler(this.CarDetail_Load);
             this.ResumeLayout(false);

@@ -78,7 +78,7 @@ namespace DAO
             object[] parameters = { xeOto.HangXe, xeOto.Model, xeOto.LoaiXe, xeOto.TrangThai, xeOto.Gia};
             int xeOToId = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query, parameters));
             
-            return xeOToId > 0;
+            return xeOToId >= 0;
         }
 
         public bool UpdateXeOto(XeOtoDTO xeOto)

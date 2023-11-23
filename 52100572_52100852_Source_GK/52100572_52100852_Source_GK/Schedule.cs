@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -147,14 +148,31 @@ namespace _52100572_52100852_Source_GK
         private void btn_CheckCar_Click(object sender, EventArgs e)
         {
             string xeOtoID = txt_XeOToID.Text;
-            if (XeOtoBUS.Instance.isAvaiable(xeOtoID))
-            {
-                MessageBox.Show("Xe số "+ xeOtoID+" sẵn sàng cho thuê");
+            if(IsValididChecker(xeOtoID)) {
+                if (XeOtoBUS.Instance.isAvaiable(xeOtoID))
+                {
+                    MessageBox.Show("Xe số "+ xeOtoID+" sẵn sàng cho thuê");
+                }
+                else
+                {
+                    MessageBox.Show("Xe số " + xeOtoID + " đang cho thuê");
+                }
             }
-            else
+        }
+
+        private bool IsValididChecker(string xeOtoId)
+        {
+            if (string.IsNullOrEmpty(xeOtoId))
             {
-                MessageBox.Show("Xe số " + xeOtoID + " đang cho thuê");
+                MessageBox.Show("Vui lòng nhập mã", "Mã xe rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
+            else if (!Regex.IsMatch(xeOtoId, @"^\d+$"))
+            {
+                MessageBox.Show("Mã xe chỉ chứa ký tự là số", "Mã xe không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

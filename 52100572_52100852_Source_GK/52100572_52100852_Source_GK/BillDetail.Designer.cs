@@ -932,6 +932,7 @@
             this.MinimumSize = new System.Drawing.Size(1295, 830);
             this.Name = "BillDetail";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Đơn Đặt Xe";
             this.Load += new System.EventHandler(this.CarDetail_Load);
             this.ResumeLayout(false);

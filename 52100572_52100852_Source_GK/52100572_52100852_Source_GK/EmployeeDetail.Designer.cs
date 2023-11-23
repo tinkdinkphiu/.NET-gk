@@ -279,6 +279,7 @@
             this.Controls.Add(this.lbl_Username);
             this.MinimumSize = new System.Drawing.Size(456, 390);
             this.Name = "EmployeeDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeDetail";
             this.ResumeLayout(false);
 
