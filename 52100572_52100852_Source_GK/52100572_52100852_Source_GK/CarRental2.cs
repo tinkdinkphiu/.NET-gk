@@ -26,7 +26,7 @@ namespace _52100572_52100852_Source_GK
             lv_CarList.Columns.Add("Model", 60);
             lv_CarList.Columns.Add("Loại Xe", 200);
             lv_CarList.Columns.Add("Trạng Thái", 150);
-            lv_CarList.Columns.Add("Giá Thuê (VND/Giờ)", 200);
+            lv_CarList.Columns.Add("Giá Thuê (VND/Ngày)", 200);
 
             this.startCarRental2CarType = carTypeFromRental1;
         }
