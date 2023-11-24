@@ -225,7 +225,7 @@ namespace _52100572_52100852_Source_GK
 
         private bool IsValidPrice(string price)
         {
-            string pattern = @"^[0-9]+$";
+            string pattern = @"^[0-9,]+$";
             if (string.IsNullOrEmpty(price))
             {
                 MessageBox.Show("Vui lòng nhập Giá", "Giá rỗng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
